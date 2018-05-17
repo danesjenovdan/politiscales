@@ -124,6 +124,21 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+.progress {
+  height: 3px;
+  background: #d7d7d7;
+  #bar
+  {
+    height: 100%;
+    background: $primary;
+  }
+}
+
+#question-text
+{
+  min-height: 150px;
+}
+
 .progress-bar {
   color: black;
   font-size: 1.125rem;
