@@ -38,6 +38,8 @@ redirect_from: "/help.html"
 
 					<div class="mt-5 text-center">
 						<button class="btn btn-link" onclick="prev_question()" id="back_button">{{ site.t[page.language].quiz_btn_back_q }}</button>
+						<button class="button" onclick="simulate()">{{ site.t[page.language].quiz_btn_random }}</button>
+
 					</div>
 				</div>
 			</div>
@@ -1961,17 +1963,17 @@ init_question();
 
 function init_question()
 {
-	document.getElementById("question-text").innerHTML = questions[qn].question;
-	document.getElementById("question-number").innerHTML = "{{ site.t[page.language].quiz_question_counter }}".replace("%num%", (qn + 1)).replace("%sum%", questions.length);
+	//document.getElementById("question-text").innerHTML = questions[qn].question;
+	//document.getElementById("question-number").innerHTML = "{{ site.t[page.language].quiz_question_counter }}".replace("%num%", (qn + 1)).replace("%sum%", questions.length);
 	if (qn == 0)
 	{
-		document.getElementById("back_button").style.display = 'none';
-		document.getElementById("back_button_off").style.display = 'block';
+	//	document.getElementById("back_button").style.display = 'none';
+	//	document.getElementById("back_button_off").style.display = 'block';
 	}
 	else
 	{
-		document.getElementById("back_button").style.display = 'block';
-		document.getElementById("back_button_off").style.display = 'none';
+	//	document.getElementById("back_button").style.display = 'block';
+		//document.getElementById("back_button_off").style.display = 'none';
 	}
 
 }
@@ -2066,36 +2068,40 @@ function results()
 	location.href = url;
 }
 
-rand_c = Math.random();
-rand_b = Math.random();
-rand_s = Math.random();
-rand_j = Math.random();
-rand_p = Math.random();
-rand_m = Math.random();
-rand_e = Math.random();
-rand_t = Math.random();
 
-rand_per_axis = {
-	c0: rand_c,
-	c1: 1 - rand_c,
-	b0: rand_b,
-	b1: 1 - rand_b,
-	s0: rand_s,
-	s1: 1 - rand_s,
-	j0: rand_j,
-	j1: 1 - rand_j,
-	p0: rand_p,
-	p1: 1 - rand_p,
-	m0: rand_m,
-	m1: 1 - rand_m,
-	e0: rand_e,
-	e1: 1 - rand_e,
-	t0: rand_t,
-	t1: 1 - rand_t,
-}
+
+
 
 function simulate()
 {
+    rand_c = Math.random();
+    rand_b = Math.random();
+    rand_s = Math.random();
+    rand_j = Math.random();
+    rand_p = Math.random();
+    rand_m = Math.random();
+    rand_e = Math.random();
+    rand_t = Math.random();
+
+    rand_per_axis = {
+        c0: rand_c,
+        c1: 1 - rand_c,
+        b0: rand_b,
+        b1: 1 - rand_b,
+        s0: rand_s,
+        s1: 1 - rand_s,
+        j0: rand_j,
+        j1: 1 - rand_j,
+        p0: rand_p,
+        p1: 1 - rand_p,
+        m0: rand_m,
+        m1: 1 - rand_m,
+        e0: rand_e,
+        e1: 1 - rand_e,
+        t0: rand_t,
+        t1: 1 - rand_t,
+    };
+
 	while(qn < questions.length)
 	{
 		prop = 0.0;

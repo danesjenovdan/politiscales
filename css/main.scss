@@ -27,6 +27,7 @@ html, body {
 body {
   overflow: auto;
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  background-attachment: fixed;
 }
 
 .answers {
@@ -34,8 +35,7 @@ body {
   flex-direction: column;
   margin: 0 auto 2rem 0;
 
-  .circle
-  {
+  .circle {
     display: block;
     height: 22px;
     width: 22px;
@@ -56,32 +56,27 @@ body {
     margin-bottom: 1rem;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, .57);
 
-    &:nth-child(1)
-    {
+    &:nth-child(1) {
       .circle {
         background: $blue;
       }
     }
-    &:nth-child(2)
-    {
+    &:nth-child(2) {
       .circle {
         background: $blueLight;
       }
     }
-    &:nth-child(3)
-    {
+    &:nth-child(3) {
       .circle {
         background: $gray;
       }
     }
-    &:nth-child(4)
-    {
+    &:nth-child(4) {
       .circle {
         background: $redLight;
       }
     }
-    &:nth-child(5)
-    {
+    &:nth-child(5) {
       .circle {
         background: $red;
       }
@@ -120,4 +115,68 @@ h1 {
 .btn-secondary {
   border: $input_btn-border-width solid $primary;
   color: $primary;
+}
+
+.result {
+  color: #444444;
+  font-weight: bold;
+
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  color: black;
+  font-size: 1.125rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+
+  > * {
+    padding: 0.25rem 0.25rem;
+  }
+  .progress-negative {
+    background-color: $redLight;
+    text-align: right;
+  }
+
+  .progress-mid {
+    background-color: #d7d7d7;
+    text-align: center;
+  }
+
+  .progress-positive {
+    background-color: $blueLight;
+    text-align: left;
+  }
+}
+
+.icon {
+  margin-top: 0.25rem;
+  padding-top: 0.85rem;
+
+  img {
+    width: 35px;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.icon-positive {
+  background: $blueLight;
+  border-radius: 100%;
+  height: 64px;
+  width: 64px;
+}
+
+.icon-negative {
+  background: $redLight;
+  border-radius: 100%;
+  height: 64px;
+  width: 64px;
 }

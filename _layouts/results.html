@@ -1,595 +1,652 @@
-{% include header.html %}
+---
+layout: default
+title: Rezultati
+language: sl_SI
+---
 
-<h2>{{ site.t[page.language].result_title }}</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            {% include sidebar.html %}
+        </div>
 
-<p class="simpleText">{{ site.t[page.language].result_desc }}</p>
+        <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
+            <div class="card card-question w-100">
+                <div class="card-body text-center p-5">
+                    <h2>{{ site.t[page.language].result_title }}</h2>
 
-<div class="flagDecoration"><canvas id="generatedFlag" width="512" height="256"></canvas><div id="slogan"></div></div>
-<div class="shareText">{{ site.t[page.language].result_share }}</div>
-<div id="urlToCopyContainer" class="urlToCopyContainer"><div id="urlToCopy" class="urlToCopy"></div></div>
-<div class="navButtons">
-	<a class="button buttonTwitter" href="" id="buttonTwitter"><i class="fa fa-twitter" aria-hidden="true"></i></a><!--
-	--><a class="button buttonFacebook" onclick="shareFacebook();"><i class="fa fa-facebook" aria-hidden="true"></i></a><!--
-	--><a class="button buttonReddit" href="" id="buttonReddit"><i class="fa fa-reddit" aria-hidden="true"></i></a><!--
-	--><a class="button buttonLink" onclick="shareLink();" id="buttonLink"><i class="fa fa-link" aria-hidden="true"></i></a>
-</div>
+                    <p class="simpleText">{{ site.t[page.language].result_desc }}</p>
 
-<hr/>
+                    <!--  	<div class="flagDecoration"><canvas id="generatedFlag" width="512" height="256"></canvas><div id="slogan"></div></div> -->
+                    <!--   <div class="shareText">{{ site.t[page.language].result_share }}</div>  -->
+                    <!--     <div id="urlToCopyContainer" class="urlToCopyContainer">
+                        <div id="urlToCopy" class="urlToCopy"></div>
+                    </div>
+ -->
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_164808_ffffff.svg" alt="{{ site.t[page.language].constructivism }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].constructivism }}</span>
+                                    <span class="float-right">{{ site.t[page.language].essentialism }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="cAxisNeg" class="progress-negative"><span
+                                                id="cAxisNegText"></span></div>
 
-<div class="columnContainer">
-	<div class="columnLeft">
+                                        <div id="cAxisMid" class="progress-mid"><span
+                                                id="cAxisMidText"></span></div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].constructivism }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].essentialism }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/constructivism.png" alt="{{ site.t[page.language].constructivism }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="cAxisNeg" class="axisSubProgress axisConstructivism"><span id="cAxisNegText"></span></div><!--
-		--><div id="cAxisMid" class="axisSubProgress axisNeutral"><span id="cAxisMidText"></span></div><!--
-		--><div id="cAxisPos" class="axisSubProgress axisEssentialism"><span id="cAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/essentialism.png" alt="{{ site.t[page.language].essentialism }}" \></div>
+                                        <div id="cAxisPos" class="progress-positive"><span
+                                                id="cAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_1333114_ffffff.svg" alt="{{ site.t[page.language].essentialism }}"
+                                                        ></div>
+                    </div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].justice_soft }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].justice_hard }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/justice_soft.png" alt="{{ site.t[page.language].justice_soft }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="jAxisNeg" class="axisSubProgress axisLiberal"><span id="jAxisNegText"></span></div><!--
-		--><div id="jAxisMid" class="axisSubProgress axisNeutral"><span id="jAxisMidText"></span></div><!--
-		--><div id="jAxisPos" class="axisSubProgress axisAuthoritarism"><span id="jAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/justice_hard.png" alt="{{ site.t[page.language].justice_hard }}" \></div>
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_1570221_ffffff.svg" alt="{{ site.t[page.language].justice_soft }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].justice_soft }}</span>
+                                    <span class="float-right">{{ site.t[page.language].justice_hard }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="jAxisNeg" class="progress-negative"><span
+                                                id="jAxisNegText"></span></div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].progressism }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].conservatism }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/progressism.png" alt="{{ site.t[page.language].progessism }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="sAxisNeg" class="axisSubProgress axisProgressism"><span id="sAxisNegText"></span></div><!--
-		--><div id="sAxisMid" class="axisSubProgress axisNeutral"><span id="sAxisMidText"></span></div><!--
-		--><div id="sAxisPos" class="axisSubProgress axisConservatism"><span id="sAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/conservatism.png" alt="{{ site.t[page.language].conservatism }}" \></div>
+                                        <div id="jAxisMid" class="progress-mid"><span
+                                                id="jAxisMidText"></span></div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].internationalism }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].nationalism }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/internationalism.png" alt="{{ site.t[page.language].internationalism }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="bAxisNeg" class="axisSubProgress axisInternationalism"><span id="bAxisNegText"></span></div><!--
-		--><div id="bAxisMid" class="axisSubProgress axisNeutral"><span id="bAxisMidText"></span></div><!--
-		--><div id="bAxisPos" class="axisSubProgress axisNationalism"><span id="bAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/nationalism.png" alt="{{ site.t[page.language].nationalism }}" \></div>
+                                        <div id="jAxisPos" class="progress-positive"><span
+                                                id="jAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_394344_ffffff.svg" alt="{{ site.t[page.language].justice_hard }}"
+                                                        ></div>
+                    </div>
 
-	</div>
-	<div class="columnRight">
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_1262992_ffffff.svg" alt="{{ site.t[page.language].progressism }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].progressism }}</span>
+                                    <span class="float-right">{{ site.t[page.language].conservatism }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="sAxisNeg" class="progress-negative"><span
+                                                id="sAxisNegText"></span></div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].communism }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].capitalism }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/communism.png" alt="{{ site.t[page.language].communism }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="pAxisNeg" class="axisSubProgress axisCommunism"><span id="pAxisNegText"></span></div><!--
-		--><div id="pAxisMid" class="axisSubProgress axisNeutral"><span id="pAxisMidText"></span></div><!--
-		--><div id="pAxisPos" class="axisSubProgress axisCapitalism"><span id="pAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/capitalism.png" alt="{{ site.t[page.language].capitalism }}" \></div>
+                                        <div id="sAxisMid" class="progress-mid"><span
+                                                id="sAxisMidText"></span></div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].regulationism }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].laissez_faire }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/regulation.png" alt="{{ site.t[page.language].regulationism }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="mAxisNeg" class="axisSubProgress axisRegulation"><span id="mAxisNegText"></span></div><!--
-		--><div id="mAxisMid" class="axisSubProgress axisNeutral"><span id="mAxisMidText"></span></div><!--
-		--><div id="mAxisPos" class="axisSubProgress axisLaissez"><span id="mAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/laissezfaire.png" alt="{{ site.t[page.language].laissez_faire }}" \></div>
+                                        <div id="sAxisPos" class="progress-positive"><span
+                                                id="sAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_671007_ffffff.svg" alt="{{ site.t[page.language].conservatism }}"
+                                                        ></div>
+                    </div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].ecology }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].productivism }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/ecology.png" alt="{{ site.t[page.language].ecology }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="eAxisNeg" class="axisSubProgress axisEcology"><span id="eAxisNegText"></span></div><!--
-		--><div id="eAxisMid" class="axisSubProgress axisNeutral"><span id="eAxisMidText"></span></div><!--
-		--><div id="eAxisPos" class="axisSubProgress axisProductivism"><span id="eAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/productivism.png" alt="{{ site.t[page.language].productivism }}" \></div>
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_977265_ffffff.svg" alt="{{ site.t[page.language].internationalism }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].internationalism }}</span>
+                                    <span class="float-right">{{ site.t[page.language].nationalism }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="bAxisNeg" class="progress-negative"><span
+                                                id="bAxisNegText"></span></div>
 
-		<div class="axisDesc"><div class="axisDescLeft"><p>{{ site.t[page.language].revo }}</p></div><div class="axisDescRight"><p>{{ site.t[page.language].refo }}</p></div></div>
-		<div class="axisEnd axisEndLeft"><img src="{{ site.basepath }}/images/revolution.png" alt="{{ site.t[page.language].revo }}" \></div><!--
-		--><div class="axisProgress"><!--
-		--><div id="tAxisNeg" class="axisSubProgress axisRevo"><span id="tAxisNegText"></span></div><!--
-		--><div id="tAxisMid" class="axisSubProgress axisNeutral"><span id="tAxisMidText"></span></div><!--
-		--><div id="tAxisPos" class="axisSubProgress axisRefo"><span id="tAxisPosText"></span></div>
-		</div><!--
-		--><div class="axisEnd axisEndRight"><img src="{{ site.basepath }}/images/reformism.png" alt="{{ site.t[page.language].refo }}" \></div>
+                                        <div id="bAxisMid" class="progress-mid"><span
+                                                id="bAxisMidText"></span></div>
 
-	</div>
-</div>
-<br/>
-<div id="bonusBox">
-	<h2>{{ site.t[page.language].result_special }}</h2>
+                                        <div id="bAxisPos" class="progress-positive"><span
+                                                id="bAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_1041307_ffffff.svg" alt="{{ site.t[page.language].nationalism }}"
+                                                        ></div>
+                    </div>
+
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_58179_ffffff.svg" alt="{{ site.t[page.language].communism }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].communism }}</span>
+                                    <span class="float-right">{{ site.t[page.language].capitalism }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="pAxisNeg" class="progress-negative"><span
+                                                id="pAxisNegText"></span></div>
+
+                                        <div id="pAxisMid" class="progress-mid"><span
+                                                id="pAxisMidText"></span></div>
+
+                                        <div id="pAxisPos" class="progress-positive"><span
+                                                id="pAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_1615934_ffffff.svg" alt="{{ site.t[page.language].capitalism }}"
+                                                        ></div>
+                    </div>
+
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_1009307_ffffff.svg" alt="{{ site.t[page.language].regulationism }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].regulationism }}</span>
+                                    <span class="float-right">{{ site.t[page.language].laissez_faire }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="mAxisNeg" class="progress-negative"><span
+                                                id="mAxisNegText"></span></div>
+
+                                        <div id="mAxisMid" class="progress-mid"><span
+                                                id="mAxisMidText"></span></div>
+
+                                        <div id="mAxisPos" class="progress-positive"><span
+                                                id="mAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_271026_ffffff.svg" alt="{{ site.t[page.language].laissez_faire }}"
+                                                        ></div>
+                    </div>
+
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_1667288_ffffff.svg" alt="{{ site.t[page.language].ecology }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].ecology }}</span>
+                                    <span class="float-right">{{ site.t[page.language].productivism }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="eAxisNeg" class="progress-negative"><span
+                                                id="eAxisNegText"></span></div>
+
+                                        <div id="eAxisMid" class="progress-mid"><span
+                                                id="eAxisMidText"></span></div>
+
+                                        <div id="eAxisPos" class="progress-positive"><span
+                                                id="eAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_563350_ffffff.svg" alt="{{ site.t[page.language].productivism }}"
+                                                        ></div>
+                    </div>
+
+                    <div class="d-flex result">
+                        <div class="icon icon-positive"><img src="{{ site.basepath }}/ikone/noun_862397_ffffff.svg" alt="{{ site.t[page.language].revo }}"
+                                                        ></div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="float-left">{{ site.t[page.language].revo }}</span>
+                                    <span class="float-right">{{ site.t[page.language].refo }}</span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="progress-bar">
+                                        <div id="tAxisNeg" class="progress-negative"><span
+                                                id="tAxisNegText"></span></div>
+
+                                        <div id="tAxisMid" class="progress-mid"><span
+                                                id="tAxisMidText"></span></div>
+
+                                        <div id="tAxisPos" class="progress-positive"><span
+                                                id="tAxisPosText"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="icon icon-negative"><img src="{{ site.basepath }}/ikone/noun_1236080_ffffff.svg" alt="{{ site.t[page.language].refo }}"
+                                                        ></div>
+                    </div>
 
 
-	<div id="anarBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/anarchism.png" alt="{{ site.t[page.language].anarchism }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_anarchism }}</p>
-		</div>
-	</div>
+                    <div class="columnContainer">
+                        <div class="columnLeft">
 
-	<div id="pragBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/pragmatism.png" alt="{{ site.t[page.language].pragmatism }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_pragmatism }}</p>
-		</div>
-	</div>
 
-	<div id="femiBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/feminism.png" alt="{{ site.t[page.language].feminism }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_feminism }}</p>
-		</div>
-	</div>
+                        </div>
+                        <br/>
 
-	<div id="compBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/complotism.png" alt="{{ site.t[page.language].complotism }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_complotism }}</p>
-		</div>
-	</div>
+                        <div class="navButtons">
+                            <a class="button" href="{{ site.basepath }}/{{ page.language }}/quiz">{{
+                                site.t[page.language].result_btn_redo }}</a>
+                        </div>
+                    </div>
+                </div>
 
-	<div id="vegaBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/veganism.png" alt="{{ site.t[page.language].veganism }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_veganism }}</p>
-		</div>
-	</div>
-	
-	<div id="monaBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/monarchism.png" alt="{{ site.t[page.language].monarchism }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_monarchism }}</p>
-		</div>
-	</div>
-	
-	<div id="reliBonus" class="description">
-		<div class="descImg"><img src="{{ site.basepath }}/images/religion.png" alt="{{ site.t[page.language].religion }}"/></div><!--
-		--><div class="descTextMono">
-			<p>{{ site.t[page.language].result_religion }}</p>
-		</div>
-	</div>
-</div>
+            </div>
+        </div>
+    </div>
 
-<div class="navButtons">
-	<a class="button" href="{{ site.basepath }}/{{ page.language }}/quiz">{{ site.t[page.language].result_btn_redo }}</a>
-</div>
 
-<script type="application/javascript" src="{{ site.basepath }}/flags.js"></script>
-<script>
-var urlToCopy = document.getElementById("urlToCopy")
-if(urlToCopy)
-{
-	urlToCopy.innerHTML = location.href;
-}
+    <script>
+        var urlToCopy = document.getElementById("urlToCopy")
+        if (urlToCopy) {
+            urlToCopy.innerHTML = location.href;
+        }
 
-function shareLink()
-{
-	var urlToCopy = document.getElementById("urlToCopy")
-	var urlToCopyContainer = document.getElementById("urlToCopyContainer")
-	if(urlToCopy && urlToCopyContainer)
-	{
-		urlToCopyContainer.style.display = "block";
-		var range = document.createRange();
-		range.selectNode(urlToCopy);
-		window.getSelection().addRange(range);
+        function shareLink() {
+            var urlToCopy = document.getElementById("urlToCopy")
+            var urlToCopyContainer = document.getElementById("urlToCopyContainer")
+            if (urlToCopy && urlToCopyContainer) {
+                urlToCopyContainer.style.display = "block";
+                var range = document.createRange();
+                range.selectNode(urlToCopy);
+                window.getSelection().addRange(range);
 
-		try
-		{
-			// Now that we've selected the anchor text, execute the copy command
-			//~ if(document.execCommand('copy'))
-			{
-				var button = document.getElementById("buttonLink")
-				if(button)
-				{
-					button.className = "button buttonLinkGood";
-					setTimeout(function()
-					{
-						var buttonTimeout = document.getElementById("buttonLink")
-						if(buttonTimeout)
-							button.className = "button buttonLink";
-					}, 2000);
-				}
-			}
-		} 
-		catch (err)
-		{
-			
-		}
-	}
-}
+                try {
+                    // Now that we've selected the anchor text, execute the copy command
+                    //~ if(document.execCommand('copy'))
+                    {
+                        var button = document.getElementById("buttonLink")
+                        if (button) {
+                            button.className = "button buttonLinkGood";
+                            setTimeout(function () {
+                                var buttonTimeout = document.getElementById("buttonLink")
+                                if (buttonTimeout)
+                                    button.className = "button buttonLink";
+                            }, 2000);
+                        }
+                    }
+                }
+                catch (err) {
 
-function getQueryVariable(variable)
-{
-	var query = window.location.search.substring(1);
-	var vars = query.split("&");
-	for(var i=0;i<vars.length;i++)
-	{
-		var pair = vars[i].split("=")
-		if(pair[0] == variable)
-		{
-			if(pair[1] == "NaN")
-			{
-				return 0
-			}
-			else
-			{
-				return pair[1]/100;
-			}
-		}
-	}
-	return 0;
-}
+                }
+            }
+        }
 
-function setAxisValue(name, value)
-{
-	var axis = document.getElementById(name)
-	if(!axis)
-		return
-	
-	var text = document.getElementById(name+"Text")
-	if(!text)
-		return
-	
-	axis.style.width = ((100*value).toFixed(1) + "%");
-	
-	text.innerHTML = ((100*value).toFixed(0) + "%");
-	if (text.offsetWidth > axis.offsetWidth)
-		text.style.visibility = "hidden";
-}
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=")
+                if (pair[0] == variable) {
+                    if (pair[1] == "NaN") {
+                        return 0
+                    }
+                    else {
+                        return pair[1] / 100;
+                    }
+                }
+            }
+            return 0;
+        }
 
-function setBonus(name, value, limit)
-{
-	axis = document.getElementById(name)
-	if(!axis)
-		return
-	
-	if(value > limit)
-	{
-		axis.style.display = "block";
-		axis.style.opacity = value*value;
-	}
-	else
-	{
-		axis.style.display = "none";
-	}
-}
+        function setAxisValue(name, value) {
+            var axis = document.getElementById(name)
+            if (!axis)
+                return
 
-axes = [
-	"c",
-	"b",
-	"p",
-	"m",
-	"s",
-	"j",
-	"e",
-	"t"
-]
+            var text = document.getElementById(name + "Text")
+            if (!text)
+                return
 
-bonus = {
-	anar: 0.9,
-	prag: 0.5,
-	femi: 0.9,
-	comp: 0.9,
-	vega: 0.5,
-	reli: 0.5,
-	mona: 0.5,
-}
+            axis.style.width = ((100 * value).toFixed(1) + "%");
 
-characteristics = []
+            value = (100 * value).toFixed(0);
 
-for(var i=0; i<axes.length; i++)
-{
-	negativeValue  = getQueryVariable(axes[i]+"0");
-	positiveValue  = getQueryVariable(axes[i]+"1");
-	setAxisValue(axes[i]+"AxisNeg", negativeValue);
-	setAxisValue(axes[i]+"AxisPos", positiveValue);
-	setAxisValue(axes[i]+"AxisMid", 1-negativeValue-positiveValue);
-	
-	if(negativeValue > positiveValue)
-	{
-		characteristics.push({ name: axes[i]+"0", value: negativeValue});
-	}
-	else
-	{
-		characteristics.push({ name: axes[i]+"1", value: positiveValue});
-	}
-}
+            if (value > 10) {
+                text.innerHTML = (value + "%");
+            }
 
-bonusEnabled = 0
-for(var b in bonus)
-{
-	
-	value = getQueryVariable(b);
-	
-	setBonus(b+"Bonus", value, bonus[b]);
-	
-	if(value > bonus[b])
-	{
-		bonusEnabled = 1;
-		characteristics.push({ name: b, value: value});
-	}
-}
+            /*  if (text.offsetWidth > axis.offsetWidth)
+                  text.style.visibility = "hidden";*/
+        }
 
-characteristics.sort(function(a, b)
-{
-	return a.value < b.value;
-});
+        function setBonus(name, value, limit) {
+            axis = document.getElementById(name)
+            if (!axis)
+                return
 
-charSlogan = {
-	c0: "{{ site.t[page.language].slogan_constructivism }}",
-	b0: "{{ site.t[page.language].slogan_internationalism }}",
-	b1: "{{ site.t[page.language].slogan_nationalism }}",
-	p0: "{{ site.t[page.language].slogan_communism }}",
-	p1: "{{ site.t[page.language].slogan_capitalism }}",
-	m1: "{{ site.t[page.language].slogan_laissez_faire }}",
-	s1: "{{ site.t[page.language].slogan_conservatism }}",
-	j0: "{{ site.t[page.language].slogan_justice_soft }}",
-	j1: "{{ site.t[page.language].slogan_justice_hard }}",
-	e0: "{{ site.t[page.language].slogan_ecology }}",
-	t0: "{{ site.t[page.language].slogan_revo }}"
-}
+            if (value > limit) {
+                axis.style.display = "block";
+                axis.style.opacity = value * value;
+            }
+            else {
+                axis.style.display = "none";
+            }
+        }
 
-function findFlagColors()
-{
-	colors = [];
-	
-	for(var i=0; i<flagColors.length; i++)
-	{
-		var accepted = 1;
-		
-		var mainValue = 0;
-		var mainValueFound = 0;
-	
-		for(var j=0; j<flagColors[i].cond.length; j++)
-		{
-			var charFound = 0;
-			for(var k=0; k<characteristics.length; k++)
-			{
-				if(characteristics[k].name == flagColors[i].cond[j].name)
-				{
-					charFound = 1;
-					if(characteristics[k].value < flagColors[i].cond[j].vmin || characteristics[k].value > flagColors[i].cond[j].vmax)
-						accepted = 0;
-					else if(!mainValueFound)
-					{
-						mainValueFound = 1;
-						mainValue = characteristics[k].value;
-					}
-					
-					break;
-				}
-			}
-			
-			if(!charFound)
-				accepted = 0;
-			
-			if(!accepted)
-				break;
-		}
-		
-		if(accepted)
-		{
-			colors.push({ bgColor: flagColors[i].bgColor, fgColor: flagColors[i].fgColor, value: mainValue });
-		}
-	}
-	
-	colors.sort(function(a, b) { return a.value < b.value; });
-	
-	return colors;
-}
+        axes = [
+            "c",
+            "b",
+            "p",
+            "m",
+            "s",
+            "j",
+            "e",
+            "t"
+        ]
 
-function findFlagShape(numColors)
-{
-	for(var i=0; i<flagShapes.length; i++)
-	{
-		var accepted = 1;
-		
-		if(flagShapes[i].numColors > numColors)
-			accepted = 0;
-		else
-		{
-			for(var j=0; j<flagShapes[i].cond.length; j++)
-			{
-				var charFound = 0;
-				for(var k=0; k<characteristics.length; k++)
-				{
-					if(characteristics[k].name == flagShapes[i].cond[j].name)
-					{
-						charFound = 1;
-						if(characteristics[k].value < flagShapes[i].cond[j].vmin || characteristics[k].value > flagShapes[i].cond[j].vmax)
-							accepted = 0;
-						
-						break;
-					}
-				}
-				
-				if(!charFound)
-					accepted = 0;
-				
-				if(!accepted)
-					break;
-			}
-		}
-		
-		if(accepted)
-			return i;
-	}
-	
-	return -1;
-}
+        bonus = {
+            anar: 0.9,
+            prag: 0.5,
+            femi: 0.9,
+            comp: 0.9,
+            vega: 0.5,
+            reli: 0.5,
+            mona: 0.5,
+        }
 
-function findFlagSymbol()
-{
-	for(var i=0; i<flagSymbols.length; i++)
-	{
-		var accepted = 1;
-		
-		for(var j=0; j<flagSymbols[i].cond.length; j++)
-		{
-			var charFound = 0;
-			for(var k=0; k<characteristics.length; k++)
-			{
-				if(characteristics[k].name == flagSymbols[i].cond[j].name)
-				{
-					charFound = 1;
-					if(characteristics[k].value < flagSymbols[i].cond[j].vmin || characteristics[k].value > flagSymbols[i].cond[j].vmax)
-						accepted = 0;
-					
-					break;
-				}
-			}
-			
-			if(!charFound)
-				accepted = 0;
-			
-			if(!accepted)
-				break;
-		}
-		
-		if(accepted)
-			return flagSymbols[i].id;
-	}
-	
-	return -1;
-}
+        characteristics = []
 
-generatedSlogan = "";
-sloganDiv = document.getElementById("slogan");
-if(sloganDiv)
-{
-	selectedSlogan = []
-	
-	for(var i=0; i<characteristics.length; i++)
-	{
-		if(characteristics[i].value > 0 && charSlogan.hasOwnProperty(characteristics[i].name))
-		{
-			selectedSlogan.push({ text: charSlogan[characteristics[i].name], value: characteristics[i].value });
-		}
-	}
-	
-	selectedSlogan.sort(function(a, b) { return a.value < b.value; });
-	
-	var counter = 0;
-	for(var i=0; i<selectedSlogan.length; i++)
-	{
-		if(generatedSlogan != "")
-			generatedSlogan += " · ";
-		generatedSlogan += selectedSlogan[i].text;
-		counter++;
-		
-		if(counter >= 3)
-			break;
-	}
-	
-	sloganDiv.innerHTML = generatedSlogan;
-}
+        for (var i = 0; i < axes.length; i++) {
+            negativeValue = getQueryVariable(axes[i] + "0");
+            positiveValue = getQueryVariable(axes[i] + "1");
+            setAxisValue(axes[i] + "AxisNeg", negativeValue);
+            setAxisValue(axes[i] + "AxisPos", positiveValue);
+            setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
 
-if(!bonusEnabled)
-{
-	bonusBox = document.getElementById("bonusBox")
-	bonusBox.style.display = "none";
-}
+            if (negativeValue > positiveValue) {
+                characteristics.push({name: axes[i] + "0", value: negativeValue});
+            }
+            else {
+                characteristics.push({name: axes[i] + "1", value: positiveValue});
+            }
+        }
 
-twitterButton = document.getElementById("buttonTwitter")
-if(twitterButton)
-{
-	var text = "{{ site.t[page.language].share_twitter }}".replace("%slogan%", generatedSlogan);
-	twitterButton.href = "https://twitter.com/intent/tweet?text="+encodeURIComponent(text+" ")+encodeURIComponent(location.href);
-}
+        bonusEnabled = 0
+        for (var b in bonus) {
 
-redditButton = document.getElementById("buttonReddit")
-if(redditButton)
-{
-	var text = "{{ site.t[page.language].share_reddit }}".replace("%slogan%", generatedSlogan);
-	redditButton.href = "http://www.reddit.com/submit?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent(text);
-}
+            value = getQueryVariable(b);
 
-var sprites = new Image();
-sprites.src = '{{ site.basepath }}/images/flag_sprites.png';
+            setBonus(b + "Bonus", value, bonus[b]);
 
-function shareFacebook()
-{
-	uri = location.href;
-	
-	FB.ui({
-	method: 'share',
-	hashtag: '#PolitiScales',
-	quote: "{{ site.t[page.language].share_facebook }}".replace("%slogan%", generatedSlogan),
-	href: uri,
-	}, function(response){});
-}
+            if (value > bonus[b]) {
+                bonusEnabled = 1;
+                characteristics.push({name: b, value: value});
+            }
+        }
 
-sprites.onload = function()
-{
-	flag = document.getElementById("generatedFlag");
-	if(flag)
-	{
-		var ctx = flag.getContext("2d");
-		
-		var spriteX = 256;
-		var spriteY = 128;
-		var spriteS = 1.0;
-		
-		var symbolId = findFlagSymbol();
-		var colors = findFlagColors();
-		
-		if(colors.length <= 0)
-			colors.push({ bgColor: "#ffffff", fgColor: "#000000" });
-		
-		var flagId = findFlagShape(colors.length);
-		
-		if(flagId < 0)
-		{
-			ctx.beginPath();
-			ctx.rect(0, 0, 512, 256);
-			ctx.fillStyle = "#ffffff";
-			ctx.fill();
-		}
-		else
-		{
-			for(var i=0; i<flagShapes[flagId].shapes.length; i++)
-			{
-				var path = flagShapes[flagId].shapes[i];
-				var numPoints = path.length/2;
-				
-				ctx.beginPath();
-				ctx.moveTo(path[1]*512, path[2]*256);
-				
-				for(var j=1; j<numPoints; j++)
-				{
-					ctx.lineTo(path[1+j*2+0]*512, path[1+j*2+1]*256);
-				}
-				ctx.fillStyle = colors[path[0]].bgColor;
-				ctx.fill();
-			}
-			
-			spriteX = flagShapes[flagId].symbol[0]*512;
-			spriteY = flagShapes[flagId].symbol[1]*256;
-			spriteS = flagShapes[flagId].symbol[2];
-		}
-		
-		if(symbolId >= 0)
-		{
-			var tmpC = document.createElement('canvas');
-			tmpC.width = sprites.width;
-			tmpC.height = sprites.height;
-			var tmpCtx = tmpC.getContext('2d');
-			var coloredSprites = tmpCtx.getImageData(0, 0, tmpC.width, tmpC.height);
-			
-			tmpCtx.beginPath();
-			tmpCtx.rect(0, 0, tmpC.width, tmpC.height);
-			tmpCtx.fillStyle = colors[0].fgColor;
-			tmpCtx.fill();
-			
-			tmpCtx.globalCompositeOperation = "destination-in";
-			tmpCtx.drawImage(sprites, 0, 0);
-			
-			ctx.drawImage(tmpC, symbolId*128, 0, 128, 128, spriteX-64*spriteS, spriteY-64*spriteS, 128*spriteS, 128*spriteS);
-		}
-	}
-}
+        characteristics.sort(function (a, b) {
+            return a.value < b.value;
+        });
 
-</script>
+        charSlogan = {
+            c0: "{{ site.t[page.language].slogan_constructivism }}",
+            b0: "{{ site.t[page.language].slogan_internationalism }}",
+            b1: "{{ site.t[page.language].slogan_nationalism }}",
+            p0: "{{ site.t[page.language].slogan_communism }}",
+            p1: "{{ site.t[page.language].slogan_capitalism }}",
+            m1: "{{ site.t[page.language].slogan_laissez_faire }}",
+            s1: "{{ site.t[page.language].slogan_conservatism }}",
+            j0: "{{ site.t[page.language].slogan_justice_soft }}",
+            j1: "{{ site.t[page.language].slogan_justice_hard }}",
+            e0: "{{ site.t[page.language].slogan_ecology }}",
+            t0: "{{ site.t[page.language].slogan_revo }}"
+        }
 
-{% include footer.html %}
+        function findFlagColors() {
+            colors = [];
+
+            for (var i = 0; i < flagColors.length; i++) {
+                var accepted = 1;
+
+                var mainValue = 0;
+                var mainValueFound = 0;
+
+                for (var j = 0; j < flagColors[i].cond.length; j++) {
+                    var charFound = 0;
+                    for (var k = 0; k < characteristics.length; k++) {
+                        if (characteristics[k].name == flagColors[i].cond[j].name) {
+                            charFound = 1;
+                            if (characteristics[k].value < flagColors[i].cond[j].vmin || characteristics[k].value > flagColors[i].cond[j].vmax)
+                                accepted = 0;
+                            else if (!mainValueFound) {
+                                mainValueFound = 1;
+                                mainValue = characteristics[k].value;
+                            }
+
+                            break;
+                        }
+                    }
+
+                    if (!charFound)
+                        accepted = 0;
+
+                    if (!accepted)
+                        break;
+                }
+
+                if (accepted) {
+                    colors.push({bgColor: flagColors[i].bgColor, fgColor: flagColors[i].fgColor, value: mainValue});
+                }
+            }
+
+            colors.sort(function (a, b) {
+                return a.value < b.value;
+            });
+
+            return colors;
+        }
+
+        function findFlagShape(numColors) {
+            for (var i = 0; i < flagShapes.length; i++) {
+                var accepted = 1;
+
+                if (flagShapes[i].numColors > numColors)
+                    accepted = 0;
+                else {
+                    for (var j = 0; j < flagShapes[i].cond.length; j++) {
+                        var charFound = 0;
+                        for (var k = 0; k < characteristics.length; k++) {
+                            if (characteristics[k].name == flagShapes[i].cond[j].name) {
+                                charFound = 1;
+                                if (characteristics[k].value < flagShapes[i].cond[j].vmin || characteristics[k].value > flagShapes[i].cond[j].vmax)
+                                    accepted = 0;
+
+                                break;
+                            }
+                        }
+
+                        if (!charFound)
+                            accepted = 0;
+
+                        if (!accepted)
+                            break;
+                    }
+                }
+
+                if (accepted)
+                    return i;
+            }
+
+            return -1;
+        }
+
+        function findFlagSymbol() {
+            for (var i = 0; i < flagSymbols.length; i++) {
+                var accepted = 1;
+
+                for (var j = 0; j < flagSymbols[i].cond.length; j++) {
+                    var charFound = 0;
+                    for (var k = 0; k < characteristics.length; k++) {
+                        if (characteristics[k].name == flagSymbols[i].cond[j].name) {
+                            charFound = 1;
+                            if (characteristics[k].value < flagSymbols[i].cond[j].vmin || characteristics[k].value > flagSymbols[i].cond[j].vmax)
+                                accepted = 0;
+
+                            break;
+                        }
+                    }
+
+                    if (!charFound)
+                        accepted = 0;
+
+                    if (!accepted)
+                        break;
+                }
+
+                if (accepted)
+                    return flagSymbols[i].id;
+            }
+
+            return -1;
+        }
+
+        generatedSlogan = "";
+        sloganDiv = document.getElementById("slogan");
+        if (sloganDiv) {
+            selectedSlogan = []
+
+            for (var i = 0; i < characteristics.length; i++) {
+                if (characteristics[i].value > 0 && charSlogan.hasOwnProperty(characteristics[i].name)) {
+                    selectedSlogan.push({text: charSlogan[characteristics[i].name], value: characteristics[i].value});
+                }
+            }
+
+            selectedSlogan.sort(function (a, b) {
+                return a.value < b.value;
+            });
+
+            var counter = 0;
+            for (var i = 0; i < selectedSlogan.length; i++) {
+                if (generatedSlogan != "")
+                    generatedSlogan += " · ";
+                generatedSlogan += selectedSlogan[i].text;
+                counter++;
+
+                if (counter >= 3)
+                    break;
+            }
+
+            sloganDiv.innerHTML = generatedSlogan;
+        }
+
+        if (!bonusEnabled) {
+            bonusBox = document.getElementById("bonusBox")
+            bonusBox.style.display = "none";
+        }
+
+        twitterButton = document.getElementById("buttonTwitter")
+        if (twitterButton) {
+            var text = "{{ site.t[page.language].share_twitter }}".replace("%slogan%", generatedSlogan);
+            twitterButton.href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text + " ") + encodeURIComponent(location.href);
+        }
+
+        redditButton = document.getElementById("buttonReddit")
+        if (redditButton) {
+            var text = "{{ site.t[page.language].share_reddit }}".replace("%slogan%", generatedSlogan);
+            redditButton.href = "http://www.reddit.com/submit?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(text);
+        }
+
+        var sprites = new Image();
+        sprites.src = '{{ site.basepath }}/images/flag_sprites.png';
+
+        function shareFacebook() {
+            uri = location.href;
+
+            FB.ui({
+                method: 'share',
+                hashtag: '#PolitiScales',
+                quote: "{{ site.t[page.language].share_facebook }}".replace("%slogan%", generatedSlogan),
+                href: uri,
+            }, function (response) {
+            });
+        }
+
+        sprites.onload = function () {
+            flag = document.getElementById("generatedFlag");
+            if (flag) {
+                var ctx = flag.getContext("2d");
+
+                var spriteX = 256;
+                var spriteY = 128;
+                var spriteS = 1.0;
+
+                var symbolId = findFlagSymbol();
+                var colors = findFlagColors();
+
+                if (colors.length <= 0)
+                    colors.push({bgColor: "#ffffff", fgColor: "#000000"});
+
+                var flagId = findFlagShape(colors.length);
+
+                if (flagId < 0) {
+                    ctx.beginPath();
+                    ctx.rect(0, 0, 512, 256);
+                    ctx.fillStyle = "#ffffff";
+                    ctx.fill();
+                }
+                else {
+                    for (var i = 0; i < flagShapes[flagId].shapes.length; i++) {
+                        var path = flagShapes[flagId].shapes[i];
+                        var numPoints = path.length / 2;
+
+                        ctx.beginPath();
+                        ctx.moveTo(path[1] * 512, path[2] * 256);
+
+                        for (var j = 1; j < numPoints; j++) {
+                            ctx.lineTo(path[1 + j * 2 + 0] * 512, path[1 + j * 2 + 1] * 256);
+                        }
+                        ctx.fillStyle = colors[path[0]].bgColor;
+                        ctx.fill();
+                    }
+
+                    spriteX = flagShapes[flagId].symbol[0] * 512;
+                    spriteY = flagShapes[flagId].symbol[1] * 256;
+                    spriteS = flagShapes[flagId].symbol[2];
+                }
+
+                if (symbolId >= 0) {
+                    var tmpC = document.createElement('canvas');
+                    tmpC.width = sprites.width;
+                    tmpC.height = sprites.height;
+                    var tmpCtx = tmpC.getContext('2d');
+                    var coloredSprites = tmpCtx.getImageData(0, 0, tmpC.width, tmpC.height);
+
+                    tmpCtx.beginPath();
+                    tmpCtx.rect(0, 0, tmpC.width, tmpC.height);
+                    tmpCtx.fillStyle = colors[0].fgColor;
+                    tmpCtx.fill();
+
+                    tmpCtx.globalCompositeOperation = "destination-in";
+                    tmpCtx.drawImage(sprites, 0, 0);
+
+                    ctx.drawImage(tmpC, symbolId * 128, 0, 128, 128, spriteX - 64 * spriteS, spriteY - 64 * spriteS, 128 * spriteS, 128 * spriteS);
+                }
+            }
+        }
+
+    </script>
+
