@@ -1,26 +1,51 @@
-{% include header.html %}
+---
+layout: default
+title: Kviz
+language: sl_SI
+redirect_from: "/help.html"
+---
 
-<h2 id="question-number">{{ site.t[page.language].quiz_loading }}</h2>
-<div class="questionBox">
-	<div>
-		<p id="question-text"></p>
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-md-6 col-lg-4">
+			{% include sidebar.html %}
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
+			<div class="card card-question w-100">
+				<div class="card-body text-center p-5">
+
+					<!--  	<div class="progress">
+						<div class="d-flex">
+							<div>{{ site.t[page.language].quiz_loading }}</div>
+						</div>
+					</div> -->
+
+					<!--  <h2 id="question-number">{{ site.t[page.language].quiz_loading }}</h2> -->
+					<div class="questionBox">
+						<div>
+							<p id="question-text"></p>
+						</div>
+					</div>
+
+					<div class="navButtons answers">
+						<button class="buttonQuestion" onclick="next_question(1)"><div class="circle"></div>{{ site.t[page.language].quiz_btn_yes1 }}</button>
+						<button class="buttonQuestion" onclick="next_question(2/3)"><div class="circle"></div>{{ site.t[page.language].quiz_btn_yes0 }}</button>
+						<button class="buttonQuestion" onclick="next_question(0)"><div class="circle"></div>{{ site.t[page.language].quiz_btn_neutral }}</button>
+						<button class="buttonQuestion" onclick="next_question(-2/3)"><div class="circle"></div>{{ site.t[page.language].quiz_btn_no0 }}</button>
+						<button class="buttonQuestion" onclick="next_question(-1)"><div class="circle"></div>{{ site.t[page.language].quiz_btn_no1 }}</button>
+					</div>
+
+					<div class="mt-5 text-center">
+						<button class="btn btn-link" onclick="prev_question()" id="back_button">{{ site.t[page.language].quiz_btn_back_q }}</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</div>
 </div>
-<div class="navButtons">
-	<button class="buttonQuestion" onclick="next_question(1)" style="background-color: #1b5e20;">{{ site.t[page.language].quiz_btn_yes1 }}</button>
-	<button class="buttonQuestion" onclick="next_question(2/3)" style="background-color: #4caf50;">{{ site.t[page.language].quiz_btn_yes0 }}</button>
-	<button class="buttonQuestion" onclick="next_question(0)" style="background-color: #bbbbbb;">{{ site.t[page.language].quiz_btn_neutral }}</button>
-	<button class="buttonQuestion" onclick="next_question(-2/3)" style="background-color: #f44336;">{{ site.t[page.language].quiz_btn_no0 }}</button>
-	<button class="buttonQuestion" onclick="next_question(-1)" style="background-color: #b71c1c;">{{ site.t[page.language].quiz_btn_no1 }}</button>
-</div>
 
-<div class="navButtons">
-	<button class="button" onclick="prev_question()" id="back_button">{{ site.t[page.language].quiz_btn_back_q }}</button>
-	<button class="button" onclick="location.href='{{ site.basepath }}/{{ page.language }}/';" id="back_button_off">{{ site.t[page.language].quiz_btn_back_i }}</button>
-</div>
-<div class="navButtons">
-	<button class="button" onclick="simulate()">{{ site.t[page.language].quiz_btn_random }}</button>
-</div>
 
 <script>
 questions = [

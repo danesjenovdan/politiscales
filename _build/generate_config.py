@@ -5,7 +5,8 @@ filename = "_build/_config_tpl.yml"
 
 languages = {
 	"en_US": "English",
-	"fr_FR": "Français"
+	"fr_FR": "Français",
+	"sl_SI": "Slovenščina"
 }
 
 with open(filename, 'r') as f:

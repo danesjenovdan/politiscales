@@ -1,0 +1,123 @@
+---
+---
+
+$enable-rounded: false;
+
+$primary: #4d65cd;
+$secondary: #f5adaf;
+$font-family-sans-serif: 'Barlow', sans-serif;
+
+$input-btn-padding-y: 0.875rem;
+$input-btn-padding-x: 1.25rem;
+$input-btn-border-width: 3px;
+
+$blue: #4d65cd;
+$blueLight: #91b2fe;
+$gray: #979797;
+$redLight: #f58184;
+$red: #f6333b;
+
+// start content
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  overflow: auto;
+  background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 2rem 0;
+
+  .circle
+  {
+    display: block;
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+    float: left;
+    margin-right: 2rem;
+  }
+
+  button {
+    text-align: left;
+    background: transparent;
+    letter-spacing: 1px;
+    color: #3c3c3c;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .57);
+
+    &:nth-child(1)
+    {
+      .circle {
+        background: $blue;
+      }
+    }
+    &:nth-child(2)
+    {
+      .circle {
+        background: $blueLight;
+      }
+    }
+    &:nth-child(3)
+    {
+      .circle {
+        background: $gray;
+      }
+    }
+    &:nth-child(4)
+    {
+      .circle {
+        background: $redLight;
+      }
+    }
+    &:nth-child(5)
+    {
+      .circle {
+        background: $red;
+      }
+    }
+  }
+}
+
+#question-text {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.15;
+  letter-spacing: 15px;
+  font-weight: bold;
+  color: $primary;
+  word-break: break-all;
+  text-transform: uppercase;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.btn-primary {
+  color: $secondary;
+}
+
+.btn-secondary {
+  border: $input_btn-border-width solid $primary;
+  color: $primary;
+}

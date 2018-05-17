@@ -4,6 +4,10 @@ basepath:
 plugins:
   - jekyll-redirect-from
 
+sass:
+  sass_dir: css
+  style: compressed
+
 collections:
 	{{BUILD.LANGUAGES}}
 
