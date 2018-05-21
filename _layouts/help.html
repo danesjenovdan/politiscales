@@ -1,99 +1,248 @@
-{% include header.html %}
+---
+layout: default
+title: Kaj pomenijo rezultate
+language: sl_SI
+---
 
-<h2></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+            {% include sidebar.html %}
+        </div>
+        <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        <h1>Razlaga rezultatov</h1>
 
-<h2>{{ site.t[page.language].help_whois }}</h2>
 
-<p class="simpleText">{{ site.t[page.language].help_desc }}</p>
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
 
-<h2>{{ site.t[page.language].constructivism }} / {{ site.t[page.language].essentialism }}</h2>
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_164808_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1333114_ffffff.svg" alt="">
+                                    </div>
+                                </div>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/constructivism.png" alt="{{ site.t[page.language].constructivism }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_constructivism1 }}</p><!--
-	--><p>{{ site.t[page.language].help_constructivism2 }}</p><!--
-	--><p>{{ site.t[page.language].help_constructivism3 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/essentialism.png" alt="{{ site.t[page.language].essentialism }}" class="descImgRight"/></div><!--
---></div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Konstruktivizem / esencializem</h3>
 
-<h2>{{ site.t[page.language].justice_soft }} / {{ site.t[page.language].justice_hard }}</h2>
+                                <p>Zakaj so ljudje takšni, kot so? Ta os ti omogoča umestitev med dva nasprotujoča si
+                                    pola, ki odgovarjata na to vprašanje.</p>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/justice_soft.png" alt="{{ site.t[page.language].justice_soft }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_justice1 }}</p><!--
-	--><p>{{ site.t[page.language].help_justice2 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/justice_hard.png" alt="{{ site.t[page.language].justice_hard }}" class="descImgRight"/></div><!--
---></div>
+                                <p>Konstruktivisti menijo, da so ljudje produkt svojega (predvsem družbenega) okolja in
+                                    da so lastnosti, ki jih definirajo, pridobljene.</p>
 
-<h2>{{ site.t[page.language].progressism }} / {{ site.t[page.language].conservatism }}</h2>
+                                <p>Po drugi strani pa esencialisti menijo, da je posameznik/-ca takšen/-na, kot je, po
+                                    naravi in da so lastnosti, ki ga/jo definirajo, prirojene.</p>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/progressism.png" alt="{{ site.t[page.language].progressism }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_progressism1 }}</p><!--
-	--><p>{{ site.t[page.language].help_progressism2 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/conservatism.png" alt="{{ site.t[page.language].conservatism }}" class="descImgRight"/></div><!--
---></div>
+                            </div>
+                        </div>
 
-<h2>{{ site.t[page.language].internationalism }} / {{ site.t[page.language].nationalism }}</h2>
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1570221_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_394344_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Rehabilitacija / kaznovanje
+                                </h3>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/internationalism.png" alt="{{ site.t[page.language].internationalism }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_internationalism1 }}</p><!--
-	--><p>{{ site.t[page.language].help_internationalism2 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/nationalism.png" alt="{{ site.t[page.language].nationalism }}" class="descImgRight"/></div><!--
---></div>
+                                <p>Tisti, ki verjamejo v rehabilitacijsko politiko, verjamejo, da je vloga kazenskega
+                                    prava usmerjanje obsojenih nazaj na “pravo pot”. Pri tem jim poskušajo pomagati in
+                                    stati ob strani na poti razumevanja, zakaj ne bi smeli storiti, kar so storili, ter
+                                    zakaj so bili obsojeni.</p>
 
-<h2>{{ site.t[page.language].communism }} / {{ site.t[page.language].capitalism }}</h2>
+                                <p>Po drugi strani tisti, ki verjamejo v kaznovalno politiko, verjamejo, da je vloga
+                                    kazenskega prava odvračanje, tako obsojencev (skozi izogibanje recidivizmu oz.
+                                    “povratništvu”) kot tudi za večinsko družbo (skozi postavljanje “negativnega
+                                    zgleda”, ki se mu ne splača slediti).</p>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/communism.png" alt="{{ site.t[page.language].communism }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_communism1 }}</p><!--
-	--><p>{{ site.t[page.language].help_communism2 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/capitalism.png" alt="{{ site.t[page.language].capitalism }}" class="descImgRight"/></div><!--
---></div>
+                            </div>
+                        </div>
 
-<h2>{{ site.t[page.language].regulationism }} / {{ site.t[page.language].laissez_faire }}</h2>
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1262992_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_671007_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Progresivnost / konzervativnost
+                                </h3>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/regulation.png" alt="{{ site.t[page.language].regulationism }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_regulationism1 }}</p><!--
-	--><p>{{ site.t[page.language].help_regulationism2 }}</p><!--
-	--><p>{{ site.t[page.language].help_regulationism3 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/laissezfaire.png" alt="{{ site.t[page.language].laissez_faire }}" class="descImgRight"/></div><!--
---></div>
+                                <p>Progresivci poskušajo graditi družbeni napredek in izboljšati družbo neoziraje se na
+                                    tradicije. Pogosto sedanjost vidijo kot boljšo od preteklosti, zato menijo, da je
+                                    treba vztrajati na tej poti.</p>
 
-<h2>{{ site.t[page.language].ecology }} / {{ site.t[page.language].productivism }}</h2>
+                                <p>Po drugi strani konzervativci želijo obdržati status quo in celo povrniti nekatere
+                                    vrednote, ki so že izginile ali izginjajo. Tradicije, kot je npr. religiozna
+                                    dediščina, predstavljajo kot vir modrosti.</p>
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/ecology.png" alt="{{ site.t[page.language].ecology }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_ecology1 }}</p><!--
-	--><p>{{ site.t[page.language].help_ecology2 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/productivism.png" alt="{{ site.t[page.language].productivism }}" class="descImgRight"/></div><!--
---></div>
+                            </div>
+                        </div>
 
-<h2>{{ site.t[page.language].revo }} / {{ site.t[page.language].refo }}</h2>
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_977265_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1041307_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Internacionalizem / nacionalizem
 
-<div class="description"><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/revolution.png" alt="{{ site.t[page.language].revo }}"/></div><!--
---><div class="descText"><!--
-	--><p>{{ site.t[page.language].help_revo1 }}</p><!--
-	--><p>{{ site.t[page.language].help_revo2 }}</p><!--
---></div><!--
---><div class="descImg"><img src="{{ site.basepath }}/images/reformism.png" alt="{{ site.t[page.language].refo }}" class="descImgRight"/></div><!--
---></div>
+                                </h3>
 
-{% include footer.html %}
+                                <p>Internacionalizem je zbir raznolikih idej, ki jim je skupno to, da želijo ukiniti
+                                    hierarhije med državami in njihovimi prebivalci in kar najbolj promovirati
+                                    sodelovanje. Internacionalizem v svoji najbolj radikalni obliki kot ultimativni cilj
+                                    postavlja ukinitev državnih mej.</p>
+
+                                <p>Po drugi strani je nacionalizem zbir raznolikih idej, ki favorizirajo državo in njene
+                                    prebivalce napram tujcem. Nacionalizem upravičuje idejo, da narodu pripada tudi
+                                    država.</p>
+                            </div>
+                        </div>
+
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_58179_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1615934_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Komunizem / kapitalizem
+
+
+                                </h3>
+
+                                <p>Komunizem je obsežna politična doktrina; v tem testu pa označuje idejo, da bi morala
+                                    biti produkcijska sredstva v javni lasti.</p>
+                                <p>Kapitalizem, prav tako ambivalenten koncept, v tem testu označuje idejo, da bi morala
+                                    biti produkcijska sredstva v zasebni lasti.</p></div>
+                        </div>
+
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1009307_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_271026_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Regulacija / laissez-faire
+
+
+                                </h3>
+
+                                <p>Na tej osi se opredeliš do tega, kakšen odnos naj bi imela vlada do tržne ekonomije,
+                                    v kateri je pomemben del produkcijskih sredstev zaseben. Liberalci in keynesianci
+                                    nasprotujejo to the method that needs to be adopted without putting into question
+                                    capitalism. Če se na prejšnji osi pozicioniraš bolj kot podpornik/-ca kapitalizma,
+                                    ta os zate predstavlja tvoj cilj v kontekstu gospodarstva. Če se na prejšnji osi
+                                    pozicioniraš bolj kot podpornik/-ca komunizma, pa ta os zate predstavlja the least
+                                    bad that you can expect of the current system.</p>
+
+                                <p>Regulacionizem ali intervecionizem je zamisel, da bi morale biti gospodarske
+                                    dejavnosti regulirane v smeri skupnega interesa. Regulacija se lahko dogaja skozi
+                                    zakonodajo, načrtovanje, subvencije, variabilno obdavčenje ...</p>
+
+
+                                <p>Po drugi strani je laissez-faire zamisel, da gospodarske aktivnosti ne bi smele biti
+                                    regulirane, saj same po sebi ustrezajo skupnemu interesu. Laissez-faire se lahko
+                                    uveljavlja skozi šibko zakonodajo, z malo ali brez subvencij, s fiksnim
+                                    obdavčevanjem in šibko vlogo države v gospodarstvu ali celo njenim popolnim
+                                    umikom.</p>
+
+                            </div>
+                        </div>
+
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1667288_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_563350_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Ekologija / produktivnost
+                                </h3>
+
+                                <p>Ekološke politike privilegirajo zaščito okolja z omejevanjem človeških aktivnosti in
+                                    vplivov na biodiverziteto, četudi to implicira bolj ali manj radikalno spreminjanje
+                                    obstoječega načina življenja.</p>
+                                <p>Produktivnost privilegira človeške potrebe in podpira povečanje produkcije ali
+                                    uporabo metod, ki imajo negotov vpliv na okolje.</p>
+
+
+                            </div>
+                        </div>
+
+                        <div class="row help-section">
+                            <div class="col-12 col-md-3">
+                                <div class="help-circle">
+                                    <div class="top-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_862397_ffffff.svg" alt="">
+                                    </div>
+                                    <div class="bottom-circle">
+                                        <img src="{{ site.basepath }}/ikone/noun_1236080_ffffff.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3>Revolucija / reformizem
+                                </h3>
+
+                                <p>Revolucionarji imajo tendenco, da za doseganje svojih ciljev preferirajo direktno
+                                    akcijo, ki je pogosto na robu legalnosti. Njihov glavni cilj pa je zamenjati
+                                    trenutno politično organizacijo oz. sistem za nekaj popolnoma drugega.</p>
+
+                                <p>Reformisti imajo tendenco, da za doseganje svojih ciljev privilegirajo pravno
+                                    delovanje in želijo politično organizacijo oz. sistem definirati korak po koraku. To
+                                    lahko počnejo skozi institucije, s pomočjo volitev, prijavljenih demonstracij,
+                                    peticij …</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

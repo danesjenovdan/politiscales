@@ -101,6 +101,13 @@ h1 {
   text-transform: uppercase;
 }
 
+#quiz-progress {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: -10px;
+  color: $primary;
+}
+
 .btn {
   text-transform: uppercase;
   font-weight: bold;
@@ -127,15 +134,13 @@ h1 {
 .progress {
   height: 3px;
   background: #d7d7d7;
-  #bar
-  {
+  #bar {
     height: 100%;
     background: $primary;
   }
 }
 
-#question-text
-{
+#question-text {
   min-height: 150px;
 }
 
@@ -195,3 +200,50 @@ h1 {
   height: 64px;
   width: 64px;
 }
+
+.help-section {
+  border-bottom: 1px solid $redLight;
+  h3 {
+    color: $redLight;
+  }
+
+  .help-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: $redLight;
+    border-radius: 100%;
+    transform: scale(1.2);
+    margin: 0 auto;
+    margin-top: 40px;
+
+    .bottom-circle {
+      img {
+        width: 30px;
+        position: absolute;
+        right: 15px;
+        top: 50px;
+      }
+    }
+
+    .top-circle {
+      width: 100%;
+      height: 50%;
+      background: $blueLight;
+      border-radius: 150px 150px 0 0;
+      transform: rotate(-45deg);
+      position: absolute;
+      left: -18px;
+      top: 7px;
+
+      img {
+        width: 35px;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 7px;
+        right: 35px;
+      }
+    }
+  }
+}
+

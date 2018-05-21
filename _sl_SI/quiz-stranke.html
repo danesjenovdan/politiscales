@@ -14,55 +14,28 @@ redirect_from: "/help.html"
         <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
             <div class="card card-question w-100">
                 <div class="card-body text-center p-5">
+                        <h2>Kje so stranke?</h2>
 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda, autem deserunt dicta dolore dolorum ducimus hic id, incidunt ipsam libero minima molestiae molestias mollitia numquam possimus rem, vitae! Nisi.</p>
 
-                    <div class="d-flex">
-                        <div>
-                            <div id="quiz-progress"></div>
-                        </div>
-                        <div class="col">
-                            <div class="progress">
-                                <div id="bar"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <!--
 
-                    <div class="questionBox">
-                        <div>
-                            <p id="question-text"></p>
-                        </div>
-                    </div>
-
-                    <div class="navButtons answers">
-                        <button class="buttonQuestion" onclick="next_question(1)">
-                            <div class="circle"></div>
-                            {{ site.t[page.language].quiz_btn_yes1 }}
-                        </button>
-                        <button class="buttonQuestion" onclick="next_question(2/3)">
-                            <div class="circle"></div>
-                            {{ site.t[page.language].quiz_btn_yes0 }}
-                        </button>
-                        <button class="buttonQuestion" onclick="next_question(0)">
-                            <div class="circle"></div>
-                            {{ site.t[page.language].quiz_btn_neutral }}
-                        </button>
-                        <button class="buttonQuestion" onclick="next_question(-2/3)">
-                            <div class="circle"></div>
-                            {{ site.t[page.language].quiz_btn_no0 }}
-                        </button>
-                        <button class="buttonQuestion" onclick="next_question(-1)">
-                            <div class="circle"></div>
-                            {{ site.t[page.language].quiz_btn_no1 }}
-                        </button>
-                    </div>
-
-                    <div class="mt-5 text-center">
-                        <button class="btn btn-link" onclick="prev_question()" id="back_button">{{
-                            site.t[page.language].quiz_btn_back_q }}
-                        </button>
-                        <button class="button" onclick="simulate()">{{ site.t[page.language].quiz_btn_random }}</button>
-
-                    </div>
+                     onchange="location = this.value;">
+ <option value="Home.php">Home</option>
+ <option value="Contact.php">Contact</option>
+ <option value="Sitemap.php">Sitemap</option>
+</select>
+                     -->
+                    <select class="form-control" onchange="location = this.value;">
+                        <option value="?csv=ANDREJ ČUŠ IN ZELENI SLOVENIJE.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE.csv</option>
+                        <option value="?csv=DEMOKRATIČNA STRANKA UPOKOJENCEV.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV.csv</option>
+                        <option value="?csv=LEVICA.csv">LEVICA.csv</option>
+                        <option value="?csv=NAPREJ SLOVENIJA.csv">NAPREJ SLOVENIJA.csv</option>
+                        <option value="?csv=NOVA SLOVENIJA KRŠČANSKI DEMOKRATI.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI.csv</option>
+                        <option value="?csv=PIRATSKA STRANKA SLOVENIJE.csv">PIRATSKA STRANKA SLOVENIJE.csv</option>
+                        <option value="?csv=SOLIDARNOST, ZA PRAVIČNO DRUŽBO.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO.csv</option>
+                        <option value="?csv=ZEDINJENA SLOVENIJA.csv">ZEDINJENA SLOVENIJA.csv</option>
+                    </select>
                 </div>
             </div>
 
@@ -71,6 +44,19 @@ redirect_from: "/help.html"
 </div>
 
 <script>
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    var csv = getParameterByName('csv');
+
     function requestCSV(f,c){return new CSVAJAX(f,c);};
     function CSVAJAX(filepath,callback)
     {
@@ -97,34 +83,38 @@ redirect_from: "/help.html"
         this.request.send();
     };
 
-    var foo = requestCSV("/data/PIRATSKA STRANKA SLOVENIJE.csv", function (data) {
-        var results = data[1].slice(1);
+    if(csv)
+    {
+        var foo = requestCSV("/data/" + csv, function (data) {
+            var results = data[1].slice(1);
 
-        results = results.map(function (item) {
+            results = results.map(function (item) {
 
-            switch (item)
-            {
-                case "\"Se popolnoma strinjam\"":
-                    return 1;
-                case "\"Nekako se strinjam\"":
-                    return 2/3;
-                case "\"Sem nevtralen/-a oz. oklevam\"":
-                    return 0;
-                case "\"Se nekako ne strinjam\"":
-                    return -2/3;
-                case "\"Absolutno se ne strinjam\"":
-                    return -1;
+                switch (item)
+                {
+                    case "\"Se popolnoma strinjam\"":
+                        return 1;
+                    case "\"Nekako se strinjam\"":
+                        return 2/3;
+                    case "\"Sem nevtralen/-a oz. oklevam\"":
+                        return 0;
+                    case "\"Se nekako ne strinjam\"":
+                        return -2/3;
+                    case "\"Absolutno se ne strinjam\"":
+                        return -1;
+                }
+
+            });
+
+
+            for (let i = 0; i < results.length; i++) {
+                const result = results[i];
+                next_question(result);
             }
 
         });
+    }
 
-
-      /*  for (let i = 0; i < results.length; i++) {
-            const result = results[i];
-            next_question(result);
-        }*/
-
-    });
 
 </script>
 
@@ -2035,12 +2025,12 @@ redirect_from: "/help.html"
         }*/
     }
 
-    shuffle(questions)
+   // shuffle(questions)
 
     init_question();
 
     function init_question() {
-        document.getElementById("question-text").innerHTML = questions[qn].question;
+      /*  document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("quiz-progress").innerHTML = "" + (qn + 1) + "/" +  questions.length;
         document.getElementById("bar").style.width =  (((qn + 1) / questions.length) * 100).toFixed(0) + "%";
         if (qn == 0) {
@@ -2050,7 +2040,7 @@ redirect_from: "/help.html"
         else {
             document.getElementById("back_button").style.display = 'block';
             //document.getElementById("back_button_off").style.display = 'none';
-        }
+        }*/
 
     }
 
