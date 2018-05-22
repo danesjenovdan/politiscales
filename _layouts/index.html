@@ -1,14 +1,18 @@
-{% include header.html %}
+<html lang="sl_SI">
+<head>
+	{% include head.html %}
 
-<h2>{{ site.t[page.language].index_title_instructions }}</h2>
-<p class="simpleText">{{ site.t[page.language].index_welcome }}</p>
-<br/>
-<p class="simpleText"><i class="fa fa-bell" aria-hidden="true"></i> {{ site.t[page.language].index_context }}</p>
-<p class="simpleText"><i class="fa fa-bell" aria-hidden="true"></i> {{ site.t[page.language].index_advice }}</p>
-<p class="simpleText"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> {{ site.t[page.language].index_warning }}</p>
+	<!--  <meta name="description" content="">
+    <meta name="description" content="{{ site.t[page.language].index_welcome }}" />
 
-<div class="navButtons">
-	<a class="button" href="{{ site.basepath }}/{{ page.language }}/quiz">{{ site.t[page.language].index_btn_start }}</a>
-</div>
+    <meta property="og:url" content="http://politiscales.la-commune.net/{{ page.language }}/" />
+    <meta property="og:title" content="{{ site.name }}" />
+    <meta property="og:locale" content="{{ page.language }}" />
+    <meta property="og:description" content="{{ site.t[page.language].index_welcome }}" />
+    <meta property="og:image" content="http://politiscales.la-commune.net/images/facebook-preview.png" /> -->
+</head>
 
-{% include footer.html %}
+<body>
+{{ content }}
+</body>
+</html>

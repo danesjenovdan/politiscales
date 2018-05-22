@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Kviz
+layout: quiz
+title: Politiscales
 language: sl_SI
-redirect_from: "/help.html"
 ---
 
 <div class="container">
@@ -14,86 +13,63 @@ redirect_from: "/help.html"
         <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
             <div class="card card-question w-100">
                 <div class="card-body text-center p-5">
-                        <h2>Kje so stranke?</h2>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda, autem deserunt dicta dolore dolorum ducimus hic id, incidunt ipsam libero minima molestiae molestias mollitia numquam possimus rem, vitae! Nisi.</p>
 
-                    <!--
+                    <div class="d-flex">
+                        <div>
+                            <div id="quiz-progress"></div>
+                        </div>
+                        <div class="col">
+                            <div class="progress">
+                                <div id="bar"></div>
+                            </div>
+                        </div>
+                    </div>
 
-                     onchange="location = this.value;">
- <option value="Home.php">Home</option>
- <option value="Contact.php">Contact</option>
- <option value="Sitemap.php">Sitemap</option>
-</select>
-                     -->
-                    <select class="form-control" onchange="location = this.value;">
-                        <option value="#">Andrej Čuš in Zeleni Slovenije</option>
-                    </select>
+                    <div class="questionBox">
+                        <div>
+                            <p id="question-text"></p>
+                        </div>
+                    </div>
+
+                    <div class="navButtons answers">
+                        <button class="buttonQuestion" onclick="next_question(1)">
+                            <div class="circle"></div>
+                            {{ site.t[page.language].quiz_btn_yes1 }}
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(2/3)">
+                            <div class="circle"></div>
+                            {{ site.t[page.language].quiz_btn_yes0 }}
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(0)">
+                            <div class="circle"></div>
+                            {{ site.t[page.language].quiz_btn_neutral }}
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(-2/3)">
+                            <div class="circle"></div>
+                            {{ site.t[page.language].quiz_btn_no0 }}
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(-1)">
+                            <div class="circle"></div>
+                            {{ site.t[page.language].quiz_btn_no1 }}
+                        </button>
+                    </div>
+
+                    <div class="mt-5 text-center">
+
+                        <button class="btn btn-link mx-auto" onclick="prev_question()" id="back_button">{{
+                            site.t[page.language].quiz_btn_back_q }}
+                        </button>
+
+                        <button class="button" onclick="simulate()">{{ site.t[page.language].quiz_btn_random }}</button>
+
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-
-<script>
-    function requestCSV(f,c){return new CSVAJAX(f,c);};
-    function CSVAJAX(filepath,callback)
-    {
-        this.request = new XMLHttpRequest();
-        this.request.timeout = 10000;
-        this.request.open("GET", filepath, true);
-        this.request.parent = this;
-        this.callback = callback;
-        this.request.onload = function()
-        {
-            var d = this.response.split('\n'); /*1st separator*/
-            var i = d.length;
-            while(i--)
-            {
-                if(d[i] !== "")
-                    d[i] = d[i].split(','); /*2nd separator*/
-                else
-                    d.splice(i,1);
-            }
-            this.parent.response = d;
-            if(typeof this.parent.callback !== "undefined")
-                this.parent.callback(d);
-        };
-        this.request.send();
-    };
-
-    var foo = requestCSV("/data/PIRATSKA STRANKA SLOVENIJE.csv", function (data) {
-        var results = data[1].slice(1);
-
-        results = results.map(function (item) {
-
-            switch (item)
-            {
-                case "\"Se popolnoma strinjam\"":
-                    return 1;
-                case "\"Nekako se strinjam\"":
-                    return 2/3;
-                case "\"Sem nevtralen/-a oz. oklevam\"":
-                    return 0;
-                case "\"Se nekako ne strinjam\"":
-                    return -2/3;
-                case "\"Absolutno se ne strinjam\"":
-                    return -1;
-            }
-
-        });
-
-
-        for (let i = 0; i < results.length; i++) {
-            const result = results[i];
-            next_question(result);
-        }
-
-    });
-
-</script>
-
 
 <script>
     questions = [
@@ -1993,12 +1969,12 @@ redirect_from: "/help.html"
     function shuffle(array) {
         var i = 0, j = 0, temp = null;
 
-      /*  for (i = array.length - 1; i > 0; i -= 1) {
-            j = Math.floor(Math.random() * (i + 1));
-            temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }*/
+        /*  for (i = array.length - 1; i > 0; i -= 1) {
+              j = Math.floor(Math.random() * (i + 1));
+              temp = array[i];
+              array[i] = array[j];
+              array[j] = temp;
+          }*/
     }
 
     shuffle(questions)
@@ -2091,7 +2067,7 @@ redirect_from: "/help.html"
             }
         }
 
-        url = "{{site.basepath}}/{{page.language}}/results?" + url
+        url = "{{site.basepath}}/rezultati?" + url
 
         location.href = url;
     }
@@ -2160,4 +2136,3 @@ redirect_from: "/help.html"
 
 </script>
 
-{% include footer.html %}
