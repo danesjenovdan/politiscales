@@ -11,33 +11,9 @@ language: sl_SI
         </div>
 
         <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
-            <div class="card card-question w-100">
+            <div class="card card-results w-100">
                 <div class="card-body text-center p-5">
-                    <h2>Kje so stranke?</h2>
-
-                    <div class="my-5">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda, autem
-                            deserunt dicta dolore dolorum ducimus hic id, incidunt ipsam libero minima molestiae
-                            molestias mollitia numquam possimus rem, vitae! Nisi.</p>
-
-                        <select class="form-control" onchange="location = this.value;">
-                            <option value="" selected></option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE,
-                                NOVA LJUDSKA STRANKA SLOVENIJE
-                            </option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=4.csv">LEVICA</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</option>
-                            <option value="{{ site.basepath }}/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</option>
-                        </select>
-                    </div>
+                    {% include parties.html %}
 
                     <!--  	<div class="flagDecoration"><canvas id="generatedFlag" width="512" height="256"></canvas><div id="slogan"></div></div> -->
                     <!--   <div class="shareText">{{ site.t[page.language].result_share }}</div>  -->
@@ -46,10 +22,22 @@ language: sl_SI
                     </div>
  -->
 
-                    {% include results-single.html %}
+                    <div class="mt-5">
 
+                        <hr>
+                        <div class="my-4">
+                            {% include results-single.html %}
+                        </div>
+                        <hr>
+                    </div>
 
-                    <div class="columnContainer">
+                    <div class="mb-5">
+                        <a href="{{ site.basepath }}/kviz.html" class="btn btn-link">Reši test in se primerjaj s strankami</a>
+                        <hr>
+
+                    </div>
+
+                    <!--    <div class="columnContainer">
                         <div class="columnLeft">
 
 
@@ -60,7 +48,7 @@ language: sl_SI
                             <a class="button" href="{{ site.basepath }}/kviz">{{
                                 site.t[page.language].result_btn_redo }}</a>
                         </div>
-                    </div>
+                    </div>  -->
                 </div>
 
             </div>
@@ -82,15 +70,14 @@ language: sl_SI
 
     csv = getParameterByName('csv');
 
-    if(csv)
-    {
-        $('select option').filter(function() {
-            return $(this).val().indexOf('csv='+csv) !== -1;
+    if (csv) {
+        $('select option').filter(function () {
+            return $(this).val().indexOf('csv=' + csv) !== -1;
         }).prop('selected', true);
 
-      /*  console.log($('select'));
-        $('select:first').val(csv);
-        console.log(csv);*/
+        /*  console.log($('select'));
+          $('select:first').val(csv);
+          console.log(csv);*/
     }
 
     var urlToCopy = document.getElementById("urlToCopy")

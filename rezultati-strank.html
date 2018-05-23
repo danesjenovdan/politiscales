@@ -11,27 +11,11 @@ language: sl_SI
         </div>
 
         <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
-            <div class="card card-question w-100">
+            <div class="card card-results w-100">
                 <div class="card-body text-center p-5">
-                    <h2>Kje so stranke?</h2>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores assumenda, autem deserunt dicta dolore dolorum ducimus hic id, incidunt ipsam libero minima molestiae molestias mollitia numquam possimus rem, vitae! Nisi.</p>
+                    {% include parties.html %}
 
-                    <select class="form-control" onchange="location = this.value;">
-                        <option value="" selected></option>
-                        <option value="?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</option>
-                        <option value="?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</option>
-                        <option value="?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</option>
-                        <option value="?csv=4.csv">LEVICA</option>
-                        <option value="?csv=5.csv">NAPREJ SLOVENIJA</option>
-                        <option value="?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</option>
-                        <option value="?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</option>
-                        <option value="?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</option>
-                        <option value="?csv=9.csv">ZEDINJENA SLOVENIJA</option>
-                        <option value="?csv=10.csv">STRANKA MODERNEGA CENTRA</option>
-                        <option value="?csv=11.csv">STRANKA SLOVENSKEGA NARODA</option>
-                        <option value="?csv=12.csv">ZA ZDRAVO DRUŽBO</option>
-                    </select>
                 </div>
             </div>
 
@@ -53,49 +37,48 @@ language: sl_SI
 
     csv = getParameterByName('csv');
 
-    function requestCSV(f,c){return new CSVAJAX(f,c);};
-    function CSVAJAX(filepath,callback)
-    {
+    function requestCSV(f, c) {
+        return new CSVAJAX(f, c);
+    };
+
+    function CSVAJAX(filepath, callback) {
         this.request = new XMLHttpRequest();
         this.request.timeout = 10000;
         this.request.open("GET", filepath, true);
         this.request.parent = this;
         this.callback = callback;
-        this.request.onload = function()
-        {
-            var d = this.response.split('\n'); /*1st separator*/
+        this.request.onload = function () {
+            var d = this.response.split('\n');
+            /*1st separator*/
             var i = d.length;
-            while(i--)
-            {
-                if(d[i] !== "")
+            while (i--) {
+                if (d[i] !== "")
                     d[i] = d[i].split(','); /*2nd separator*/
                 else
-                    d.splice(i,1);
+                    d.splice(i, 1);
             }
             this.parent.response = d;
-            if(typeof this.parent.callback !== "undefined")
+            if (typeof this.parent.callback !== "undefined")
                 this.parent.callback(d);
         };
         this.request.send();
     };
 
-    if(csv)
-    {
+    if (csv) {
         var foo = requestCSV("/data/" + csv, function (data) {
             var results = data[1].slice(1);
 
             results = results.map(function (item) {
 
-                switch (item)
-                {
+                switch (item) {
                     case "\"Se popolnoma strinjam\"":
                         return 1;
                     case "\"Nekako se strinjam\"":
-                        return 2/3;
+                        return 2 / 3;
                     case "\"Sem nevtralen/-a oz. oklevam\"":
                         return 0;
                     case "\"Se nekako ne strinjam\"":
-                        return -2/3;
+                        return -2 / 3;
                     case "\"Absolutno se ne strinjam\"":
                         return -1;
                 }

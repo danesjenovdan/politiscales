@@ -3,6 +3,8 @@
 
 $enable-rounded: false;
 
+$body-color: #444444;
+
 $primary: #4d65cd;
 $secondary: #f5adaf;
 $font-family-sans-serif: 'Barlow', sans-serif;
@@ -21,13 +23,45 @@ $red: #f6333b;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 html, body {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
   overflow: auto;
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    overflow: hidden;
+  }
+}
+
+.card-intro {
+  .card-body {
+    font-size: 1.25rem;
+  }
+}
+
+.card-results, .card-help {
+
+  @include media-breakpoint-up(lg) {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: $blue;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.card-help {
 }
 
 .answers {
@@ -52,8 +86,10 @@ body {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    padding: 0.75rem 1rem;
+    padding: 1rem 1rem 0.75rem 1rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
 
     &:nth-child(1) {
@@ -84,15 +120,39 @@ body {
   }
 }
 
+.sidebar
+{
+
+  .btn:not(.btn-primary)
+  {
+    @include hover-focus-active()
+    {
+      color: white;
+      background: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
 #question-text {
-  margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 1.5rem;
   line-height: 1.5;
 }
 
+.no-link
+{
+  @include hover-focus-active()
+  {
+    text-decoration: none;
+  }
+}
+.author-link
+{
+  letter-spacing: 2px;
+}
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 1.15;
   letter-spacing: 15px;
   font-weight: bold;
@@ -106,6 +166,7 @@ h1 {
   font-weight: bold;
   margin-top: -10px;
   color: $primary;
+  letter-spacing: 3px;
 }
 
 .btn {
@@ -124,11 +185,16 @@ h1 {
   color: $primary;
 }
 
+hr {
+  border-color: #f68184;
+}
+
 .result {
   color: #444444;
   font-weight: bold;
-
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
+
 }
 
 .progress {
@@ -140,11 +206,15 @@ h1 {
   }
 }
 
-#question-text {
-  min-height: 150px;
+.questionBox {
+  min-height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .progress-bar {
+  min-height: 16px;
   color: black;
   font-size: 1.125rem;
   font-weight: bold;
@@ -153,13 +223,14 @@ h1 {
   background: transparent;
 
   margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
 
   > * {
     padding: 0.25rem 0.25rem;
   }
   .progress-negative {
-    background-color: $redLight;
+    background-color: $blueLight;
+
     text-align: right;
   }
 
@@ -169,8 +240,53 @@ h1 {
   }
 
   .progress-positive {
-    background-color: $blueLight;
+    background-color: $redLight;
     text-align: left;
+  }
+}
+
+.progress-bar-you {
+  h6 {
+    width: 230px;
+    padding-top: 6.25px;
+    padding-right: 0.5rem;
+    text-align: right !important;
+    font-weight: bold;
+    color: #444444;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  *[id] {
+    font-size: 0;
+  }
+}
+
+.progress-bar-party {
+  height: 16px;
+
+  h6 {
+    width: 230px;
+    padding-top: 0;
+    padding-right: 0.5rem;
+    text-align: right !important;
+    font-size: 0.875rem;
+    color: #444444;
+    letter-spacing: 1px;
+  }
+
+  .progress-negative {
+    background-color: #b8cdfe;
+
+  }
+
+  .progress-mid {
+    background-color: #d7d7d7;
+  }
+
+  .progress-positive {
+    background-color: #f5adaf;
+
   }
 }
 
@@ -202,48 +318,28 @@ h1 {
 }
 
 .help-section {
+  margin: 2rem;
   border-bottom: 1px solid $redLight;
+
+  &:last-child {
+    border: none;
+  }
   h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
     color: $redLight;
   }
 
-  .help-circle {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background: $redLight;
-    border-radius: 100%;
-    transform: scale(1.2);
-    margin: 0 auto;
-    margin-top: 40px;
+  img {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 
-    .bottom-circle {
-      img {
-        width: 30px;
-        position: absolute;
-        right: 15px;
-        top: 50px;
-      }
+    @include media-breakpoint-down(sm) {
+      width: 50% !important;
+      margin-left: 25% !important;
     }
 
-    .top-circle {
-      width: 100%;
-      height: 50%;
-      background: $blueLight;
-      border-radius: 150px 150px 0 0;
-      transform: rotate(-45deg);
-      position: absolute;
-      left: -18px;
-      top: 7px;
-
-      img {
-        width: 35px;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 7px;
-        right: 35px;
-      }
-    }
   }
+
 }
 

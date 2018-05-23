@@ -11,28 +11,30 @@ language: sl_SI
         </div>
 
         <div class="col-12 col-md-6 col-lg-8 d-flex align-items-center">
-            <div class="card card-question w-100">
+            <div class="card card-results w-100">
                 <div class="card-body text-center p-5">
-                    <h2>{{ site.t[page.language].result_title }}</h2>
+                    <h2>Rezultati</h2>
 
-                    <p class="simpleText">{{ site.t[page.language].result_desc }}</p>
+                    <p class="my-4">
+                        Rezultati tvojega [slovenskoime] testa so razdeljeni na 8 osi. Vsaka os kaže tvojo pozicijo med dvema nasprotujočima si ideologijama. Nekatere specifične lastnosti, ki jih prikazujemo na dnu te strani, dopolnjujejo tvoj rezultat. Za natančnejšo razlago različnih osi si oglej stran z razlagami.
+                    </p>
 
-                    <!--  	<div class="flagDecoration"><canvas id="generatedFlag" width="512" height="256"></canvas><div id="slogan"></div></div> -->
-                    <!--   <div class="shareText">{{ site.t[page.language].result_share }}</div>  -->
-                    <!--     <div id="urlToCopyContainer" class="urlToCopyContainer">
-                        <div id="urlToCopy" class="urlToCopy"></div>
-                    </div>
- -->
+                    <hr>
+
+                    <div class="my-4">
                     {% include results-single.html %}
+                    </div>
 
-
-
-                    <div class="text-center">
+                    <div class="text-center mb-4">
                         <button class="btn btn-primary" onclick="compare()">
                             Primerjaj se s strankami
                         </button>
                     </div>
 
+                    <hr>
+
+
+                    <!--
 
                     <div class="columnContainer">
                         <div class="columnLeft">
@@ -45,7 +47,7 @@ language: sl_SI
                             <a class="button" href="{{ site.basepath }}/kviz">{{
                                 site.t[page.language].result_btn_redo }}</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
