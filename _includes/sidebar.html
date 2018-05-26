@@ -1,7 +1,13 @@
 <div class="pb-5 sidebar">
+    <div class="float-right d-lg-none">
+        <button class="btn-outline-primary btn btn-lg" data-toggle="collapse" data-target="#sidebar-links" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
     <a href="{{ site.basepath }}/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
 
-    <div class="d-none d-sm-block">
+    <div class="collapse" id="sidebar-links">
         <a href="{{ site.basepath }}/">
             <button class="btn btn-primary mb-3 w-100">Reši test</button>
         </a>

@@ -456,3 +456,10 @@ hr {
 
 }
 
+#sidebar-links
+{
+  @include media-breakpoint-up(lg)
+  {
+    display: block !important;
+  }
+}
