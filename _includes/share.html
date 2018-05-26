@@ -1,0 +1,63 @@
+<div>
+    <div class="text-center">
+        <p class="text-uppercase share-headline">Deli!</p>
+    </div>
+
+    <div class="share">
+        <button class="btn btn-social js-facebook">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn btn-social js-twitter">
+            <i class="fab fa-twitter"></i>
+
+        </button>
+        <button class="btn btn-social js-email">
+            <i class="fas fa-envelope"></i>
+        </button>
+    </div>
+
+</div>
+
+<script>
+    var link = document.location.href;
+    // $.ajax({
+    //   method: 'POST',
+    //   url: 'http://www.djnd.si/yomamasofat/',
+    //   data: {
+    //     fatmama: document.location.href,
+    //   },
+    //   success: function (resp) {
+    //     link = resp;
+    //   }
+    // });
+
+    var title = 'Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank';
+    var text = 'Če še ne veš, komu dati svoj glas na prihajajočih parlamentarnih volitvah, ali se želiš prepričati, da ga daješ pravi stranki, reši politični test, ki tvoja stališča razvrsti po 8 vrednotnih oseh in jih primerja s stališči strank, za katere lahko voliš.';
+    var hashtags = '';
+
+    //social
+    $('.js-facebook').on('click', function () {
+        var url = 'https://www.facebook.com/sharer/sharer.php?u="' + encodeURIComponent(text) + '?href=' + encodeURIComponent(document.location.href);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'facebook');
+        return false;
+    });
+    $('.js-twitter').on('click', function () {
+        var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + link);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'twitter');
+        return false;
+    });
+    $('.js-gplus').on('click', function () {
+        var url = 'https://plus.google.com/share?url=' + encodeURIComponent(document.location.href);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'gplus');
+        return false;
+    });
+    $('.js-email').on('click', function () {
+        var url = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + text + ' ' + encodeURIComponent(document.location.href);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'email');
+        return false;
+    });
+</script>

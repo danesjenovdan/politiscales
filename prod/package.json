@@ -1,0 +1,22 @@
+{
+  "name": "politscales",
+  "version": "1.0.0",
+  "description": "The 8values Political Quiz measures individuals' political values, including Equality, Might, Liberty, Tradition, Wealth, Peace, Authority, and Progress.",
+  "main": "flags.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danesjenovdan/politiscales.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danesjenovdan/politiscales/issues"
+  },
+  "homepage": "https://github.com/danesjenovdan/politiscales#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}

@@ -3,13 +3,11 @@
 <p class="my-4">Vprašalnik smo poslali vsem političnim strankam, ki kandidirajo na volitvah v Državni zbor 2018.
     Prosili smo jih, da se do stališč opredelijo kolektivno.</p>
 
-<select class="form-control" onchange="location = this.value;">
+<select class="form-control" onchange="location = this.value;" style="display: none;">
     <option value="" selected></option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</option>
-    <option value="{{ site.basepath }}/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA
-        LJUDSKA STRANKA SLOVENIJE
-    </option>
+    <option value="{{ site.basepath }}/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=4.csv">LEVICA</option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</option>
@@ -21,4 +19,33 @@
     <option value="{{ site.basepath }}/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</option>
     <option value="{{ site.basepath }}/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</option>
+    <option value="{{ site.basepath }}/rezultati-strank?csv=15.csv">LISTA MARJANA ŠARCA</option>
+    <option value="{{ site.basepath }}/rezultati-strank?csv=16.csv">REŠIMO SLOVENIJO ELITE IN TAJKUNOV</option>
+    <option value="{{ site.basepath }}/rezultati-strank?csv=17.csv">GOSPODARSKO AKTIVNA STRANKA</option>
 </select>
+
+<div class="dropdown mb-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        VSE STRANKE
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank">VSE STRANKE</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=4.csv">LEVICA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=15.csv">LISTA MARJANA ŠARCA</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=16.csv">REŠIMO SLOVENIJO ELITE IN TAJKUNOV</a>
+        <a class="dropdown-item" href="{{ site.basepath }}/rezultati-strank?csv=17.csv">GOSPODARSKO AKTIVNA STRANKA</a>
+    </div>
+</div>

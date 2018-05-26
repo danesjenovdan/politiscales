@@ -1,119 +1,155 @@
----
-layout: results-party
-title: Rezultati strank
-language: sl_SI
----
+<html lang="sl_SI">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<meta property="og:locale" content="sl_SI"/>
+
+<meta property="og:image" content="/images/og-image.png"/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@danesjenovdan">
+<meta name="twitter:image" content="/images/og-image.png">
+
+<title>Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank</title>
+<meta property="og:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank"/>
+<meta name="twitter:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank">
+<meta name="twitter:description" content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+
+<meta name="description" content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+<meta property="og:description" content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!"/>
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+    <!--  <meta name="description" content="">
+    <meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+
+    <meta property="og:url" content="http://politiscales.la-commune.net/sl_SI/" />
+    <meta property="og:title" content="PolitiScales" />
+    <meta property="og:locale" content="sl_SI" />
+    <meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+    <meta property="og:image" content="http://politiscales.la-commune.net/images/facebook-preview.png" /> -->
+</head>
+
+<body>
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-4">
-            {% include sidebar.html %}
+            <div class="pb-5 sidebar">
+    <a href="/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
+
+    <a href="/">
+        <button class="btn btn-primary mb-3 w-100">Reši test</button>
+    </a>
+
+    <a href="/rezultati-strank">
+        <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
+    </a>
+
+    <a href="/pomoc">
+        <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
+    </a>
+
+    <a href="/o-politicnem-portretu">
+        <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
+    </a>
+
+    <div class="mt-3 pt-3">
+
+        <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
+
+        <div class="social d-inline">
+            <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+</div>
         </div>
 
         <div class="col-12 col-lg-8 d-flex align-items-center">
-            <div class="card card-results w-100">
-                <div class="card-body text-center p-5">
-
-                    {% include parties.html %}
-
-
-                    <hr>
-                    <div class="my-4">
-                        {% include results-compare.html %}
+            <div class="card card-question w-100">
+                <div class="d-flex m-3">
+                    <div>
+                        <div id="quiz-progress"></div>
                     </div>
-                    <hr>
+                    <div class="col">
+                        <div class="progress">
+                            <div id="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-center px-5 pb-5">
 
-                    {% include share.html %}
+                    <div class="questionBox">
+                        <p id="question-text"></p>
+                    </div>
 
+                    <div class="navButtons answers">
+                        <button class="buttonQuestion" onclick="next_question(1)">
+                            <div class="circle"></div>
+                            Se popolnoma strinjam
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(2/3)">
+                            <div class="circle"></div>
+                            Se deloma strinjam
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(0)">
+                            <div class="circle"></div>
+                            Ne znam se odločiti
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(-2/3)">
+                            <div class="circle"></div>
+                            Se ne strinjam
+                        </button>
+                        <button class="buttonQuestion" onclick="next_question(-1)">
+                            <div class="circle"></div>
+                            Se popolnoma ne strinjam
+                        </button>
+                    </div>
 
+                    <div class="mt-5 text-center">
+
+                        <a href="#" onclick="prev_question()" id="back_button">Nazaj na prejšnje vprašanje</a>
+                        <button class="btn btn-link position-absolute" onclick="simulate()">
+                            Simuliraj
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
-
-{% include script-party-results.html %}
-
-
-<script>
-
-    function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    csv = getParameterByName('csv');
-
-    function requestCSV(f, c) {
-        return new CSVAJAX(f, c);
-    };
-
-    function CSVAJAX(filepath, callback) {
-        this.request = new XMLHttpRequest();
-        this.request.timeout = 10000;
-        this.request.open("GET", filepath, true);
-        this.request.parent = this;
-        this.callback = callback;
-        this.request.onload = function () {
-            var d = this.response.split('\n');
-            /*1st separator*/
-            var i = d.length;
-            while (i--) {
-                if (d[i] !== "")
-                    d[i] = d[i].split(','); /*2nd separator*/
-                else
-                    d.splice(i, 1);
-            }
-            this.parent.response = d;
-            if (typeof this.parent.callback !== "undefined")
-                this.parent.callback(d);
-        };
-        this.request.send();
-    };
-
-    if (csv) {
-        var foo = requestCSV("/data/" + csv, function (data) {
-            var results = data[1].slice(1);
-
-            results = results.map(function (item) {
-
-                switch (item) {
-                    case "\"Se popolnoma strinjam\"":
-                        return 1;
-                    case "\"Nekako se strinjam\"":
-                        return 2 / 3;
-                    case "\"Sem nevtralen/-a oz. oklevam\"":
-                        return 0;
-                    case "\"Se nekako ne strinjam\"":
-                        return -2 / 3;
-                    case "\"Absolutno se ne strinjam\"":
-                        return -1;
-                }
-
-            });
-
-
-            for (let i = 0; i < results.length; i++) {
-                const result = results[i];
-                next_question(result);
-            }
-
-        });
-    }
-
-</script>
-
 
 <script>
     questions = [
         /* ESSENTIALISME ************************************************ */
         {
-            question: "{{site.t[page.language].qc0}}",
+            question: "“One is not born, but rather becomes, a woman.”",
+            question_slo: "Ženska se ne rodi, ampak to postane.",
             answer: 0,
             valuesYes: [
                 {
@@ -133,7 +169,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc1}}",
+            question: "Differences of treatement and quality of life in our society show that racism is still omnipresent.",
+            question_slo: "Razlike v kvaliteti življenja in neenaka obravnava dokazujejo, da je rasizem še zmeraj vseprisoten.",
             answer: 0,
             valuesYes: [
                 {
@@ -149,7 +186,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc2}}",
+            question: "All sciences, even chemistry and biology, are not absolute and are subject to being shaped by our society.",
+            question_slo: "Nobena znanost, niti biologija niti kemija, ni absolutna, vse oblikuje družba.",
             answer: 0,
             valuesYes: [
                 {
@@ -165,7 +203,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc3}}",
+            question: "The categories “women” and “men” are social constructs that should be given up.",
+            question_slo: "Kategoriji \"ženske\" in \"moški\" sta družbena konstrukta, ki bi se jima morali odreči.",
             answer: 0,
             valuesYes: [
                 {
@@ -185,7 +224,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc4}}",
+            question: "Nobody is by nature predisposed to criminality.",
+            question_slo: "Nihče ni po naravi nagnjen h kriminalnim dejanjem.",
             answer: 0,
             valuesYes: [
                 {
@@ -201,7 +241,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc5}}",
+            question: "Sexual orientation is a social construct",
+            question_slo: "Spolna usmerjenost je družbeni konstrukt.",
             answer: 0,
             valuesYes: [
                 {
@@ -217,7 +258,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc6}}",
+            question: "Social differences between ethnic groups cannot be explained by biology.",
+            question_slo: "Družbenih razlik med etničnimi skupinami se ne da razložiti z biologijo.",
             answer: 0,
             valuesYes: [
                 {
@@ -233,27 +275,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc7}}",
-            answer: 0,
-            valuesYes: [
-                {
-                    axis: "c1",
-                    value: 3
-                }
-            ],
-            valuesNo: [
-                {
-                    axis: "c0",
-                    value: 3
-                },
-                {
-                    axis: "femi",
-                    value: 3
-                }
-            ]
-        },
-        {
-            question: "{{site.t[page.language].qc8}}",
+            question: "The social roles of women and men can partly be explained by biological differences.",
+            question_slo: "Družbene vloge moških in žensk se da deloma pojasniti z biološkimi razlikami.",
             answer: 0,
             valuesYes: [
                 {
@@ -273,7 +296,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc9}}",
+            question: "Hormonal differences can explain some differences in individual characteristics between women and men.",
+            question_slo: "Hormonalne razlike lahko razložijo nekatere razlike v posameznih lastnostih moških in žensk.",
             answer: 0,
             valuesYes: [
                 {
@@ -293,7 +317,29 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc10}}",
+            question: "Sexual assaults are partly caused by men&#39;s natural impulse.",
+            question_slo: "Spolni napadi so deloma povzročeni zaradi naravnih moških impulzov.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Transgender individuals will never really be of the gender they would like to be.",
+            question_slo: "Transspolne osebe ne bodo nikoli zares takšnega spola, kot bi si želele.",
             answer: 0,
             valuesYes: [
                 {
@@ -309,7 +355,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc11}}",
+            question: "Members of a nation or culture have some unchangeable characteristics that define them.",
+            question_slo: "Pripadniki naroda ali kulture imajo nekatere nespremenljive lastnosti, ki jih zaznamujejo.",
             answer: 0,
             valuesYes: [
                 {
@@ -325,7 +372,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc12}}",
+            question: "Biologically, human beings are designed for heterosexuality.",
+            question_slo: "Biološko gledano so cloveška bitja ustvarjena za heteroseksualnost.",
             answer: 0,
             valuesYes: [
                 {
@@ -341,7 +389,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qc13}}",
+            question: "Selfishness is the overriding drive in the human species, no matter the context.",
+            question_slo: "Sebičnost je prevladujoč cloveški nagon, ne glede na kontekst.",
             answer: 0,
             valuesYes: [
                 {
@@ -358,7 +407,8 @@ language: sl_SI
         },
         /* NATIONALISME ************************************************* */
         {
-            question: "{{site.t[page.language].qb0}}",
+            question: "Borders should eventually be abolished.",
+            question_slo: "Meje bi morali sčasoma ukiniti.",
             answer: 0,
             valuesYes: [
                 {
@@ -374,7 +424,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb1}}",
+            question: "People need to stand up for their ideals, even if it leads them to betray their country.",
+            question_slo: "Ljudje se morajo zavzemati za svoja načela, tudi če zaradi tega izdajo svojo državo.",
             answer: 0,
             valuesYes: [
                 {
@@ -390,7 +441,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb2}}",
+            question: "My country must pay for the damages caused by the crimes it commited in other countries.",
+            question_slo: "Moja država mora plačati za škodo, povzročeno z zločini, ki jih je zagrešila v drugih državah.",
             answer: 0,
             valuesYes: [
                 {
@@ -406,7 +458,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb3}}",
+            question: "If two countries have similar economies, social systems and environmental norms, then the free market between them has no negative impact.",
+            question_slo: "Če imata dve državi podobni gospodarstvi, družbene sisteme in okoljske norme, potem prosti trg med njima nima negativnega vpliva.",
             answer: 0,
             valuesYes: [
                 {
@@ -422,7 +475,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb4}}",
+            question: "National Chauvinism during sport competitions is not acceptable.",
+            question_slo: "Državni šovinizem med športnimi tekmovanji ni sprejemljiv.",
             answer: 0,
             valuesYes: [
                 {
@@ -438,7 +492,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb5}}",
+            question: "I am equally concerned about the inhabitants of my country and those of other the countries.",
+            question_slo: "Enako me skrbi za prebivalce moje države kot za prebivalce drugih držav.",
             answer: 0,
             valuesYes: [
                 {
@@ -454,7 +509,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb6}}",
+            question: "Foreigners living in my country should be allowed to act politically, equally to those who have the nationality.",
+            question_slo: "Tujci, ki živijo v moji državi, bi morali imeti pravico do političnega delovanja na enak način kot državljani.",
             answer: 0,
             valuesYes: [
                 {
@@ -470,7 +526,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb7}}",
+            question: "Citizens should take priority over foreigners.",
+            question_slo: "Državljani bi morali imeti prednost pred tujci.",
             answer: 0,
             valuesYes: [
                 {
@@ -486,7 +543,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb8}}",
+            question: "The values of my country are superior to those of other countries.",
+            question_slo: "Vrednote moje države so boljše od vrednot drugih držav.",
             answer: 0,
             valuesYes: [
                 {
@@ -502,7 +560,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb9}}",
+            question: "Multiculturalism is a threat to our society.",
+            question_slo: "Multikulturalizem je grožnja naši družbi.",
             answer: 0,
             valuesYes: [
                 {
@@ -518,7 +577,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb10}}",
+            question: "A good citizen is a patriot.",
+            question_slo: "Dober državljan je patriot.",
             answer: 0,
             valuesYes: [
                 {
@@ -534,7 +594,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb11}}",
+            question: "It is legitimate for a country to intervene militarily to defend its economic interests.",
+            question_slo: "Legitimno je, da država vojaško intervenira, da bi zaščitila svoje gospodarske interese.",
             answer: 0,
             valuesYes: [
                 {
@@ -550,7 +611,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb12}}",
+            question: "It is necessary to teach history in order to create a sense of belonging to the nation.",
+            question_slo: "Nujno je učiti zgodovino, da bi ustvarili občutek pripadnosti narodu.",
             answer: 0,
             valuesYes: [
                 {
@@ -566,7 +628,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qb13}}",
+            question: "Research produced by my country should not be available to other countries.",
+            question_slo: "Izsledki raziskav moje države ne bi smeli biti na voljo drugim državam.",
             answer: 0,
             valuesYes: [
                 {
@@ -583,7 +646,8 @@ language: sl_SI
         },
         /* PRODUCTION *************************************************** */
         {
-            question: "{{site.t[page.language].qp0}}",
+            question: "No one should get rich from owning a business, housing, or land.",
+            question_slo: "Nihče ne bi smel obogateti na račun tega, da ima v lasti podjetje, nepremičnino ali zemljo.",
             answer: 0,
             valuesYes: [
                 {
@@ -599,7 +663,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp1}}",
+            question: "Wage labour is a form of theft from the worker by companies.",
+            question_slo: "Mezdno delo je oblika kraje delavcu s strani podjetja.",
             answer: 0,
             valuesYes: [
                 {
@@ -615,7 +680,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp2}}",
+            question: "It is important that health should stay a public matter.",
+            question_slo: "Pomembno je, da zdravstvo ostane v javni domeni.",
             answer: 0,
             valuesYes: [
                 {
@@ -631,7 +697,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp3}}",
+            question: "Energy and transport structures should be a public matter.",
+            question_slo: "Energetska in prometna infrastruktura bi morali biti v javni domeni.",
             answer: 0,
             valuesYes: [
                 {
@@ -647,7 +714,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp4}}",
+            question: "Patents should not exist.",
+            question_slo: "Patenti ne bi smeli obstajati.",
             answer: 0,
             valuesYes: [
                 {
@@ -663,7 +731,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp5}}",
+            question: "It is necessary to implement assemblies to ration our production to the consumers according to their needs.",
+            question_slo: "Nujno je ustanavljati zbornice, da bi uskladili proizvodnjo s potrošniki glede na njihove potrebe.",
             answer: 0,
             valuesYes: [
                 {
@@ -679,13 +748,14 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp6}}",
+            question: "The labor market enslave workers.",
+            question_slo: "Trg dela zasužnjuje delavce.",
             answer: 0,
             valuesYes: [
                 {
                     axis: "p0",
-                    value: 3
-                }
+                    value: 3,
+                    }
             ],
             valuesNo: [
                 {
@@ -695,23 +765,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp7}}",
-            answer: 0,
-            valuesYes: [
-                {
-                    axis: "p1",
-                    value: 3
-                }
-            ],
-            valuesNo: [
-                {
-                    axis: "p0",
-                    value: 3
-                }
-            ]
-        },
-        {
-            question: "{{site.t[page.language].qp8}}",
+            question: "Looking for one&#39;s own profit is healthy for the economy.",
+            question_slo: "Zasledovanje lastnega profita je zdravo za gospodarstvo.",
             answer: 0,
             valuesYes: [
                 {
@@ -727,7 +782,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp9}}",
+            question: "It is merit that explains differences of wealth between two individuals.",
+            question_slo: "Razliko med bogastvom dveh posameznikov pojasnjujejo zasluge.",
             answer: 0,
             valuesYes: [
                 {
@@ -743,7 +799,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp10}}",
+            question: "The fact that some schools and universities are private is not a problem.",
+            question_slo: "Dejstvo, da so nekatere šole in univerze zasebne, ni problem.",
             answer: 0,
             valuesYes: [
                 {
@@ -759,7 +816,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp11}}",
+            question: "Offshoring and outsourcing are necessary evils to improve production.",
+            question_slo: "Najemanje delavcev in podizvajalcev iz tujine je nujno zlo za napredek proizvodnje.",
             answer: 0,
             valuesYes: [
                 {
@@ -775,7 +833,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp12}}",
+            question: "It is acceptable that there are rich and poor people.",
+            question_slo: "Sprejemljivo je, da obstajajo bogati in revni ljudje.",
             answer: 0,
             valuesYes: [
                 {
@@ -791,7 +850,25 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qp13}}",
+            question: "It is acceptable that some industry sectors are private.",
+            question_slo: "Sprejemljivo je, da so nekateri industrijski sektorji zasebni.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Banks should remain private.",
+            question_slo: "Banke naj ostanejo zasebne.",
             answer: 0,
             valuesYes: [
                 {
@@ -808,7 +885,8 @@ language: sl_SI
         },
         /* MARKET ******************************************************* */
         {
-            question: "{{site.t[page.language].qm0}}",
+            question: "Revenues and capital should be taxed to redistribute wealth.",
+            question_slo: "Prihodki in kapital bi morali biti obdavčeni tako, da bi se bogastvo porazdelilo.",
             answer: 0,
             valuesYes: [
                 {
@@ -824,7 +902,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm1}}",
+            question: "The age of retirement should be lowered.",
+            question_slo: "Upokojitveno starost bi morali znižati.",
             answer: 0,
             valuesYes: [
                 {
@@ -840,7 +919,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm2}}",
+            question: "Dismissals of employees should be forbidden except if it is justified.",
+            question_slo: "Odpuščanje zaposlenih bi moralo biti prepovedano, razen ce je upravičeno.",
             answer: 0,
             valuesYes: [
                 {
@@ -856,7 +936,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm3}}",
+            question: "Minimal levels of salary should be ensured to make sure that a worker can live of her/his work.",
+            question_slo: "Minimalna plača bi morala biti zagotovljena, da bi posrkrbeli, da delavec/-ka lahko živi od svojega dela.",
             answer: 0,
             valuesYes: [
                 {
@@ -872,7 +953,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm4}}",
+            question: "It is necessary to avoid private monopoly.",
+            question_slo: "Nujno se je izogniti zasebnim monopolom.",
             answer: 0,
             valuesYes: [
                 {
@@ -888,7 +970,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm5}}",
+            question: "Loans contracted in the public sphere (State, regions, collectivities...) should not necessarily be refunded.",
+            question_slo: "Posojila, ki so sklenjena v javni sferi (država, regije, kolektivnosti ...), ne rabijo biti nujno vrnjena.",
             answer: 0,
             valuesYes: [
                 {
@@ -904,7 +987,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm6}}",
+            question: "Some sectors or type of employment should be financially supported.",
+            question_slo: "Nekateri sektorji ali tipi zaposlitev bi morali biti finančno podprti.",
             answer: 0,
             valuesYes: [
                 {
@@ -920,7 +1004,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm7}}",
+            question: "Market economy is optimal when it is not regulated.",
+            question_slo: "Tržno gospodarstvo je optimalno, kadar ni regulirano.",
             answer: 0,
             valuesYes: [
                 {
@@ -936,7 +1021,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm8}}",
+            question: "Nowadays employees are free to choose when signing a contract with their future employer",
+            question_slo: "Dandanes imajo zaposleni svobodno izbiro, ko podpisujejo pogodbo s svojim bodočim zaposlovacem.",
             answer: 0,
             valuesYes: [
                 {
@@ -952,7 +1038,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm9}}",
+            question: "It is necessary to remove regulations in labour legislation to encourage firms to hire.",
+            question_slo: "Nujno je odpraviti regulacije v delovni zakonodaji, da bi spodbudili podjetja k zaposlovanju.",
             answer: 0,
             valuesYes: [
                 {
@@ -968,7 +1055,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm10}}",
+            question: "The maximum allowed hours in the legal work week should be increased.",
+            question_slo: "Največje dovoljeno število ur v zakonsko določenem delovnem tednu bi morali povečati.",
             answer: 0,
             valuesYes: [
                 {
@@ -984,7 +1072,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm11}}",
+            question: "Environmental norms should be influenced by mass consumption and not from an authority.",
+            question_slo: "Okoljske norme bi morale biti pod vplivom masovne potrošnje, ne avtoritete.",
             answer: 0,
             valuesYes: [
                 {
@@ -1000,7 +1089,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm12}}",
+            question: "Social assistance deters people from working.",
+            question_slo: "Socialna pomoč ljudi odvrača od dela.",
             answer: 0,
             valuesYes: [
                 {
@@ -1016,7 +1106,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qm13}}",
+            question: "State-run companies should be managed like private ones and follow the logic of the market (competition, profitability...).",
+            question_slo: "Državna podjetja bi morala biti upravljana enako kot zasebna in slediti logiki trga (konkurenčnost, donosnost ...).",
             answer: 0,
             valuesYes: [
                 {
@@ -1033,7 +1124,8 @@ language: sl_SI
         },
         /* SOCIETE ****************************************************** */
         {
-            question: "{{site.t[page.language].qs0}}",
+            question: "Traditions should be questioned.",
+            question_slo: "Tradicije bi morali preizpraševati.",
             answer: 0,
             valuesYes: [
                 {
@@ -1049,7 +1141,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs1}}",
+            question: "I do not have any problem if other official languages are added or replace the already existing official language in my country.",
+            question_slo: "Nimam težav s tem, da bi dodali druge uradne jezike ali zamenjali uradni jezik v moji državi.",
             answer: 0,
             valuesYes: [
                 {
@@ -1065,7 +1158,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs2}}",
+            question: "Marriage should be abolished.",
+            question_slo: "Poroko bi morali ukiniti.",
             answer: 0,
             valuesYes: [
                 {
@@ -1085,7 +1179,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs3}}",
+            question: "Foreigners enrich our culture.",
+            question_slo: "Tujci bogatijo našo kulturo.",
             answer: 0,
             valuesYes: [
                 {
@@ -1101,7 +1196,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs4}}",
+            question: "The influence of religion should decrease.",
+            question_slo: "Vpliv vere bi se moral zmanjšati.",
             answer: 0,
             valuesYes: [
                 {
@@ -1117,7 +1213,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs5}}",
+            question: "A language is defined by its users, not by scholars.",
+            question_slo: "Jezik določajo njegovi govorci, ne znanstveniki.",
             answer: 0,
             valuesYes: [
                 {
@@ -1133,7 +1230,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs6}}",
+            question: "Euthanasia should be authorised.",
+            question_slo: "Evtanazija bi morala biti dovoljena.",
             answer: 0,
             valuesYes: [
                 {
@@ -1149,7 +1247,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs7}}",
+            question: "Homosexuals should not be treated equally to heterosexuals with regards to marriage, filiation, adoption or procreation.",
+            question_slo: "Homoseksualci ne bi smeli biti obravnavani enako, kar se tiče poroke, posvojitev ali razmnoževanja.",
             answer: 0,
             valuesYes: [
                 {
@@ -1165,7 +1264,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs8}}",
+            question: "In some specific conditions, the death penalty is justified.",
+            question_slo: "Pod nekaterimi specifičnimi pogoji je smrtna kazen upravičena.",
             answer: 0,
             valuesYes: [
                 {
@@ -1189,7 +1289,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs9}}",
+            question: "Technological progress must not to change society too quickly.",
+            question_slo: "Tehnološki napredek družbe ne sme prehitro spremeniti.",
             answer: 0,
             valuesYes: [
                 {
@@ -1205,7 +1306,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs10}}",
+            question: "School should mostly teach our values, traditions and fundamental knowledge.",
+            question_slo: "Šola bi morala učiti predvsem vrednote, tradicije in temeljna znanja.",
             answer: 0,
             valuesYes: [
                 {
@@ -1221,7 +1323,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs11}}",
+            question: "Abortion should be limited to specific cases.",
+            question_slo: "Splav bi moral biti omejen na specifične primere.",
             answer: 0,
             valuesYes: [
                 {
@@ -1241,7 +1344,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs12}}",
+            question: "The main goal of a couple is to make at least one child.",
+            question_slo: "Osrednji cilj para je, da naredi vsaj enega otroka.",
             answer: 0,
             valuesYes: [
                 {
@@ -1257,7 +1361,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qs13}}",
+            question: "Abstinence should be prefered to contraception, to preserve the true nature of the sexual act.",
+            question_slo: "Abstinenca bi morala imeti prednost pred kontracepcijo, da se ohrani prava narava spolnega odnosa.",
             answer: 0,
             valuesYes: [
                 {
@@ -1274,7 +1379,8 @@ language: sl_SI
         },
         /* ECOLOGIE ***************************************************** */
         {
-            question: "{{site.t[page.language].qe0}}",
+            question: "It is not acceptable that human actions should lead to the extinction of species.",
+            question_slo: "Ni sprejemljivo, da človeška dejanja vodijo v izumiranje živalskih vrst.",
             answer: 0,
             valuesYes: [
                 {
@@ -1290,7 +1396,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe1}}",
+            question: "GMOs should be forbidden outside research and medical purposes.",
+            question_slo: "Gensko spremenjeni organizmi bi morali biti prepovedani onkraj raziskovalnih in medicinskih namenov.",
             answer: 0,
             valuesYes: [
                 {
@@ -1306,7 +1413,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe2}}",
+            question: "We must fight against global warming.",
+            question_slo: "Boriti se moramo proti globalnemu segrevanju.",
             answer: 0,
             valuesYes: [
                 {
@@ -1322,7 +1430,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe3}}",
+            question: "We should accept changes in our way of consuming food to limit the exploitation of nature.",
+            question_slo: "Sprejeti moramo spremembe v našem načinu prehranjevanja, da bi omejili izkorišcanje narave.",
             answer: 0,
             valuesYes: [
                 {
@@ -1338,7 +1447,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe4}}",
+            question: "It is important to encourage an agriculture that maintains a food biodiversity, even if the output is inferior.",
+            question_slo: "Pomembno je vzpodbujati kmetijstvo, ki ohranja biodiverziteto hrane, četudi je pridelek na ta račun slabši.",
             answer: 0,
             valuesYes: [
                 {
@@ -1354,7 +1464,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe5}}",
+            question: "Preserving non urban ecosystems is more important than creating jobs.",
+            question_slo: "Ohranjanje neurbanih ekosistemov je pomembnejše od ustvarjanja služb.",
             answer: 0,
             valuesYes: [
                 {
@@ -1370,7 +1481,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe6}}",
+            question: "Reduction of waste should be done by reducing production.",
+            question_slo: "Zmanjševanje količine smeti bi morali doseči z zmanjševanjem proizvodnje.",
             answer: 0,
             valuesYes: [
                 {
@@ -1386,7 +1498,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe7}}",
+            question: "Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...) ",
+            question_slo: "Kolonizacija vesolja je dobra rešitev za oskrbo z materiali, ki jih bo na Zemlji nekoč zmanjkalo (železo, redke kovine, goriva ...).",
             answer: 0,
             valuesYes: [
                 {
@@ -1402,7 +1515,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe8}}",
+            question: "Transforming ecosystems durably to increase the quality of life of human beings is legitimate.",
+            question_slo: "Trajno preoblikovanje ekosistemov za zvišanje kvalitete življenja ljudi je legitimno.",
             answer: 0,
             valuesYes: [
                 {
@@ -1418,7 +1532,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe9}}",
+            question: "It is necessary to massively invest in research to improve productivity.",
+            question_slo: "Nujno je veliko vlagati v razvoj, da bi povečali produktivnost.",
             answer: 0,
             valuesYes: [
                 {
@@ -1434,7 +1549,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe10}}",
+            question: "Transhumanism will be beneficial because it will allow us to improve our capacities.",
+            question_slo: "Transhumanizem bo koristen, ker nam bo omogočil izboljšati naše zmogljivosti.",
             answer: 0,
             valuesYes: [
                 {
@@ -1450,7 +1566,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe11}}",
+            question: "Nuclear fission, when well maintained, is a good source of energy.",
+            question_slo: "Jedrska cepitev, ce je dobro vzdrževana, je dober vir energije.",
             answer: 0,
             valuesYes: [
                 {
@@ -1466,7 +1583,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe12}}",
+            question: "Exploitation of fossil fuels is necessary.",
+            question_slo: "Izkoriščanje fosilnih goriv je nujno.",
             answer: 0,
             valuesYes: [
                 {
@@ -1482,7 +1600,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qe13}}",
+            question: "Maintaining strong economic growth should be an objective for the government.",
+            question_slo: "Ohranjanje močne gospodarske rasti bi moral biti cilj vlade.",
             answer: 0,
             valuesYes: [
                 {
@@ -1499,7 +1618,8 @@ language: sl_SI
         },
         /* LIBERTAIRE *************************************************** */
         {
-            question: "{{site.t[page.language].qj0}}",
+            question: "Prisons should no longer exist.",
+            question_slo: "Zapori ne bi smeli več obstajati.",
             answer: 0,
             valuesYes: [
                 {
@@ -1515,7 +1635,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj1}}",
+            question: "It is unfair to set a minimal penalty for an offense or a crime.",
+            question_slo: "Ni pošteno določiti minimalne kazni za prekršek ali zlocin.",
             answer: 0,
             valuesYes: [
                 {
@@ -1531,7 +1652,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj2}}",
+            question: "Individuals who get out of prison should be accompanied in their reinsertion.",
+            question_slo: "Posameznike, ki pridejo iz zapora, je potrebno spremljati pri njihovem vključevanju nazaj v družbo.",
             answer: 0,
             valuesYes: [
                 {
@@ -1547,7 +1669,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj3}}",
+            question: "Justice should always take into consideration the context and the past of the condemned and adapt their penalty accordingly.",
+            question_slo: "Pravica bi vedno morala upoštevati kontekst in preteklost obsojenca in temu primerno prilagoditi kazen.",
             answer: 0,
             valuesYes: [
                 {
@@ -1563,7 +1686,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj4}}",
+            question: "Conditions of life in jail should be greatly improved.",
+            question_slo: "Življenjske pogoje v zaporu bi morali močno izboljšati.",
             answer: 0,
             valuesYes: [
                 {
@@ -1579,7 +1703,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj5}}",
+            question: "The filing and storage of personal records should be delimited strictly and database cross-checking should be forbidden.",
+            question_slo: "Zbiranje in shranjevanje osebnih podatkov bi moralo biti strogo omejeno, povezovanje različnih baz osebnih podatkov pa prepovedano.",
             answer: 0,
             valuesYes: [
                 {
@@ -1595,7 +1720,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj6}}",
+            question: "The right to be anonymous on Internet should be guaranteed.",
+            question_slo: "Pravica biti anonimen na internetu bi morala biti zagotovljena.",
             answer: 0,
             valuesYes: [
                 {
@@ -1611,7 +1737,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj7}}",
+            question: "The purpose of the judiciary system should be to punish those who went against the law.",
+            question_slo: "Namen pravosodnega sistema bi moral biti kaznovati tiste, ki so kršili zakon.",
             answer: 0,
             valuesYes: [
                 {
@@ -1627,7 +1754,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj8}}",
+            question: "The police should be armed.",
+            question_slo: "Policija mora biti oborožena.",
             answer: 0,
             valuesYes: [
                 {
@@ -1643,7 +1771,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj9}}",
+            question: "The sacrifice of some civil liberties is a necessity in order to be protected from terrorist acts.",
+            question_slo: "Žrtvovanje nekaterih državljanskih svoboščin je nujno za preprečevanje terorističnih dejanj.",
             answer: 0,
             valuesYes: [
                 {
@@ -1659,7 +1788,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj10}}",
+            question: "Order and authority should be respected in all circumstances.",
+            question_slo: "Red in oblast je treba spoštovati v vseh okoliščinah.",
             answer: 0,
             valuesYes: [
                 {
@@ -1675,7 +1805,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj11}}",
+            question: "Heavy penalties are efficient because they are dissuasive.",
+            question_slo: "Stroge kazni so učinkovite, ker odvračajo od zločinov.",
             answer: 0,
             valuesYes: [
                 {
@@ -1691,7 +1822,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qj12}}",
+            question: "It is better to arrest someone potentially dangerous preventively rather than taking the risk of having them committing a crime.",
+            question_slo: "Bolje je preventivno aretirati potencialno nevarne kot tvegati, da storijo zločin.",
             answer: 0,
             valuesYes: [
                 {
@@ -1708,7 +1840,8 @@ language: sl_SI
         },
         /* STRATEGIE **************************************************** */
         {
-            question: "{{site.t[page.language].qt0}}",
+            question: "Mass strike is a good way to acquire new rights.",
+            question_slo: "Množična stavka je dober način za pridobitev novih pravic.",
             answer: 0,
             valuesYes: [
                 {
@@ -1724,7 +1857,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt1}}",
+            question: "Armed struggle in a country is sometimes necessary.",
+            question_slo: "Oborožen boj v državi je včasih nujen.",
             answer: 0,
             valuesYes: [
                 {
@@ -1740,7 +1874,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt2}}",
+            question: "Insurrection is necessary to deeply change society.",
+            question_slo: "Vstaja je nujna za globoko spremembo družbe.",
             answer: 0,
             valuesYes: [
                 {
@@ -1756,7 +1891,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt3}}",
+            question: "Activism in existing political organisations is not relevant to change society.",
+            question_slo: "Aktivizem v obstoječih političnih organizacijah ni relevanten za spremembe v družbi.",
             answer: 0,
             valuesYes: [
                 {
@@ -1772,7 +1908,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt4}}",
+            question: "Elections organised by the state cannot question the powers in place.",
+            question_slo: "Volitve, ki jih organizira država, ne morejo preizprašati obstoječih moči.",
             answer: 0,
             valuesYes: [
                 {
@@ -1788,7 +1925,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt5}}",
+            question: "Hacking has a legitimate place in political struggle.",
+            question_slo: "Hekanje ima legitimno mesto v političnem boju.",
             answer: 0,
             valuesYes: [
                 {
@@ -1804,7 +1942,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt6}}",
+            question: "Sabotage is legitimate under certain conditions.",
+            question_slo: "Pod nekaterimi pogoji je sabotaža legitimna.",
             answer: 0,
             valuesYes: [
                 {
@@ -1820,7 +1959,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt7}}",
+            question: "Activists must always act in strict accordance with the law.",
+            question_slo: "Aktivisti morajo vedno delovati strogo v skladu z zakonom.",
             answer: 0,
             valuesYes: [
                 {
@@ -1836,7 +1976,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt8}}",
+            question: "Revolutions will always end up in a bad way.",
+            question_slo: "Revolucije se bodo vedno slabo končale.",
             answer: 0,
             valuesYes: [
                 {
@@ -1852,7 +1993,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt9}}",
+            question: "Changing the system radically is counter-productive. We should rather transform it progressively.",
+            question_slo: "Radikalne spremembe sistema so kontraproduktivne. Spremeniti ga moramo postopoma.",
             answer: 0,
             valuesYes: [
                 {
@@ -1868,7 +2010,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt10}}",
+            question: "Violence against individuals is never productive.",
+            question_slo: "Nasilje proti posameznikom ni nikoli produktivno.",
             answer: 0,
             valuesYes: [
                 {
@@ -1884,7 +2027,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt11}}",
+            question: "We should always distance ourselves from protestors who use violence.",
+            question_slo: "Vedno se moramo distancirati od protestnikov, ki uporabljajo nasilje.",
             answer: 0,
             valuesYes: [
                 {
@@ -1900,7 +2044,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt12}}",
+            question: "We need to make compromises with the opposition to apply our ideas.",
+            question_slo: "Da bi uspeli s svojimi idejami, je treba z opozicijo sklepati kompromise.",
             answer: 0,
             valuesYes: [
                 {
@@ -1916,7 +2061,8 @@ language: sl_SI
             ]
         },
         {
-            question: "{{site.t[page.language].qt13}}",
+            question: "Changes in an individual&#39;s way of life can induce changes in society.",
+            question_slo: "Spremembe v življenju posameznika lahko prinesejo spremembe v družbi.",
             answer: 0,
             valuesYes: [
                 {
@@ -1933,7 +2079,8 @@ language: sl_SI
         },
         /* BONUS ******************************************************** */
         {
-            question: "{{site.t[page.language].qreli}}",
+            question: "My religion must be spread as widely as possible.",
+            question_slo: "Mojo religijo je treba razširiti, kolikor je možno.",
             answer: 0,
             valuesYes: [
                 {
@@ -1944,7 +2091,8 @@ language: sl_SI
             valuesNo: []
         },
         {
-            question: "{{site.t[page.language].qcons}}",
+            question: "It is a small group that consciously and secretly controls the world.",
+            question_slo: "Svet zavestno in na skrivaj nadzira majhna skupina ljudi.",
             answer: 0,
             valuesYes: [
                 {
@@ -1955,7 +2103,8 @@ language: sl_SI
             valuesNo: []
         },
         {
-            question: "{{site.t[page.language].qprag}}",
+            question: "A good policy is a pragmatic policy without ideology.",
+            question_slo: "Dobra politika je pragmatična politika brez ideologije.",
             answer: 0,
             valuesYes: [
                 {
@@ -1966,7 +2115,8 @@ language: sl_SI
             valuesNo: []
         },
         {
-            question: "{{site.t[page.language].qmona}}",
+            question: "We need to establish a monarchy to federate the people and preserve our sovereignty.",
+            question_slo: "Vzpostaviti moramo monarhijo, da bi združili ljudi in ohranili svojo suverenost.",
             answer: 0,
             valuesYes: [
                 {
@@ -1977,7 +2127,8 @@ language: sl_SI
             valuesNo: []
         },
         {
-            question: "{{site.t[page.language].qvega}}",
+            question: "Humans should neither eat nor exploit animals.",
+            question_slo: "Ljudje ne bi smeli jesti ali drugače izkorišcati živali.",
             answer: 0,
             valuesYes: [
                 {
@@ -1988,7 +2139,8 @@ language: sl_SI
             valuesNo: []
         },
         {
-            question: "{{site.t[page.language].qanar}}",
+            question: "The State should be abolished.",
+            question_slo: "Državo bi bilo treba ukiniti.",
             answer: 0,
             valuesYes: [
                 {
@@ -2007,30 +2159,30 @@ language: sl_SI
     function shuffle(array) {
         var i = 0, j = 0, temp = null;
 
-        /*  for (i = array.length - 1; i > 0; i -= 1) {
+          for (i = array.length - 1; i > 0; i -= 1) {
               j = Math.floor(Math.random() * (i + 1));
               temp = array[i];
               array[i] = array[j];
               array[j] = temp;
-          }*/
+          }
     }
 
-    // shuffle(questions)
+    shuffle(questions)
 
     init_question();
 
     function init_question() {
-        /*  document.getElementById("question-text").innerHTML = questions[qn].question;
-          document.getElementById("quiz-progress").innerHTML = "" + (qn + 1) + "/" +  questions.length;
-          document.getElementById("bar").style.width =  (((qn + 1) / questions.length) * 100).toFixed(0) + "%";
-          if (qn == 0) {
-              document.getElementById("back_button").style.display = 'none';
-              //	document.getElementById("back_button_off").style.display = 'block';
-          }
-          else {
-              document.getElementById("back_button").style.display = 'block';
-              //document.getElementById("back_button_off").style.display = 'none';
-          }*/
+        document.getElementById("question-text").innerHTML = questions[qn].question_slo;
+        document.getElementById("quiz-progress").innerHTML = "" + (qn + 1) + "/" + questions.length;
+        document.getElementById("bar").style.width = (((qn + 1) / questions.length) * 100).toFixed(0) + "%";
+        if (qn == 0) {
+            document.getElementById("back_button").style.visibility = 'hidden';
+            //	document.getElementById("back_button_off").style.display = 'block';
+        }
+        else {
+            document.getElementById("back_button").style.visibility = 'visible';
+            //document.getElementById("back_button_off").style.display = 'none';
+        }
 
     }
 
@@ -2105,7 +2257,7 @@ language: sl_SI
             }
         }
 
-        url = "{{site.basepath}}/stranke?" + url + "&csv=" + csv;
+        url = "/rezultati?" + url
 
         location.href = url;
     }
@@ -2172,151 +2324,11 @@ language: sl_SI
         }
     }
 
-    axes = [
-        "c",
-        "b",
-        "p",
-        "m",
-        "s",
-        "j",
-        "e",
-        "t"
-    ]
-
-    var parties = [];
-
-    for (var party in partyResults) {
-
-        //   console.log(party, partyResults[party]);
-        var votes = [];
-
-        for (var i = 0; i < axes.length; i++) {
-            var neg = getQueryVariableFromString(axes[i] + "0", partyResults[party]);
-            var pos = getQueryVariableFromString(axes[i] + "1", partyResults[party]);
-
-            var vote = {};
-            vote.axes = axes[i];
-            vote.negative = neg;
-            vote.positive = pos;
-            vote.neutral = 1 - neg - pos;
-            votes.push(vote);
-        }
-
-        parties.push({party: party, votes: votes});
-        // propertyName is what you want
-        // you can get the value like this: myObject[propertyName]
-    }
-
-    characteristics = []
-
-
-    for (var i = 0; i < axes.length; i++) {
-        negativeValue = getQueryVariable(axes[i] + "0");
-        positiveValue = getQueryVariable(axes[i] + "1");
-        setAxisValue(axes[i] + "AxisNeg", negativeValue);
-        setAxisValue(axes[i] + "AxisPos", positiveValue);
-        setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
-
-        if (negativeValue > positiveValue) {
-            characteristics.push({name: axes[i] + "0", value: negativeValue});
-        }
-        else {
-            characteristics.push({name: axes[i] + "1", value: positiveValue});
-        }
-    }
-
-    for (var i = 0; i < axes.length; i++) {
-        var axis = axes[i];
-        var container = $('#' + axis);
-
-        var axisStuff = [];
-
-        for (var party of parties) {
-            for (var vote of party.votes) {
-                if (axis == vote.axes) {
-                    var append = $('<div class="progress-bar progress-bar-party d-flex flex-row"><h6 class="text-center">' + party.party + '</h6><div class="progress-negative"></div><div class="progress-mid"></div><div class="progress-positive"></div></div>');
-
-                    append.find('.progress-positive').width((vote.positive * 100).toFixed(0) + "%");
-                    append.find('.progress-negative').width((vote.negative * 100).toFixed(0) + "%");
-                    append.find('.progress-mid').width((vote.neutral * 100).toFixed(0) + "%");
-
-                    axisStuff.push({html: append, vote});
-                }
-            }
-        }
-
-        axisStuff = axisStuff.sort(function (a, b) {
-            return b.vote.negative - a.vote.negative;
-        });
-
-
-        var you = container.find('.progress-bar');
-        var youPositive = you.find('.progress-negative')[0].style.width;
-
-        // console.log(youPositive, parseInt(youPositive.replace('%', '')));
-        var you = you.detach();
-
-
-        var hasYouBeenPlaced = false;
-        for (let j = 0; j < axisStuff.length; j++) {
-            const stuff = axisStuff[j];
-
-            /*  if (parseInt(youPositive.replace('%', '')) >= stuff.vote.negative * 100) {
-                  if (!hasYouBeenPlaced) {
-                      hasYouBeenPlaced = true;
-                      container.append(you);
-                  }
-
-              }*/
-            container.append(stuff.html);
-        }
-
-        /*  if (!hasYouBeenPlaced) {
-              hasYouBeenPlaced = true;
-              container.append(you);
-          }*/
-
-
-        //  console.log(axisStuff);
-    }
-
-    function getQueryVariableFromString(variable, input) {
-        var query = input.replace('?', '&');
-
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=")
-            if (pair[0] == variable) {
-                if (pair[1] == "NaN") {
-                    return 0
-                }
-                else {
-                    return pair[1] / 100;
-                }
-            }
-        }
-        return 0;
-    }
-
-    function setAxisValue(name, value) {
-        var axis = document.getElementById(name)
-        if (!axis)
-            return
-
-        var text = document.getElementById(name + "Text")
-        if (!text)
-            return
-
-        axis.style.width = ((100 * value).toFixed(1) + "%");
-
-        value = (100 * value).toFixed(0);
-
-        if (value > 10) {
-            text.innerHTML = (value + "%");
-        }
-
-        /*  if (text.offsetWidth > axis.offsetWidth)
-              text.style.visibility = "hidden";*/
-    }
-
 </script>
+
+
+</body>
+</html>
+
+
+

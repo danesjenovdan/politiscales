@@ -1,0 +1,817 @@
+<html lang="sl_SI">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<meta property="og:locale" content="sl_SI"/>
+
+<meta property="og:image" content="/images/og-image.png"/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@danesjenovdan">
+<meta name="twitter:image" content="/images/og-image.png">
+
+<title>Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank</title>
+<meta property="og:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank"/>
+<meta name="twitter:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank">
+<meta name="twitter:description" content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+
+<meta name="description" content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+<meta property="og:description" content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!"/>
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+
+    <!--  <meta name="description" content="">
+    <meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+
+    <meta property="og:url" content="http://politiscales.la-commune.net/sl_SI/" />
+    <meta property="og:title" content="PolitiScales" />
+    <meta property="og:locale" content="sl_SI" />
+    <meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+    <meta property="og:image" content="http://politiscales.la-commune.net/images/facebook-preview.png" /> -->
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-4">
+            <div class="pb-5 sidebar">
+    <a href="/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
+
+    <a href="/">
+        <button class="btn btn-primary mb-3 w-100">Reši test</button>
+    </a>
+
+    <a href="/rezultati-strank">
+        <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
+    </a>
+
+    <a href="/pomoc">
+        <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
+    </a>
+
+    <a href="/o-politicnem-portretu">
+        <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
+    </a>
+
+    <div class="mt-3 pt-3">
+
+        <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
+
+        <div class="social d-inline">
+            <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+
+</div>
+        </div>
+
+        <div class="col-12 col-lg-8 d-flex align-items-center">
+            <div class="card card-results w-100">
+                <div class="card-body text-center p-5">
+                    <h2>Kako se na vsebinske osi umeščajo politične stranke?</h2>
+
+<p class="my-4">Vprašalnik smo poslali vsem političnim strankam, ki kandidirajo na volitvah v Državni zbor 2018.
+    Prosili smo jih, da se do stališč opredelijo kolektivno.</p>
+
+<select class="form-control" onchange="location = this.value;" style="display: none;">
+    <option value="" selected></option>
+    <option value="/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</option>
+    <option value="/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</option>
+    <option value="/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</option>
+    <option value="/rezultati-strank?csv=4.csv">LEVICA</option>
+    <option value="/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</option>
+    <option value="/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</option>
+    <option value="/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</option>
+    <option value="/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</option>
+    <option value="/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</option>
+    <option value="/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</option>
+    <option value="/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</option>
+    <option value="/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</option>
+    <option value="/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</option>
+    <option value="/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</option>
+</select>
+
+<div class="dropdown mb-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        VSE STRANKE
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/rezultati-strank">VSE STRANKE</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=4.csv">LEVICA</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</a>
+        <a class="dropdown-item" href="/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</a>
+    </div>
+</div>
+
+                    <div class="mt-5">
+
+                        <hr>
+                        <div class="my-4">
+                            <div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_164808_ffffff.svg"
+                                         alt="Konstruktivizem"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Konstruktivizem</span>
+                <span class="float-right">Esencializem</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="cAxisNeg" class="progress-negative"><span
+                            id="cAxisNegText"></span></div>
+
+                    <div id="cAxisMid" class="progress-mid"><span
+                            id="cAxisMidText"></span></div>
+
+                    <div id="cAxisPos" class="progress-positive"><span
+                            id="cAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_1333114_ffffff.svg"
+                                         alt="Esencializem"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_1570221_ffffff.svg"
+                                         alt="Rehabilitacija"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Rehabilitacija</span>
+                <span class="float-right">Kaznovanje</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="jAxisNeg" class="progress-negative"><span
+                            id="jAxisNegText"></span></div>
+
+                    <div id="jAxisMid" class="progress-mid"><span
+                            id="jAxisMidText"></span></div>
+
+                    <div id="jAxisPos" class="progress-positive"><span
+                            id="jAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_394344_ffffff.svg"
+                                         alt="Kaznovanje"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_1262992_ffffff.svg"
+                                         alt="Progresivnost"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Progresivnost</span>
+                <span class="float-right">Konzervativnost</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="sAxisNeg" class="progress-negative"><span
+                            id="sAxisNegText"></span></div>
+
+                    <div id="sAxisMid" class="progress-mid"><span
+                            id="sAxisMidText"></span></div>
+
+                    <div id="sAxisPos" class="progress-positive"><span
+                            id="sAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_671007_ffffff.svg"
+                                         alt="konzervativnost"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_977265_ffffff.svg"
+                                         alt="Internacionalizem"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Internacionalizem</span>
+                <span class="float-right">Nacionalizem</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="bAxisNeg" class="progress-negative"><span
+                            id="bAxisNegText"></span></div>
+
+                    <div id="bAxisMid" class="progress-mid"><span
+                            id="bAxisMidText"></span></div>
+
+                    <div id="bAxisPos" class="progress-positive"><span
+                            id="bAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_1041307_ffffff.svg"
+                                         alt="Nacionalizem"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_58179_ffffff.svg"
+                                         alt="Komunizem"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Komunizem</span>
+                <span class="float-right">Kapitalizem</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="pAxisNeg" class="progress-negative"><span
+                            id="pAxisNegText"></span></div>
+
+                    <div id="pAxisMid" class="progress-mid"><span
+                            id="pAxisMidText"></span></div>
+
+                    <div id="pAxisPos" class="progress-positive"><span
+                            id="pAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_1615934_ffffff.svg"
+                                         alt="Kapitalizem"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_1009307_ffffff.svg"
+                                         alt="Regulacija"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Regulacija</span>
+                <span class="float-right">Laissez-faire</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="mAxisNeg" class="progress-negative"><span
+                            id="mAxisNegText"></span></div>
+
+                    <div id="mAxisMid" class="progress-mid"><span
+                            id="mAxisMidText"></span></div>
+
+                    <div id="mAxisPos" class="progress-positive"><span
+                            id="mAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_271026_ffffff.svg"
+                                         alt="Laissez-faire"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_1667288_ffffff.svg"
+                                         alt="Ekologija"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Ekologija</span>
+                <span class="float-right">Produktivnost</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="eAxisNeg" class="progress-negative"><span
+                            id="eAxisNegText"></span></div>
+
+                    <div id="eAxisMid" class="progress-mid"><span
+                            id="eAxisMidText"></span></div>
+
+                    <div id="eAxisPos" class="progress-positive"><span
+                            id="eAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_563350_ffffff.svg"
+                                         alt="Produktivnost"
+    ></div>
+</div>
+
+<div class="d-flex result">
+    <div class="icon icon-positive"><img src="/ikone/noun_862397_ffffff.svg"
+                                         alt="Revolucija"
+    ></div>
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <span class="float-left">Revolucija</span>
+                <span class="float-right">Reformizem</span>
+            </div>
+            <div class="col-12">
+                <div class="progress-bar">
+                    <div id="tAxisNeg" class="progress-negative"><span
+                            id="tAxisNegText"></span></div>
+
+                    <div id="tAxisMid" class="progress-mid"><span
+                            id="tAxisMidText"></span></div>
+
+                    <div id="tAxisPos" class="progress-positive"><span
+                            id="tAxisPosText"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="icon icon-negative"><img src="/ikone/noun_1236080_ffffff.svg"
+                                         alt="Reformizem"
+    ></div>
+</div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="mb-5">
+                        <a href="/" class="btn btn-link">Reši test in se primerjaj s strankami</a>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    csv = getParameterByName('csv');
+
+    if (csv) {
+        var option;
+        $('select option').filter(function () {
+            if ($(this).val().indexOf('csv=' + csv) !== -1) {
+                option = ($(this));
+                return true;
+            }
+
+            return false;
+        }).prop('selected', true);
+
+
+        $('#dropdownMenuButton').text(option.text());
+
+        /*  console.log($('select'));
+          $('select:first').val(csv);
+          console.log(csv);*/
+    } else {
+        $('#dropdownMenuButton').text('VSE STRANKE');
+    }
+
+    var urlToCopy = document.getElementById("urlToCopy")
+    if (urlToCopy) {
+        urlToCopy.innerHTML = location.href;
+    }
+
+    function shareLink() {
+        var urlToCopy = document.getElementById("urlToCopy")
+        var urlToCopyContainer = document.getElementById("urlToCopyContainer")
+        if (urlToCopy && urlToCopyContainer) {
+            urlToCopyContainer.style.display = "block";
+            var range = document.createRange();
+            range.selectNode(urlToCopy);
+            window.getSelection().addRange(range);
+
+            try {
+                // Now that we've selected the anchor text, execute the copy command
+                //~ if(document.execCommand('copy'))
+                {
+                    var button = document.getElementById("buttonLink")
+                    if (button) {
+                        button.className = "button buttonLinkGood";
+                        setTimeout(function () {
+                            var buttonTimeout = document.getElementById("buttonLink")
+                            if (buttonTimeout)
+                                button.className = "button buttonLink";
+                        }, 2000);
+                    }
+                }
+            }
+            catch (err) {
+
+            }
+        }
+    }
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=")
+            if (pair[0] == variable) {
+                if (pair[1] == "NaN") {
+                    return 0
+                }
+                else {
+                    return pair[1] / 100;
+                }
+            }
+        }
+        return 0;
+    }
+
+    function setAxisValue(name, value) {
+        var axis = document.getElementById(name)
+        if (!axis)
+            return
+
+        var text = document.getElementById(name + "Text")
+        if (!text)
+            return
+
+        axis.style.width = ((100 * value).toFixed(1) + "%");
+
+        value = (100 * value).toFixed(0);
+
+        if (value > 10) {
+            text.innerHTML = (value + "%");
+        }
+
+        /*  if (text.offsetWidth > axis.offsetWidth)
+              text.style.visibility = "hidden";*/
+    }
+
+    function setBonus(name, value, limit) {
+        axis = document.getElementById(name)
+        if (!axis)
+            return
+
+        if (value > limit) {
+            axis.style.display = "block";
+            axis.style.opacity = value * value;
+        }
+        else {
+            axis.style.display = "none";
+        }
+    }
+
+    axes = [
+        "c",
+        "b",
+        "p",
+        "m",
+        "s",
+        "j",
+        "e",
+        "t"
+    ]
+
+    bonus = {
+        anar: 0.9,
+        prag: 0.5,
+        femi: 0.9,
+        comp: 0.9,
+        vega: 0.5,
+        reli: 0.5,
+        mona: 0.5,
+    }
+
+    characteristics = []
+
+    for (var i = 0; i < axes.length; i++) {
+        negativeValue = getQueryVariable(axes[i] + "0");
+        positiveValue = getQueryVariable(axes[i] + "1");
+        setAxisValue(axes[i] + "AxisNeg", negativeValue);
+        setAxisValue(axes[i] + "AxisPos", positiveValue);
+        setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
+
+        if (negativeValue > positiveValue) {
+            characteristics.push({name: axes[i] + "0", value: negativeValue});
+        }
+        else {
+            characteristics.push({name: axes[i] + "1", value: positiveValue});
+        }
+    }
+
+    bonusEnabled = 0
+    for (var b in bonus) {
+
+        value = getQueryVariable(b);
+
+        setBonus(b + "Bonus", value, bonus[b]);
+
+        if (value > bonus[b]) {
+            bonusEnabled = 1;
+            characteristics.push({name: b, value: value});
+        }
+    }
+
+    characteristics.sort(function (a, b) {
+        return a.value < b.value;
+    });
+
+    charSlogan = {
+        c0: "Equality",
+        b0: "Humanity",
+        b1: "Fatherland",
+        p0: "Socialism",
+        p1: "Work",
+        m1: "Liberty",
+        s1: "Family",
+        j0: "Justice",
+        j1: "Order",
+        e0: "Ecology",
+        t0: "Revolution"
+    }
+
+    function findFlagColors() {
+        colors = [];
+
+        for (var i = 0; i < flagColors.length; i++) {
+            var accepted = 1;
+
+            var mainValue = 0;
+            var mainValueFound = 0;
+
+            for (var j = 0; j < flagColors[i].cond.length; j++) {
+                var charFound = 0;
+                for (var k = 0; k < characteristics.length; k++) {
+                    if (characteristics[k].name == flagColors[i].cond[j].name) {
+                        charFound = 1;
+                        if (characteristics[k].value < flagColors[i].cond[j].vmin || characteristics[k].value > flagColors[i].cond[j].vmax)
+                            accepted = 0;
+                        else if (!mainValueFound) {
+                            mainValueFound = 1;
+                            mainValue = characteristics[k].value;
+                        }
+
+                        break;
+                    }
+                }
+
+                if (!charFound)
+                    accepted = 0;
+
+                if (!accepted)
+                    break;
+            }
+
+            if (accepted) {
+                colors.push({bgColor: flagColors[i].bgColor, fgColor: flagColors[i].fgColor, value: mainValue});
+            }
+        }
+
+        colors.sort(function (a, b) {
+            return a.value < b.value;
+        });
+
+        return colors;
+    }
+
+    function findFlagShape(numColors) {
+        for (var i = 0; i < flagShapes.length; i++) {
+            var accepted = 1;
+
+            if (flagShapes[i].numColors > numColors)
+                accepted = 0;
+            else {
+                for (var j = 0; j < flagShapes[i].cond.length; j++) {
+                    var charFound = 0;
+                    for (var k = 0; k < characteristics.length; k++) {
+                        if (characteristics[k].name == flagShapes[i].cond[j].name) {
+                            charFound = 1;
+                            if (characteristics[k].value < flagShapes[i].cond[j].vmin || characteristics[k].value > flagShapes[i].cond[j].vmax)
+                                accepted = 0;
+
+                            break;
+                        }
+                    }
+
+                    if (!charFound)
+                        accepted = 0;
+
+                    if (!accepted)
+                        break;
+                }
+            }
+
+            if (accepted)
+                return i;
+        }
+
+        return -1;
+    }
+
+    function findFlagSymbol() {
+        for (var i = 0; i < flagSymbols.length; i++) {
+            var accepted = 1;
+
+            for (var j = 0; j < flagSymbols[i].cond.length; j++) {
+                var charFound = 0;
+                for (var k = 0; k < characteristics.length; k++) {
+                    if (characteristics[k].name == flagSymbols[i].cond[j].name) {
+                        charFound = 1;
+                        if (characteristics[k].value < flagSymbols[i].cond[j].vmin || characteristics[k].value > flagSymbols[i].cond[j].vmax)
+                            accepted = 0;
+
+                        break;
+                    }
+                }
+
+                if (!charFound)
+                    accepted = 0;
+
+                if (!accepted)
+                    break;
+            }
+
+            if (accepted)
+                return flagSymbols[i].id;
+        }
+
+        return -1;
+    }
+
+    generatedSlogan = "";
+    sloganDiv = document.getElementById("slogan");
+    if (sloganDiv) {
+        selectedSlogan = []
+
+        for (var i = 0; i < characteristics.length; i++) {
+            if (characteristics[i].value > 0 && charSlogan.hasOwnProperty(characteristics[i].name)) {
+                selectedSlogan.push({text: charSlogan[characteristics[i].name], value: characteristics[i].value});
+            }
+        }
+
+        selectedSlogan.sort(function (a, b) {
+            return a.value < b.value;
+        });
+
+        var counter = 0;
+        for (var i = 0; i < selectedSlogan.length; i++) {
+            if (generatedSlogan != "")
+                generatedSlogan += " · ";
+            generatedSlogan += selectedSlogan[i].text;
+            counter++;
+
+            if (counter >= 3)
+                break;
+        }
+
+        sloganDiv.innerHTML = generatedSlogan;
+    }
+
+    if (!bonusEnabled) {
+        bonusBox = document.getElementById("bonusBox")
+        bonusBox.style.display = "none";
+    }
+
+    twitterButton = document.getElementById("buttonTwitter")
+    if (twitterButton) {
+        var text = "My #PolitiScales results: %slogan%".replace("%slogan%", generatedSlogan);
+        twitterButton.href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text + " ") + encodeURIComponent(location.href);
+    }
+
+    redditButton = document.getElementById("buttonReddit")
+    if (redditButton) {
+        var text = "My #PolitiScales results: %slogan%".replace("%slogan%", generatedSlogan);
+        redditButton.href = "http://www.reddit.com/submit?url=" + encodeURIComponent(location.href) + "&title=" + encodeURIComponent(text);
+    }
+
+    var sprites = new Image();
+    sprites.src = '/images/flag_sprites.png';
+
+    function shareFacebook() {
+        uri = location.href;
+
+        FB.ui({
+            method: 'share',
+            hashtag: '#PolitiScales',
+            quote: "My #PolitiScales results: %slogan%".replace("%slogan%", generatedSlogan),
+            href: uri,
+        }, function (response) {
+        });
+    }
+
+    sprites.onload = function () {
+        flag = document.getElementById("generatedFlag");
+        if (flag) {
+            var ctx = flag.getContext("2d");
+
+            var spriteX = 256;
+            var spriteY = 128;
+            var spriteS = 1.0;
+
+            var symbolId = findFlagSymbol();
+            var colors = findFlagColors();
+
+            if (colors.length <= 0)
+                colors.push({bgColor: "#ffffff", fgColor: "#000000"});
+
+            var flagId = findFlagShape(colors.length);
+
+            if (flagId < 0) {
+                ctx.beginPath();
+                ctx.rect(0, 0, 512, 256);
+                ctx.fillStyle = "#ffffff";
+                ctx.fill();
+            }
+            else {
+                for (var i = 0; i < flagShapes[flagId].shapes.length; i++) {
+                    var path = flagShapes[flagId].shapes[i];
+                    var numPoints = path.length / 2;
+
+                    ctx.beginPath();
+                    ctx.moveTo(path[1] * 512, path[2] * 256);
+
+                    for (var j = 1; j < numPoints; j++) {
+                        ctx.lineTo(path[1 + j * 2 + 0] * 512, path[1 + j * 2 + 1] * 256);
+                    }
+                    ctx.fillStyle = colors[path[0]].bgColor;
+                    ctx.fill();
+                }
+
+                spriteX = flagShapes[flagId].symbol[0] * 512;
+                spriteY = flagShapes[flagId].symbol[1] * 256;
+                spriteS = flagShapes[flagId].symbol[2];
+            }
+
+            if (symbolId >= 0) {
+                var tmpC = document.createElement('canvas');
+                tmpC.width = sprites.width;
+                tmpC.height = sprites.height;
+                var tmpCtx = tmpC.getContext('2d');
+                var coloredSprites = tmpCtx.getImageData(0, 0, tmpC.width, tmpC.height);
+
+                tmpCtx.beginPath();
+                tmpCtx.rect(0, 0, tmpC.width, tmpC.height);
+                tmpCtx.fillStyle = colors[0].fgColor;
+                tmpCtx.fill();
+
+                tmpCtx.globalCompositeOperation = "destination-in";
+                tmpCtx.drawImage(sprites, 0, 0);
+
+                ctx.drawImage(tmpC, symbolId * 128, 0, 128, 128, spriteX - 64 * spriteS, spriteY - 64 * spriteS, 128 * spriteS, 128 * spriteS);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
+
+
+
