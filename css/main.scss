@@ -199,6 +199,16 @@ h1 {
   color: $primary;
   word-break: break-all;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(md)
+  {
+    font-size: 1.875rem;
+  }
+
+  @include media-breakpoint-only(lg)
+  {
+    font-size: 2rem;
+  }
 }
 
 #quiz-progress {
@@ -207,6 +217,7 @@ h1 {
   margin-top: -10px;
   color: $primary;
   letter-spacing: 3px;
+  width: 75px;
 }
 
 .btn {
@@ -235,6 +246,14 @@ hr {
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
 
+  .icon
+  {
+    @include media-breakpoint-down(md)
+    {
+      display: none !important;
+    }
+  }
+
 }
 
 .progress {
@@ -250,7 +269,6 @@ hr {
   min-height: 170px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .progress-bar {
@@ -266,7 +284,12 @@ hr {
   margin-bottom: 0.75rem;
 
   > * {
-    padding: 0.25rem 0.25rem;
+    padding: 0.25rem 0;
+  }
+
+   span {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
   }
   .progress-negative {
     background-color: $blueLight;
@@ -326,7 +349,7 @@ hr {
 .missing {
   font-size: 0.875rem;
   position: relative;
-  top: -5px;
+  top: -7px;
 }
 
 .clickable {
@@ -335,7 +358,7 @@ hr {
 
 .progress-bar-you {
   h6 {
-    width: 230px;
+    width: 250px;
     padding-top: 6.25px;
     padding-right: 0.5rem;
     text-align: right !important;
@@ -367,7 +390,7 @@ hr {
   height: 16px;
 
   h6 {
-    width: 230px;
+    width: 250px;
     padding-top: 0;
     padding-right: 0.5rem;
     text-align: right !important;
@@ -454,6 +477,21 @@ hr {
 
   }
 
+}
+
+#sidebar-toggle
+{
+  .btn
+  {
+    color: white !important;
+    border: none !important;
+    font-size: 3rem !important;
+
+    @include hover-focus-active()
+    {
+      background: transparent!important;
+    }
+  }
 }
 
 #sidebar-links

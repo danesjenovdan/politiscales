@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link rel="stylesheet" href="css/main.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/main.css?1" type="text/css" media="screen"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
@@ -58,37 +58,45 @@
     <div class="row">
         <div class="col-12 col-lg-4">
             <div class="pb-5 sidebar">
+    <div class="float-right d-lg-none" id="sidebar-toggle">
+        <button class="btn-outline-primary btn btn-lg" data-toggle="collapse" data-target="#sidebar-links" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
     <a href="/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
 
-    <a href="/">
-        <button class="btn btn-primary mb-3 w-100">Reši test</button>
-    </a>
+    <div class="collapse" id="sidebar-links">
+        <a href="/">
+            <button class="btn btn-primary mb-3 w-100">Reši test</button>
+        </a>
 
-    <a href="/rezultati-strank">
-        <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
-    </a>
+        <a href="/rezultati-strank">
+            <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
+        </a>
 
-    <a href="/pomoc">
-        <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
-    </a>
+        <a href="/pomoc">
+            <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
+        </a>
 
-    <a href="/o-politicnem-portretu">
-        <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
-    </a>
+        <a href="/o-politicnem-portretu">
+            <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
+        </a>
 
-    <div class="mt-3 pt-3">
+        <div class="mt-3 pt-3">
 
-        <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
+            <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
 
-        <div class="social d-inline">
-            <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+            <div class="social d-inline">
+                <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </div>
 
 </div>
         </div>
-        <div class="col-12 col-lg-8 d-flex align-items-center">
+        <div class="col-12 col-lg-8">
             <div class="card card-help">
                 <div class="card-body p-5">
                     <div>

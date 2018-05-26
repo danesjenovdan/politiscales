@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link rel="stylesheet" href="css/main.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/main.css?1" type="text/css" media="screen"/>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
@@ -58,38 +58,46 @@
     <div class="row">
         <div class="col-12 col-lg-4">
             <div class="pb-5 sidebar">
+    <div class="float-right d-lg-none" id="sidebar-toggle">
+        <button class="btn-outline-primary btn btn-lg" data-toggle="collapse" data-target="#sidebar-links" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
     <a href="/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
 
-    <a href="/">
-        <button class="btn btn-primary mb-3 w-100">Reši test</button>
-    </a>
+    <div class="collapse" id="sidebar-links">
+        <a href="/">
+            <button class="btn btn-primary mb-3 w-100">Reši test</button>
+        </a>
 
-    <a href="/rezultati-strank">
-        <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
-    </a>
+        <a href="/rezultati-strank">
+            <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
+        </a>
 
-    <a href="/pomoc">
-        <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
-    </a>
+        <a href="/pomoc">
+            <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
+        </a>
 
-    <a href="/o-politicnem-portretu">
-        <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
-    </a>
+        <a href="/o-politicnem-portretu">
+            <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
+        </a>
 
-    <div class="mt-3 pt-3">
+        <div class="mt-3 pt-3">
 
-        <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
+            <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
 
-        <div class="social d-inline">
-            <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+            <div class="social d-inline">
+                <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+            </div>
         </div>
     </div>
 
 </div>
         </div>
 
-        <div class="col-12 col-lg-8 d-flex align-items-center">
+        <div class="col-12 col-lg-8">
             <div class="card card-question w-100">
                 <div class="d-flex m-3">
                     <div>
@@ -755,7 +763,7 @@
                 {
                     axis: "p0",
                     value: 3,
-                    }
+                }
             ],
             valuesNo: [
                 {
@@ -2151,50 +2159,34 @@
             valuesNo: []
         }
     ];
-
-
+</script>
+<script>
     var qn = 0; // Question number
     var prev_answer = null;
 
-    function shuffle(array) {
-        var i = 0, j = 0, temp = null;
 
-          for (i = array.length - 1; i > 0; i -= 1) {
-              j = Math.floor(Math.random() * (i + 1));
-              temp = array[i];
-              array[i] = array[j];
-              array[j] = temp;
-          }
-    }
-
-    shuffle(questions)
-
-    init_question();
-
-    function init_question() {
+    function show_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question_slo;
         document.getElementById("quiz-progress").innerHTML = "" + (qn + 1) + "/" + questions.length;
         document.getElementById("bar").style.width = (((qn + 1) / questions.length) * 100).toFixed(0) + "%";
+
         if (qn == 0) {
             document.getElementById("back_button").style.visibility = 'hidden';
-            //	document.getElementById("back_button_off").style.display = 'block';
         }
         else {
             document.getElementById("back_button").style.visibility = 'visible';
-            //document.getElementById("back_button_off").style.display = 'none';
         }
-
     }
 
-    function next_question(mult) {
-        questions[qn].answer = mult
+    function next_question(answer) {
+        questions[qn].answer = answer
         qn++;
 
         if (qn < questions.length) {
-            init_question();
+            show_question();
         }
         else {
-            results();
+            show_results();
         }
     }
 
@@ -2203,15 +2195,14 @@
             return;
         }
         qn--;
-        init_question();
-
+        show_question();
     }
 
-    function calc_score(score, max_value) {
+    function calculate_score(score, max_value) {
         return (100 * (score) / (max_value)).toFixed(0);
     }
 
-    function results() {
+    function show_results() {
         var axes = {};
 
         for (var i = 0; i < questions.length; i++) {
@@ -2253,12 +2244,11 @@
             if (axes[aK].val > 0) {
                 if (url != "")
                     url += "&"
-                url += aK + "=" + calc_score(axes[aK].val, axes[aK].sum)
+                url += aK + "=" + calculate_score(axes[aK].val, axes[aK].sum)
             }
         }
 
         url = "/rezultati?" + url
-
         location.href = url;
     }
 
@@ -2321,6 +2311,23 @@
                 next_question(1);
             else
                 next_question(-1);
+        }
+    }
+</script>
+
+<script>
+
+    shuffle(questions);
+    show_question();
+
+    function shuffle(array) {
+        var i = 0, j = 0, temp = null;
+
+        for (i = array.length - 1; i > 0; i -= 1) {
+            j = Math.floor(Math.random() * (i + 1));
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
         }
     }
 
