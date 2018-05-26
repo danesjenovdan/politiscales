@@ -31,12 +31,12 @@ body {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
   background-attachment: fixed;
   padding-top: 5rem;
- /* display: flex;
-  align-items: center;*/
+  /* display: flex;
+   align-items: center;*/
 
- /* @include media-breakpoint-up(lg) {
-    overflow: hidden;
-  }*/
+  /* @include media-breakpoint-up(lg) {
+     overflow: hidden;
+   }*/
 }
 
 .card-intro {
@@ -45,17 +45,16 @@ body {
   }
 }
 
-.card
-{
+.card {
   margin-bottom: 5rem;
 }
 
 .card-results, .card-help {
 
- /* @include media-breakpoint-up(lg) {
-    max-height: 90vh;
-    overflow-y: auto;
-  }*/
+  /* @include media-breakpoint-up(lg) {
+     max-height: 90vh;
+     overflow-y: auto;
+   }*/
 
   h2 {
     font-size: 1.5rem;
@@ -67,13 +66,11 @@ body {
   }
 }
 
-#back_button
-{
+#back_button {
   text-decoration: underline;
   color: #444444;
 
-  @include hover-focus-active()
-  {
+  @include hover-focus-active() {
     color: $blue;
   }
 }
@@ -110,8 +107,7 @@ body {
     font-weight: 700;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, .1);
 
-    @include media-breakpoint-down(lg)
-    {
+    @include media-breakpoint-down(lg) {
       width: 100%;
     }
 
@@ -289,13 +285,11 @@ hr {
   }
 }
 
-.btn-link
-{
+.btn-link {
   white-space: normal;
 }
 
-.dropdown-toggle
-{
+.dropdown-toggle {
   background: transparent;
   max-width: 100%;
   white-space: normal;
@@ -312,16 +306,14 @@ hr {
   }
 }
 
-.share-headline
-{
+.share-headline {
   font-size: 1.25rem;
   color: $blue;
   letter-spacing: 2px;
   font-weight: bold;
 }
 
-.btn-social
-{
+.btn-social {
   /*height: 45px;
   width: 45px;*/
   width: 50px;
@@ -329,6 +321,16 @@ hr {
   padding: 0.5rem;
   color: $redLight;
   background: $blue;
+}
+
+.missing {
+  font-size: 0.875rem;
+  position: relative;
+  top: -5px;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 .progress-bar-you {
@@ -342,8 +344,7 @@ hr {
     letter-spacing: 1px;
     margin: 0;
 
-    @include media-breakpoint-down(md)
-    {
+    @include media-breakpoint-down(md) {
       position: absolute;
       margin-top: -30px;
       left: 0;
@@ -352,8 +353,7 @@ hr {
     }
   }
 
-  @include media-breakpoint-down(md)
-  {
+  @include media-breakpoint-down(md) {
     height: 30px;
     margin-bottom: 30px;
   }
@@ -375,8 +375,7 @@ hr {
     color: #444444;
     letter-spacing: 1px;
 
-    @include media-breakpoint-down(md)
-    {
+    @include media-breakpoint-down(md) {
       position: absolute;
       margin-top: -20px;
       left: 0;
@@ -385,8 +384,7 @@ hr {
     }
   }
 
-  @include media-breakpoint-down(md)
-  {
+  @include media-breakpoint-down(md) {
     margin-bottom: 30px;
   }
 

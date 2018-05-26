@@ -1,0 +1,42 @@
+<script>
+    characteristics = [];
+
+    //  Get results from URL and show graphs
+    for (var i = 0; i < axes.length; i++) {
+        negativeValue = getQueryVariable(axes[i] + "0");
+        positiveValue = getQueryVariable(axes[i] + "1");
+        setAxisValue(axes[i] + "AxisNeg", negativeValue);
+        setAxisValue(axes[i] + "AxisPos", positiveValue);
+        setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
+
+        if (negativeValue > positiveValue) {
+            characteristics.push({name: axes[i] + "0", value: negativeValue});
+        }
+        else {
+            characteristics.push({name: axes[i] + "1", value: positiveValue});
+        }
+    }
+
+    characteristics.sort(function (a, b) {
+        return a.value < b.value;
+    });
+
+    function setAxisValue(name, value) {
+        var axis = document.getElementById(name)
+        if (!axis)
+            return
+
+        var text = document.getElementById(name + "Text")
+        if (!text)
+            return
+
+        axis.style.width = ((100 * value).toFixed(1) + "%");
+
+        value = (100 * value).toFixed(0);
+
+        if (value > 10) {
+            text.innerHTML = (value + "%");
+        }
+    }
+
+</script>

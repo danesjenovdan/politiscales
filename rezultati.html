@@ -1,6 +1,5 @@
 ---
 layout: results
-title: Rezultati strank
 language: sl_SI
 ---
 
@@ -10,7 +9,7 @@ language: sl_SI
             {% include sidebar.html %}
         </div>
 
-        <div class="col-12 col-lg-8 d-flex align-items-center">
+        <div class="col-12 col-lg-8">
             <div class="card card-results w-100">
                 <div class="card-body text-center p-5">
                     <h2>Rezultati</h2>
@@ -26,7 +25,7 @@ language: sl_SI
                     </div>
 
                     <div class="text-center mb-4">
-                        <button class="btn btn-primary" onclick="compare()">
+                        <button class="btn btn-primary" onclick="show_compare()">
                             Primerjaj se s strankami
                         </button>
                     </div>
@@ -41,105 +40,14 @@ language: sl_SI
     </div>
 </div>
 
+{% include js-party-results.html %}
+{% include js-axes.html %}
+{% include js-single-results.html %}
 
 <script>
-    function compare() {
+
+    function show_compare() {
         window.location.href = window.location.href.replace('rezultati', 'primerjava');
-    }
-
-    function getQueryVariable(variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=")
-            if (pair[0] == variable) {
-                if (pair[1] == "NaN") {
-                    return 0
-                }
-                else {
-                    return pair[1] / 100;
-                }
-            }
-        }
-        return 0;
-    }
-
-    function setAxisValue(name, value) {
-        var axis = document.getElementById(name)
-        if (!axis)
-            return
-
-        var text = document.getElementById(name + "Text")
-        if (!text)
-            return
-
-        axis.style.width = ((100 * value).toFixed(1) + "%");
-
-        value = (100 * value).toFixed(0);
-
-        if (value > 10) {
-            text.innerHTML = (value + "%");
-        }
-
-        /*  if (text.offsetWidth > axis.offsetWidth)
-              text.style.visibility = "hidden";*/
-    }
-
-
-    axes = [
-        "c",
-        "b",
-        "p",
-        "m",
-        "s",
-        "j",
-        "e",
-        "t"
-    ]
-
-    bonus = {
-        anar: 0.9,
-        prag: 0.5,
-        femi: 0.9,
-        comp: 0.9,
-        vega: 0.5,
-        reli: 0.5,
-        mona: 0.5,
-    }
-
-    characteristics = []
-
-    for (var i = 0; i < axes.length; i++) {
-        negativeValue = getQueryVariable(axes[i] + "0");
-        positiveValue = getQueryVariable(axes[i] + "1");
-        setAxisValue(axes[i] + "AxisNeg", negativeValue);
-        setAxisValue(axes[i] + "AxisPos", positiveValue);
-        setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
-
-        if (negativeValue > positiveValue) {
-            characteristics.push({name: axes[i] + "0", value: negativeValue});
-        }
-        else {
-            characteristics.push({name: axes[i] + "1", value: positiveValue});
-        }
-    }
-
-    characteristics.sort(function (a, b) {
-        return a.value < b.value;
-    });
-
-    charSlogan = {
-        c0: "{{ site.t[page.language].slogan_constructivism }}",
-        b0: "{{ site.t[page.language].slogan_internationalism }}",
-        b1: "{{ site.t[page.language].slogan_nationalism }}",
-        p0: "{{ site.t[page.language].slogan_communism }}",
-        p1: "{{ site.t[page.language].slogan_capitalism }}",
-        m1: "{{ site.t[page.language].slogan_laissez_faire }}",
-        s1: "{{ site.t[page.language].slogan_conservatism }}",
-        j0: "{{ site.t[page.language].slogan_justice_soft }}",
-        j1: "{{ site.t[page.language].slogan_justice_hard }}",
-        e0: "{{ site.t[page.language].slogan_ecology }}",
-        t0: "{{ site.t[page.language].slogan_revo }}"
     }
 
 </script>
