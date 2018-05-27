@@ -14,22 +14,48 @@
         <button class="btn btn-social js-email">
             <i class="fas fa-envelope"></i>
         </button>
+
+        <div class="row" id="short-link" style="display: none">
+            <div class="col-12 offset-0 col-md-6 offset-md-3">
+                <div class="input-group mt-3">
+                    <input type="text" class="form-control" id="share-url">
+                    <div class="input-group-append">
+                        <button id="copy-url" class="btn btn-social" type="button" style="font-size: 1rem; width: auto">Kopiraj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </div>
 
 <script>
-    var link = document.location.href;
-    // $.ajax({
-    //   method: 'POST',
-    //   url: 'http://www.djnd.si/yomamasofat/',
-    //   data: {
-    //     fatmama: document.location.href,
-    //   },
-    //   success: function (resp) {
-    //     link = resp;
-    //   }
-    // });
+    var shortUrl = '';
+
+    $.ajax({
+        method: "POST",
+        url: "https://djnd.si/yomamasofat/",
+        data: {
+            fatmama: window.location.href
+        },
+        success: function (resp) {
+            shortUrl = resp;
+            $('#short-link').show();
+            $('#share-url').val(shortUrl);
+
+        }
+    });
+
+    $('#copy-url').on('click', function () {
+        copyToClipboard($('#share-url'));
+    });
+
+    function copyToClipboard(element) {
+        element.select();
+        document.execCommand("copy");
+    }
+
 
     var title = 'Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank';
     var text = 'Če še ne veš, komu dati svoj glas na prihajajočih parlamentarnih volitvah, ali se želiš prepričati, da ga daješ pravi stranki, reši politični test, ki tvoja stališča razvrsti po 8 vrednotnih oseh in jih primerja s stališči strank, za katere lahko voliš.';
@@ -38,25 +64,25 @@
     //social
     $('.js-facebook').on('click', function () {
 
-        var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.location.href);
+        var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shortUrl);
         window.open(url, '_blank');
         // ga('send', 'event', 'social', 'facebook');
         return false;
     });
     $('.js-twitter').on('click', function () {
-        var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + link);
+        var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + shortUrl);
         window.open(url, '_blank');
         // ga('send', 'event', 'social', 'twitter');
         return false;
     });
     $('.js-gplus').on('click', function () {
-        var url = 'https://plus.google.com/share?url=' + encodeURIComponent(document.location.href);
+        var url = 'https://plus.google.com/share?url=' + encodeURIComponent(shortUrl);
         window.open(url, '_blank');
         // ga('send', 'event', 'social', 'gplus');
         return false;
     });
     $('.js-email').on('click', function () {
-        var url = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + text + ' ' + encodeURIComponent(document.location.href);
+        var url = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + text + ' ' + encodeURIComponent(shortUrl);
         window.open(url, '_blank');
         // ga('send', 'event', 'social', 'email');
         return false;

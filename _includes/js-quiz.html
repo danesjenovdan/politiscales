@@ -18,6 +18,10 @@
 
     function next_question(answer) {
         questions[qn].answer = answer
+
+        //  Analytics
+        _paq.push(['trackContentInteraction', 'questionAnswered', answer, questions[qn].question_slo, 'https://danesjenovdan.si/politicni-parket']);
+
         qn++;
 
         if (qn < questions.length) {
@@ -26,6 +30,8 @@
         else {
             show_results();
         }
+
+
     }
 
     function prev_question() {
