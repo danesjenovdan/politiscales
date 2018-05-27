@@ -86,3 +86,10 @@ language: sl_SI
 
 </script>
 
+<script>
+    $('.buttonQuestion').on('click', function () {
+        $('html, body').animate({ scrollTop: $('#question-text').offset().top - 40}, 'fast');
+        $(this).blur();
+    });
+</script>
+
