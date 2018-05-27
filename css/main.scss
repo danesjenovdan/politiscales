@@ -343,6 +343,27 @@ hr {
    }
 }
 
+.help
+{
+  padding-left: 4.75rem;
+  padding-right: 5rem;
+  margin-top: -30px;
+
+  @include media-breakpoint-down(md)
+  {
+    margin-top: -10px;
+    padding: 0 1rem 0 0.5rem;
+  }
+}
+
+.results-single
+{
+  .help
+  {
+    height: 40px;
+  }
+}
+
 .share
 {
   .input-group {
@@ -391,7 +412,7 @@ hr {
 
 .progress-bar-you {
   h6 {
-    width: 250px;
+    width: 270px;
     padding-top: 6.25px;
     padding-right: 0.5rem;
     text-align: right !important;
@@ -423,7 +444,7 @@ hr {
   height: 16px;
 
   h6 {
-    width: 250px;
+    width: 270px;
     padding-top: 0;
     padding-right: 0.5rem;
     text-align: right !important;
