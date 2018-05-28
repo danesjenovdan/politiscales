@@ -1,0 +1,725 @@
+<html lang="sl_SI">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="css/main.css?2" type="text/css" media="screen"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<meta property="og:locale" content="sl_SI"/>
+
+<meta property="og:image" content="/politicni-portret/images/og-image.png"/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@danesjenovdan">
+<meta name="twitter:image" content="/politicni-portret/images/og-image.png">
+
+<title>Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank</title>
+<meta property="og:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank"/>
+<meta name="twitter:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank">
+<meta name="twitter:description"
+      content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+
+<meta name="description"
+      content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+<meta property="og:description"
+      content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!"/>
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="/politicni-portret/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/politicni-portret/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/politicni-portret/images/favicon-16x16.png">
+<link rel="manifest" href="/politicni-portret/images/site.webmanifest">
+<link rel="mask-icon" href="/politicni-portret/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/politicni-portret/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/politicni-portret/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDoNotTrack", true]);
+    _paq.push(["disableCookies"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//track.paper.link/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '4']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- End Matomo Code -->
+
+<script>
+    $( document ).ready(function() {
+
+        var fromStorage = localStorage.getItem('id');
+
+        if(!fromStorage)
+        {
+            fromStorage = makeid();
+            localStorage.setItem('id', fromStorage);
+        }
+
+        _paq.push(['setUserId', fromStorage]);
+        _paq.push(['trackPageView']);
+    });
+
+    function makeid() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for (var i = 0; i < 15; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return text;
+    }
+</script>
+
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+    <!--  <meta name="description" content="">
+    <meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+
+    <meta property="og:url" content="http://politiscales.la-commune.net/sl_SI/" />
+    <meta property="og:title" content="PolitiScales" />
+    <meta property="og:locale" content="sl_SI" />
+    <meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+    <meta property="og:image" content="http://politiscales.la-commune.net/images/facebook-preview.png" /> -->
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-4">
+            <div class="pb-5 sidebar">
+    <div class="float-right d-lg-none" id="sidebar-toggle">
+        <button class="btn-outline-primary btn btn-lg" data-toggle="collapse" data-target="#sidebar-links" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <a href="/politicni-portret/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
+
+    <div class="collapse" id="sidebar-links">
+        <a href="/politicni-portret/">
+            <button class="btn btn-primary mb-3 w-100">Reši test</button>
+        </a>
+
+        <a href="/politicni-portret/rezultati-strank">
+            <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
+        </a>
+
+        <a href="/politicni-portret/pomoc">
+            <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
+        </a>
+
+        <a href="/politicni-portret/o-politicnem-portretu">
+            <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
+        </a>
+
+        <div class="mt-3 pt-3">
+
+            <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
+
+            <div class="social d-inline">
+                <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+            <div class="card card-results w-100">
+                <div class="card-body text-center p-5">
+                    <h2>Kako se na vsebinske osi umeščajo politične stranke?</h2>
+
+<div class="my-4">
+    <p>Vprašalnik smo poslali vsem političnim strankam, ki kandidirajo na volitvah v Državni zbor 2018.
+        Prosili smo jih, da se do stališč opredelijo kolektivno.</p>
+
+    <p>Kvizu in posledično temam, ki pogosto razdvajajo, so se kljub večkratnim pozivom izognili v štirih strankah.</p>
+</div>
+
+
+<select class="form-control" onchange="location = this.value;" style="display: none;">
+    <option value="" selected></option>
+    <option value="/politicni-portret/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</option>
+    <option value="/politicni-portret/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</option>
+    <option value="/politicni-portret/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</option>
+    <option value="/politicni-portret/rezultati-strank?csv=4.csv">LEVICA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</option>
+    <option value="/politicni-portret/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</option>
+    <option value="/politicni-portret/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</option>
+    <option value="/politicni-portret/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</option>
+    <option value="/politicni-portret/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</option>
+    <option value="/politicni-portret/rezultati-strank?csv=15.csv">LISTA MARJANA ŠARCA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=16.csv">REŠIMO SLOVENIJO ELITE IN TAJKUNOV</option>
+    <option value="/politicni-portret/rezultati-strank?csv=17.csv">GOSPODARSKO AKTIVNA STRANKA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=18.csv">STRANKA ALENKE BRATUŠEK</option>
+    <option value="/politicni-portret/rezultati-strank?csv=19.csv">ZDRUŽENA LEVICA IN SLOGA</option>
+
+</select>
+
+<div class="dropdown mb-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        VSE STRANKE
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank">VSE STRANKE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=17.csv">GOSPODARSKO AKTIVNA STRANKA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=4.csv">LEVICA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=15.csv">LISTA MARJANA ŠARCA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=16.csv">REŠIMO SLOVENIJO ELITE IN TAJKUNOV</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=18.csv">STRANKA ALENKE BRATUŠEK</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=19.csv">ZDRUŽENA LEVICA IN SLOGA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</a>
+
+    </div>
+</div>
+
+                    <div class="mt-5">
+
+                        <hr>
+                        <div class="my-4">
+                            <div class="results-single">
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_164808_ffffff.svg"
+                                             alt="Konstruktivizem"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Konstruktivizem</span>
+                    <span class="float-right">Esencializem</span>
+                </div>
+
+
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="cAxisNeg" class="progress-negative"><span
+                                id="cAxisNegText"></span></div>
+
+                        <div id="cAxisMid" class="progress-mid"><span
+                                id="cAxisMidText"></span></div>
+
+                        <div id="cAxisPos" class="progress-positive"><span
+                                id="cAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_1333114_ffffff.svg"
+                                             alt="Esencializem"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Konstruktivisti menijo, da so ljudje produkt svojega (predvsem družbenega) okolja in da so lastnosti, ki jih definirajo, pridobljene.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Esencialisti menijo, da je posameznik/-ca takšen/-na, kot je, po naravi in da so lastnosti, ki ga/jo definirajo, prirojene.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_1570221_ffffff.svg"
+                                             alt="Rehabilitacija"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Rehabilitacija</span>
+                    <span class="float-right">Kaznovanje</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="jAxisNeg" class="progress-negative"><span
+                                id="jAxisNegText"></span></div>
+
+                        <div id="jAxisMid" class="progress-mid"><span
+                                id="jAxisMidText"></span></div>
+
+                        <div id="jAxisPos" class="progress-positive"><span
+                                id="jAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_394344_ffffff.svg"
+                                             alt="Kaznovanje"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Tisti, ki verjamejo v rehabilitacijsko politiko, verjamejo, da je vloga kazenskega prava usmerjanje obsojenih nazaj na “pravo pot”. Pri tem jim poskušajo pomagati in stati ob strani na poti razumevanja, zakaj ne bi smeli storiti, kar so storili, ter zakaj so bili obsojeni.
+">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Tisti, ki verjamejo v kaznovalno politiko, verjamejo, da je vloga kazenskega prava odvračanje, tako obsojencev (skozi izogibanje recidivizmu oz. “povratništvu”) kot tudi za večinsko družbo (skozi postavljanje “negativnega zgleda”, ki se mu ne splača slediti).">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_1262992_ffffff.svg"
+                                             alt="Progresivnost"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Progresivnost</span>
+                    <span class="float-right">Konzervativnost</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="sAxisNeg" class="progress-negative"><span
+                                id="sAxisNegText"></span></div>
+
+                        <div id="sAxisMid" class="progress-mid"><span
+                                id="sAxisMidText"></span></div>
+
+                        <div id="sAxisPos" class="progress-positive"><span
+                                id="sAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_671007_ffffff.svg"
+                                             alt="konzervativnost"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Progresivci poskušajo graditi družbeni napredek in izboljšati družbo neoziraje se na tradicije. Pogosto sedanjost vidijo kot boljšo od preteklosti, zato menijo, da je treba vztrajati na tej poti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Konzervativci želijo obdržati status quo in celo povrniti nekatere vrednote, ki so že izginile ali izginjajo. Tradicije, kot je npr. religiozna dediščina, predstavljajo kot vir modrosti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_977265_ffffff.svg"
+                                             alt="Internacionalizem"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Internacionalizem</span>
+                    <span class="float-right">Nacionalizem</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="bAxisNeg" class="progress-negative"><span
+                                id="bAxisNegText"></span></div>
+
+                        <div id="bAxisMid" class="progress-mid"><span
+                                id="bAxisMidText"></span></div>
+
+                        <div id="bAxisPos" class="progress-positive"><span
+                                id="bAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_1041307_ffffff.svg"
+                                             alt="Nacionalizem"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Internacionalizem je zbir raznolikih idej, ki jim je skupno to, da želijo ukiniti hierarhije med državami in njihovimi prebivalci in kar najbolj promovirati sodelovanje. Internacionalizem v svoji najbolj radikalni obliki kot ultimativni cilj postavlja ukinitev državnih mej.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Nacionalizem je zbir raznolikih idej, ki favorizirajo državo in njene prebivalce napram tujcem. Nacionalizem upravičuje idejo, da narodu pripada tudi država.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_58179_ffffff.svg"
+                                             alt="Komunizem"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Komunizem</span>
+                    <span class="float-right">Kapitalizem</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="pAxisNeg" class="progress-negative"><span
+                                id="pAxisNegText"></span></div>
+
+                        <div id="pAxisMid" class="progress-mid"><span
+                                id="pAxisMidText"></span></div>
+
+                        <div id="pAxisPos" class="progress-positive"><span
+                                id="pAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_1615934_ffffff.svg"
+                                             alt="Kapitalizem"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Komunizem je obsežna politična doktrina; v tem testu pa označuje idejo, da bi morala biti produkcijska sredstva v javni lasti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Kapitalizem je sicer ambivalenten koncept, v tem testu pa označuje idejo, da bi morala biti produkcijska sredstva v zasebni lasti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_1009307_ffffff.svg"
+                                             alt="Regulacija"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Regulacija</span>
+                    <span class="float-right">Laissez-faire</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="mAxisNeg" class="progress-negative"><span
+                                id="mAxisNegText"></span></div>
+
+                        <div id="mAxisMid" class="progress-mid"><span
+                                id="mAxisMidText"></span></div>
+
+                        <div id="mAxisPos" class="progress-positive"><span
+                                id="mAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_271026_ffffff.svg"
+                                             alt="Laissez-faire"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Regulacionizem ali intervecionizem je zamisel, da bi morale biti gospodarske dejavnosti regulirane v smeri skupnega interesa. Regulacija se lahko dogaja skozi zakonodajo, načrtovanje, subvencije, variabilno obdavčenje ...">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Laissez-faire zamisel, da gospodarske aktivnosti ne bi smele biti regulirane, saj same po sebi ustrezajo skupnemu interesu. Laissez-faire se lahko uveljavlja skozi šibko zakonodajo, z malo ali brez subvencij, s fiksnim obdavčevanjem in šibko vlogo države v gospodarstvu ali celo njenim popolnim umikom.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_1667288_ffffff.svg"
+                                             alt="Ekologija"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Ekologija</span>
+                    <span class="float-right">Produktivnost</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="eAxisNeg" class="progress-negative"><span
+                                id="eAxisNegText"></span></div>
+
+                        <div id="eAxisMid" class="progress-mid"><span
+                                id="eAxisMidText"></span></div>
+
+                        <div id="eAxisPos" class="progress-positive"><span
+                                id="eAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_563350_ffffff.svg"
+                                             alt="Produktivnost"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Ekološke politike privilegirajo zaščito okolja z omejevanjem človeških aktivnosti in vplivov na biodiverziteto, četudi to implicira bolj ali manj radikalno spreminjanje obstoječega načina življenja.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Produktivnost privilegira človeške potrebe in podpira povečanje produkcije ali uporabo metod, ki imajo negotov vpliv na okolje.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+
+
+    <div class="d-flex result">
+        <div class="icon icon-positive"><img src="/politicni-portret/ikone/noun_862397_ffffff.svg"
+                                             alt="Revolucija"
+        ></div>
+        <div class="col">
+            <div class="row">
+                <div class="col-12">
+                    <span class="float-left">Revolucija</span>
+                    <span class="float-right">Reformizem</span>
+                </div>
+                <div class="col-12">
+                    <div class="progress-bar">
+                        <div id="tAxisNeg" class="progress-negative"><span
+                                id="tAxisNegText"></span></div>
+
+                        <div id="tAxisMid" class="progress-mid"><span
+                                id="tAxisMidText"></span></div>
+
+                        <div id="tAxisPos" class="progress-positive"><span
+                                id="tAxisPosText"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="icon icon-negative"><img src="/politicni-portret/ikone/noun_1236080_ffffff.svg"
+                                             alt="Reformizem"
+        ></div>
+    </div>
+
+    <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Revolucionarji imajo tendenco, da za doseganje svojih ciljev preferirajo direktno akcijo, ki je pogosto na robu legalnosti. Njihov glavni cilj pa je zamenjati trenutno politično organizacijo oz. sistem za nekaj popolnoma drugega.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Reformisti imajo tendenco, da za doseganje svojih ciljev privilegirajo pravno delovanje in želijo politično organizacijo oz. sistem definirati korak po koraku. To lahko počnejo skozi institucije, s pomočjo volitev, prijavljenih demonstracij, peticij …">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+</div>
+
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div class="mb-5">
+                        <a href="/politicni-portret/" class="btn btn-link">Reši test in se primerjaj s strankami</a>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var partyResults = {
+        "ANDREJ ČUŠ in ZS": 'c0=21&femi=32&c1=28&b0=29&b1=44&p0=40&p1=25&m0=51&m1=14&s0=38&s1=22&j1=39&j0=33&e0=54&e1=10&t0=12&t1=62&prag=100&csv=1.csv',
+        "DeSUS": 'c0=19&femi=24&c1=31&b0=31&b1=24&p0=24&p1=31&m0=50&m1=21&s0=45&s1=14&j1=40&j0=21&e0=24&e1=21&t0=5&t1=60&prag=67&csv=2.csv',
+        "ZDRUŽENA DESNICA": 'c0=38&femi=52&c1=52&b0=50&b1=38&p0=43&p1=40&m0=36&m1=43&s0=50&s1=45&j1=43&j0=40&e0=40&e1=38&t0=24&t1=60&comp=100&prag=67&csv=3.csv',
+        "LEVICA": 'c0=90&femi=67&c1=7&b0=88&b1=5&p0=83&p1=7&m0=98&s0=79&s1=10&j1=17&j0=69&e0=52&e1=26&t0=79&t1=12&vega=67&csv=4.csv',
+        "NPS": 'c0=24&femi=29&c1=57&b0=43&b1=36&p0=38&p1=45&m0=43&m1=57&s0=43&s1=55&j1=43&j0=33&e0=69&e1=12&t0=64&t1=31&reli=100&comp=100&prag=100&csv=5.csv',
+        "NSi": 'c0=19&femi=14&c1=71&b0=29&b1=36&p0=26&p1=50&m0=21&m1=21&s0=26&s1=48&j1=45&j0=26&e0=31&e1=19&t1=71&csv=6.csv',
+        "PIRATI": 'c0=55&femi=48&c1=14&b0=57&b1=14&p0=43&p1=24&m0=74&m1=17&s0=69&s1=12&j1=19&j0=50&e0=36&e1=40&t0=29&t1=45&csv=7.csv',
+        "SOLIDARNOST": 'c0=29&femi=27&c1=24&b0=58&p0=56&p1=11&m0=65&m1=4&s0=36&s1=15&j1=10&j0=33&e0=44&e1=11&t0=18&t1=28&csv=8.csv',
+        "ZSi": 'c0=19&c1=60&b0=5&b1=62&p0=62&p1=10&m0=69&m1=12&s0=14&s1=52&j1=43&j0=40&e0=60&e1=5&t0=64&t1=10&comp=100&prag=67&csv=9.csv',
+        "SMC": 'c0=26&femi=24&c1=38&b0=38&b1=31&p0=48&p1=31&m0=26&m1=50&s0=50&s1=31&j1=55&j0=31&e0=5&e1=57&t0=29&t1=40&comp=67&prag=67&csv=10.csv',
+        "SSN": 'c0=40&femi=24&c1=50&b0=55&b1=40&p0=26&p1=52&m0=64&m1=19&s0=24&s1=43&j1=36&j0=33&e0=71&e1=19&t0=36&t1=33&comp=100&vega=67&csv=11.csv',
+        "ZA ZDRAVO DRUŽBO": 'c0=38&femi=24&c1=21&b0=33&b1=36&p0=36&p1=45&m0=52&m1=14&s0=38&s1=31&j1=31&j0=31&e0=76&t0=17&t1=69&prag=100&vega=67&csv=12.csv',
+        "SNS": 'c0=21&femi=48&c1=62&b0=26&b1=64&p0=24&p1=62&m0=26&m1=62&s0=40&s1=48&j1=60&j0=24&e0=43&e1=33&t0=31&t1=36&comp=67&mona=67&anar=67&csv=13.csv',
+        "SD": 'c0=76&femi=71&c1=12&b0=62&b1=17&p0=55&p1=17&m0=67&m1=26&s0=79&s1=14&j1=33&j0=62&e0=50&e1=29&t0=14&t1=57&csv=14.csv',
+        "LMŠ": 'c0=26&femi=29&c1=43&b0=43&b1=31&p0=29&p1=43&m0=55&m1=19&s0=33&s1=31&j1=40&j0=19&e0=45&e1=14&t0=10&t1=60&csv=15.csv',
+        "ReSET": 'c0=21&femi=10&c1=45&b0=55&b1=12&p0=24&p1=48&m0=40&m1=50&s0=29&s1=26&j1=43&j0=40&e0=36&e1=36&t0=17&t1=52&comp=100&prag=67&mona=67&csv=16.csv',
+        "GAS": 'c0=40&femi=14&c1=52&b0=50&b1=31&p0=19&p1=69&m0=38&m1=43&s0=48&s1=38&j1=36&j0=40&e0=50&e1=38&t1=95&comp=67&csv=17.csv',
+        "STRANKA A. BRATUŠEK": 'c0=57&femi=43&c1=31&b0=57&b1=10&p0=43&p1=38&m0=64&m1=21&s0=57&s1=19&j1=33&j0=33&e0=57&e1=17&t0=7&t1=67&csv=18.csv',
+        "ZL in SLOGA": 'c0=52&femi=52&b0=74&p0=31&p1=21&m0=71&m1=7&s0=69&s1=7&j1=14&j0=48&e0=50&e1=10&t0=26&t1=31&csv=19.csv',
+    };
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=")
+            if (pair[0] == variable) {
+                if (pair[1] == "NaN") {
+                    return 0
+                }
+                else {
+                    return pair[1] / 100;
+                }
+            }
+        }
+        return 0;
+    }
+
+    function getQueryVariableFromString(variable, input) {
+        var query = input.replace('?', '&');
+
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=")
+            if (pair[0] == variable) {
+                if (pair[1] == "NaN") {
+                    return 0
+                }
+                else {
+                    return pair[1] / 100;
+                }
+            }
+        }
+        return 0;
+    }
+</script>
+<script>
+    axes = [
+        "c",
+        "b",
+        "p",
+        "m",
+        "s",
+        "j",
+        "e",
+        "t"
+    ];
+</script>
+<script>
+    characteristics = [];
+
+    //  Get results from URL and show graphs
+    for (var i = 0; i < axes.length; i++) {
+        negativeValue = getQueryVariable(axes[i] + "0");
+        positiveValue = getQueryVariable(axes[i] + "1");
+        setAxisValue(axes[i] + "AxisNeg", negativeValue);
+        setAxisValue(axes[i] + "AxisPos", positiveValue);
+        setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
+
+        if (negativeValue > positiveValue) {
+            characteristics.push({name: axes[i] + "0", value: negativeValue});
+        }
+        else {
+            characteristics.push({name: axes[i] + "1", value: positiveValue});
+        }
+    }
+
+    characteristics.sort(function (a, b) {
+        return a.value < b.value;
+    });
+
+    function setAxisValue(name, value) {
+        var axis = document.getElementById(name)
+        if (!axis)
+            return
+
+        var text = document.getElementById(name + "Text")
+        if (!text)
+            return
+
+        axis.style.width = ((100 * value).toFixed(1) + "%");
+
+        value = (100 * value).toFixed(0);
+
+        if (value > 10) {
+            text.innerHTML = (value + "%");
+        }
+    }
+
+</script>
+
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    csv = getParameterByName('csv');
+
+    if (csv) {
+        var option;
+        $('select option').filter(function () {
+            if ($(this).val().indexOf('csv=' + csv) !== -1) {
+                option = ($(this));
+                return true;
+            }
+
+            return false;
+        }).prop('selected', true);
+
+
+        $('#dropdownMenuButton').text(option.text());
+    } else {
+        $('#dropdownMenuButton').text('VSE STRANKE');
+    }
+
+</script>
+</body>
+</html>
+
+
+

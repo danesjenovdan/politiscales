@@ -1,0 +1,3649 @@
+<html lang="sl_SI">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="stylesheet" href="css/main.css?2" type="text/css" media="screen"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<meta property="og:locale" content="sl_SI"/>
+
+<meta property="og:image" content="/politicni-portret/images/og-image.png"/>
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@danesjenovdan">
+<meta name="twitter:image" content="/politicni-portret/images/og-image.png">
+
+<title>Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank</title>
+<meta property="og:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank"/>
+<meta name="twitter:title" content="Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank">
+<meta name="twitter:description"
+      content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+
+<meta name="description"
+      content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!">
+<meta property="og:description"
+      content="Politični portret je ideološki test, ki te z uporabo 8 vrednotnih osi približno umesti v politično polje, in svoj rezultat primerjaj s stališči političnih strank, ki kandidirajo na prihajajočih parlamentarnih volitvah. Reši ga tudi ti!"/>
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="/politicni-portret/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/politicni-portret/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/politicni-portret/images/favicon-16x16.png">
+<link rel="manifest" href="/politicni-portret/images/site.webmanifest">
+<link rel="mask-icon" href="/politicni-portret/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/politicni-portret/images/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/politicni-portret/images/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["setDoNotTrack", true]);
+    _paq.push(["disableCookies"]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//track.paper.link/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '4']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- End Matomo Code -->
+
+<script>
+    $( document ).ready(function() {
+
+        var fromStorage = localStorage.getItem('id');
+
+        if(!fromStorage)
+        {
+            fromStorage = makeid();
+            localStorage.setItem('id', fromStorage);
+        }
+
+        _paq.push(['setUserId', fromStorage]);
+        _paq.push(['trackPageView']);
+    });
+
+    function makeid() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for (var i = 0; i < 15; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return text;
+    }
+</script>
+
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+    <!--  <meta name="description" content="">
+    <meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+
+    <meta property="og:url" content="http://politiscales.la-commune.net/sl_SI/" />
+    <meta property="og:title" content="PolitiScales" />
+    <meta property="og:locale" content="sl_SI" />
+    <meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+    <meta property="og:image" content="http://politiscales.la-commune.net/images/facebook-preview.png" /> -->
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-4">
+            <div class="pb-5 sidebar">
+    <div class="float-right d-lg-none" id="sidebar-toggle">
+        <button class="btn-outline-primary btn btn-lg" data-toggle="collapse" data-target="#sidebar-links" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <a href="/politicni-portret/" class="no-link"><h1 class="mb-4">Politični <br>portret</h1></a>
+
+    <div class="collapse" id="sidebar-links">
+        <a href="/politicni-portret/">
+            <button class="btn btn-primary mb-3 w-100">Reši test</button>
+        </a>
+
+        <a href="/politicni-portret/rezultati-strank">
+            <button class="btn btn-secondary mb-3 w-100">Preveri rezultate strank</button>
+        </a>
+
+        <a href="/politicni-portret/pomoc">
+            <button class="btn btn-outline-primary mb-3 w-100">Kaj pomenijo rezultati?</button>
+        </a>
+
+        <a href="/politicni-portret/o-politicnem-portretu">
+            <button class="btn btn-outline-primary mb-3 w-100">O političnem portretu</button>
+        </a>
+
+        <div class="mt-3 pt-3">
+
+            <a href="https://danesjenovdan.si/" class="author-link">Danes je nov dan</a>
+
+            <div class="social d-inline">
+                <a href="https://www.facebook.com/danesjenovdan/" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/danesjenovdan" class="ml-3"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+            <div class="card card-results w-100">
+                <div class="card-body text-center p-5">
+
+                    <h2>Kako se na vsebinske osi umeščajo politične stranke?</h2>
+
+<div class="my-4">
+    <p>Vprašalnik smo poslali vsem političnim strankam, ki kandidirajo na volitvah v Državni zbor 2018.
+        Prosili smo jih, da se do stališč opredelijo kolektivno.</p>
+
+    <p>Kvizu in posledično temam, ki pogosto razdvajajo, so se kljub večkratnim pozivom izognili v štirih strankah.</p>
+</div>
+
+
+<select class="form-control" onchange="location = this.value;" style="display: none;">
+    <option value="" selected></option>
+    <option value="/politicni-portret/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</option>
+    <option value="/politicni-portret/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</option>
+    <option value="/politicni-portret/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</option>
+    <option value="/politicni-portret/rezultati-strank?csv=4.csv">LEVICA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</option>
+    <option value="/politicni-portret/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</option>
+    <option value="/politicni-portret/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</option>
+    <option value="/politicni-portret/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</option>
+    <option value="/politicni-portret/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</option>
+    <option value="/politicni-portret/rezultati-strank?csv=15.csv">LISTA MARJANA ŠARCA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=16.csv">REŠIMO SLOVENIJO ELITE IN TAJKUNOV</option>
+    <option value="/politicni-portret/rezultati-strank?csv=17.csv">GOSPODARSKO AKTIVNA STRANKA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</option>
+    <option value="/politicni-portret/rezultati-strank?csv=18.csv">STRANKA ALENKE BRATUŠEK</option>
+    <option value="/politicni-portret/rezultati-strank?csv=19.csv">ZDRUŽENA LEVICA IN SLOGA</option>
+
+</select>
+
+<div class="dropdown mb-5">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        VSE STRANKE
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank">VSE STRANKE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=1.csv">ANDREJ ČUŠ IN ZELENI SLOVENIJE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=2.csv">DEMOKRATIČNA STRANKA UPOKOJENCEV</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=17.csv">GOSPODARSKO AKTIVNA STRANKA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=3.csv">KANGLER & PRIMC ZDRUŽENA DESNICA - GLAS ZA OTROKE IN DRUŽINE, NOVA LJUDSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=4.csv">LEVICA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=15.csv">LISTA MARJANA ŠARCA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=5.csv">NAPREJ SLOVENIJA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=6.csv">NOVA SLOVENIJA KRŠČANSKI DEMOKRATI</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=7.csv">PIRATSKA STRANKA SLOVENIJE</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=16.csv">REŠIMO SLOVENIJO ELITE IN TAJKUNOV</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=13.csv">SLOVENSKA NACIONALNA STRANKA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=14.csv">SOCIALNI DEMOKRATI</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=8.csv">SOLIDARNOST, ZA PRAVIČNO DRUŽBO</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=18.csv">STRANKA ALENKE BRATUŠEK</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=10.csv">STRANKA MODERNEGA CENTRA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=11.csv">STRANKA SLOVENSKEGA NARODA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=12.csv">ZA ZDRAVO DRUŽBO</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=19.csv">ZDRUŽENA LEVICA IN SLOGA</a>
+        <a class="dropdown-item" href="/politicni-portret/rezultati-strank?csv=9.csv">ZEDINJENA SLOVENIJA</a>
+
+    </div>
+</div>
+
+
+                    <hr>
+                    <div class="my-4">
+                        <div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_164808_ffffff.svg"
+                                 alt="Constructivism"
+                            ></div>
+
+                        <span class="px-3">Konstruktivizem</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <span class="px-3">Esencializem</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_1333114_ffffff.svg"
+                                alt="Essentialism"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Konstruktivisti menijo, da so ljudje produkt svojega (predvsem družbenega) okolja in da so lastnosti, ki jih definirajo, pridobljene.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Esencialisti menijo, da je posameznik/-ca takšen/-na, kot je, po naravi in da so lastnosti, ki ga/jo definirajo, prirojene.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="c">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="cAxisNeg" class="progress-negative"><span
+                            id="cAxisNegText"></span></div>
+
+                    <div id="cAxisMid" class="progress-mid"><span
+                            id="cAxisMidText"></span></div>
+
+                    <div id="cAxisPos" class="progress-positive"><span
+                            id="cAxisPosText"></span></div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_1570221_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Rehabilitacija</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Kaznovanje</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_394344_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Tisti, ki verjamejo v rehabilitacijsko politiko, verjamejo, da je vloga kazenskega prava usmerjanje obsojenih nazaj na “pravo pot”. Pri tem jim poskušajo pomagati in stati ob strani na poti razumevanja, zakaj ne bi smeli storiti, kar so storili, ter zakaj so bili obsojeni.
+">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Tisti, ki verjamejo v kaznovalno politiko, verjamejo, da je vloga kazenskega prava odvračanje, tako obsojencev (skozi izogibanje recidivizmu oz. “povratništvu”) kot tudi za večinsko družbo (skozi postavljanje “negativnega zgleda”, ki se mu ne splača slediti).">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="j">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="jAxisNeg" class="progress-negative"><span
+                            id="jAxisNegText"></span></div>
+
+                    <div id="jAxisMid" class="progress-mid"><span
+                            id="jAxisMidText"></span></div>
+
+                    <div id="jAxisPos" class="progress-positive"><span
+                            id="jAxisPosText"></span></div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_1262992_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Progresivnost</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Konzervativnost</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_671007_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Progresivci poskušajo graditi družbeni napredek in izboljšati družbo neoziraje se na tradicije. Pogosto sedanjost vidijo kot boljšo od preteklosti, zato menijo, da je treba vztrajati na tej poti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Konzervativci želijo obdržati status quo in celo povrniti nekatere vrednote, ki so že izginile ali izginjajo. Tradicije, kot je npr. religiozna dediščina, predstavljajo kot vir modrosti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="s">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="sAxisNeg" class="progress-negative"><span
+                            id="sAxisNegText"></span></div>
+
+                    <div id="sAxisMid" class="progress-mid"><span
+                            id="sAxisMidText"></span></div>
+
+                    <div id="sAxisPos" class="progress-positive"><span
+                            id="sAxisPosText"></span></div>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_977265_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Internacionalizem</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Nacionalizem</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_1041307_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Internacionalizem je zbir raznolikih idej, ki jim je skupno to, da želijo ukiniti hierarhije med državami in njihovimi prebivalci in kar najbolj promovirati sodelovanje. Internacionalizem v svoji najbolj radikalni obliki kot ultimativni cilj postavlja ukinitev državnih mej.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Nacionalizem je zbir raznolikih idej, ki favorizirajo državo in njene prebivalce napram tujcem. Nacionalizem upravičuje idejo, da narodu pripada tudi država.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="b">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="bAxisNeg" class="progress-negative"><span
+                            id="bAxisNegText"></span></div>
+
+                    <div id="bAxisMid" class="progress-mid"><span
+                            id="bAxisMidText"></span></div>
+
+                    <div id="bAxisPos" class="progress-positive"><span
+                            id="bAxisPosText"></span></div>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_58179_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Komunizem</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Kapitalizem</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_1615934_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Komunizem je obsežna politična doktrina; v tem testu pa označuje idejo, da bi morala biti produkcijska sredstva v javni lasti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Kapitalizem je sicer ambivalenten koncept, v tem testu pa označuje idejo, da bi morala biti produkcijska sredstva v zasebni lasti.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="p">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="pAxisNeg" class="progress-negative"><span
+                            id="pAxisNegText"></span></div>
+
+                    <div id="pAxisMid" class="progress-mid"><span
+                            id="pAxisMidText"></span></div>
+
+                    <div id="pAxisPos" class="progress-positive"><span
+                            id="pAxisPosText"></span></div>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_1009307_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Regulacija</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Laissez-faire</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_271026_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Regulacionizem ali intervecionizem je zamisel, da bi morale biti gospodarske dejavnosti regulirane v smeri skupnega interesa. Regulacija se lahko dogaja skozi zakonodajo, načrtovanje, subvencije, variabilno obdavčenje ...">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Laissez-faire zamisel, da gospodarske aktivnosti ne bi smele biti regulirane, saj same po sebi ustrezajo skupnemu interesu. Laissez-faire se lahko uveljavlja skozi šibko zakonodajo, z malo ali brez subvencij, s fiksnim obdavčevanjem in šibko vlogo države v gospodarstvu ali celo njenim popolnim umikom.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="m">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="mAxisNeg" class="progress-negative"><span
+                            id="mAxisNegText"></span></div>
+
+                    <div id="mAxisMid" class="progress-mid"><span
+                            id="mAxisMidText"></span></div>
+
+                    <div id="mAxisPos" class="progress-positive"><span
+                            id="mAxisPosText"></span></div>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_1667288_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Ekologija</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Produktivnost</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_563350_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Ekološke politike privilegirajo zaščito okolja z omejevanjem človeških aktivnosti in vplivov na biodiverziteto, četudi to implicira bolj ali manj radikalno spreminjanje obstoječega načina življenja.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Produktivnost privilegira človeške potrebe in podpira povečanje produkcije ali uporabo metod, ki imajo negotov vpliv na okolje.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+
+            <div class="col-12 mt-4" id="e">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="eAxisNeg" class="progress-negative"><span
+                            id="eAxisNegText"></span></div>
+
+                    <div id="eAxisMid" class="progress-mid"><span
+                            id="eAxisMidText"></span></div>
+
+                    <div id="eAxisPos" class="progress-positive"><span
+                            id="eAxisPosText"></span></div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="d-flex result">
+
+    <div class="col">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-content-between justify-content-between">
+                    <div class="">
+                        <div class="icon icon-positive d-inline-block">
+                            <img src="/politicni-portret/ikone/noun_862397_ffffff.svg"
+                            ></div>
+
+                        <span class="px-3">Revolucija</span>
+                    </div>
+                    <div>
+                        <div class="sort-circle">
+                            <img src="/politicni-portret/ikone/noun_1300797_ffffff.svg">
+                        </div>
+                    </div>
+                    <div class="">
+                        <span class="px-3">Reformizem</span>
+                        <div class="icon icon-negative ml-auto d-inline-block"><img
+                                src="/politicni-portret/ikone/noun_1236080_ffffff.svg"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 font-weight-normal mt-2">
+                <div class="help">
+    <div class="float-left" data-toggle="tooltip" data-html="true"
+         title="Revolucionarji imajo tendenco, da za doseganje svojih ciljev preferirajo direktno akcijo, ki je pogosto na robu legalnosti. Njihov glavni cilj pa je zamenjati trenutno politično organizacijo oz. sistem za nekaj popolnoma drugega.">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+    <div class="float-right" data-toggle="tooltip" data-html="true"
+         title="Reformisti imajo tendenco, da za doseganje svojih ciljev privilegirajo pravno delovanje in želijo politično organizacijo oz. sistem definirati korak po koraku. To lahko počnejo skozi institucije, s pomočjo volitev, prijavljenih demonstracij, peticij …">
+        <img width="20" class="ml-2" src="/politicni-portret/ikone/noun_1009845_ffffff.svg" alt="Vprašaj">
+    </div>
+</div>
+
+            </div>
+            <div class="col-12 mt-4" id="t">
+                <div class="progress-bar progress-bar-you">
+                    <h6>TI</h6>
+                    <div id="tAxisNeg" class="progress-negative"><span
+                            id="tAxisNegText"></span></div>
+
+                    <div id="tAxisMid" class="progress-mid"><span
+                            id="tAxisMidText"></span></div>
+
+                    <div id="tAxisPos" class="progress-positive"><span
+                            id="tAxisPosText"></span></div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-3">
+    <div class="progress-bar progress-bar-party">
+        <h6>SDS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Dobra Država</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SLS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>LN Bojana Požarja</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>SPS</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+    <div class="progress-bar progress-bar-party">
+        <h6>Gibanje Skupaj Naprej</h6>
+        <div class="progress-mid w-100"><span class="missing"><small>Niso odgovorili</small></span></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var negativeAsc = true;
+
+    $('.sort-circle').on('click', function () {
+        negativeAsc = !negativeAsc;
+
+        var parent = $(this).closest('.result');
+        var results = $(parent).find('.col-12.mt-4 > .progress-bar');
+
+        if(!negativeAsc)
+        {
+            results.sort(function (a, b) {
+
+                var negA = $(a).find('.progress-positive')[0].style.width.replace('%', '');
+                var negB = $(b).find('.progress-positive')[0].style.width.replace('%', '');
+
+                return parseInt(negB) - parseInt(negA);
+            });
+        } else
+        {
+            results.sort(function (a, b) {
+
+                var negA = $(a).find('.progress-negative')[0].style.width.replace('%', '');
+                var negB = $(b).find('.progress-negative')[0].style.width.replace('%', '');
+
+                return parseInt(negB) - parseInt(negA);
+            });
+        }
+
+
+
+
+
+
+        $.each(results, function (idx, itm) {
+            parent.find('.col-12.mt-4').append(itm);
+        });
+    });
+
+  /*  $('.js-sort-positive').on('click', function () {
+        positiveAsc = !positiveAsc;
+
+        var parent = $(this).closest('.result');
+        var results = $(parent).find('.col-12.mt-4 > .progress-bar');
+
+
+
+
+        $.each(results, function (idx, itm) {
+            parent.find('.col-12.mt-4').append(itm);
+        });
+    });*/
+
+</script>
+                    </div>
+                    <hr>
+
+                    <div>
+    <div class="text-center">
+        <p class="text-uppercase share-headline">Deli!</p>
+    </div>
+
+    <div class="share">
+        <button class="btn btn-social js-facebook">
+            <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn btn-social js-twitter">
+            <i class="fab fa-twitter"></i>
+
+        </button>
+        <button class="btn btn-social js-email">
+            <i class="fas fa-envelope"></i>
+        </button>
+
+        <div class="row" id="short-link" style="display: none">
+            <div class="col-12 offset-0 col-md-6 offset-md-3">
+                <div class="input-group mt-3">
+                    <input type="text" class="form-control" id="share-url">
+                    <div class="input-group-append">
+                        <button id="copy-url" class="btn btn-social" type="button" style="font-size: 1rem; width: auto">Kopiraj</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    var shortUrl = '';
+
+    $.ajax({
+        method: "POST",
+        url: "https://djnd.si/yomamasofat/",
+        data: {
+            fatmama: window.location.href
+        },
+        success: function (resp) {
+            shortUrl = resp;
+            $('#short-link').show();
+            $('#share-url').val(shortUrl);
+
+        }
+    });
+
+    $('#copy-url').on('click', function () {
+        copyToClipboard($('#share-url'));
+    });
+
+    function copyToClipboard(element) {
+        element.select();
+        document.execCommand("copy");
+    }
+
+
+    var title = 'Politični portret: izmeri podobnost svojih stališč z vrednotami političnih strank';
+    var text = 'Če še ne veš, komu dati svoj glas na prihajajočih parlamentarnih volitvah, ali se želiš prepričati, da ga daješ pravi stranki, reši politični test, ki tvoja stališča razvrsti po 8 vrednotnih oseh in jih primerja s stališči strank, za katere lahko voliš.';
+    var hashtags = '';
+
+    //social
+    $('.js-facebook').on('click', function () {
+
+        var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(shortUrl);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'facebook');
+        return false;
+    });
+    $('.js-twitter').on('click', function () {
+        var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text + ' ' + hashtags + ' ' + shortUrl);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'twitter');
+        return false;
+    });
+    $('.js-gplus').on('click', function () {
+        var url = 'https://plus.google.com/share?url=' + encodeURIComponent(shortUrl);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'gplus');
+        return false;
+    });
+    $('.js-email').on('click', function () {
+        var url = 'mailto:?subject=' + encodeURIComponent(title) + '&body=' + text + ' ' + encodeURIComponent(shortUrl);
+        window.open(url, '_blank');
+        // ga('send', 'event', 'social', 'email');
+        return false;
+    });
+</script>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var partyResults = {
+        "ANDREJ ČUŠ in ZS": 'c0=21&femi=32&c1=28&b0=29&b1=44&p0=40&p1=25&m0=51&m1=14&s0=38&s1=22&j1=39&j0=33&e0=54&e1=10&t0=12&t1=62&prag=100&csv=1.csv',
+        "DeSUS": 'c0=19&femi=24&c1=31&b0=31&b1=24&p0=24&p1=31&m0=50&m1=21&s0=45&s1=14&j1=40&j0=21&e0=24&e1=21&t0=5&t1=60&prag=67&csv=2.csv',
+        "ZDRUŽENA DESNICA": 'c0=38&femi=52&c1=52&b0=50&b1=38&p0=43&p1=40&m0=36&m1=43&s0=50&s1=45&j1=43&j0=40&e0=40&e1=38&t0=24&t1=60&comp=100&prag=67&csv=3.csv',
+        "LEVICA": 'c0=90&femi=67&c1=7&b0=88&b1=5&p0=83&p1=7&m0=98&s0=79&s1=10&j1=17&j0=69&e0=52&e1=26&t0=79&t1=12&vega=67&csv=4.csv',
+        "NPS": 'c0=24&femi=29&c1=57&b0=43&b1=36&p0=38&p1=45&m0=43&m1=57&s0=43&s1=55&j1=43&j0=33&e0=69&e1=12&t0=64&t1=31&reli=100&comp=100&prag=100&csv=5.csv',
+        "NSi": 'c0=19&femi=14&c1=71&b0=29&b1=36&p0=26&p1=50&m0=21&m1=21&s0=26&s1=48&j1=45&j0=26&e0=31&e1=19&t1=71&csv=6.csv',
+        "PIRATI": 'c0=55&femi=48&c1=14&b0=57&b1=14&p0=43&p1=24&m0=74&m1=17&s0=69&s1=12&j1=19&j0=50&e0=36&e1=40&t0=29&t1=45&csv=7.csv',
+        "SOLIDARNOST": 'c0=29&femi=27&c1=24&b0=58&p0=56&p1=11&m0=65&m1=4&s0=36&s1=15&j1=10&j0=33&e0=44&e1=11&t0=18&t1=28&csv=8.csv',
+        "ZSi": 'c0=19&c1=60&b0=5&b1=62&p0=62&p1=10&m0=69&m1=12&s0=14&s1=52&j1=43&j0=40&e0=60&e1=5&t0=64&t1=10&comp=100&prag=67&csv=9.csv',
+        "SMC": 'c0=26&femi=24&c1=38&b0=38&b1=31&p0=48&p1=31&m0=26&m1=50&s0=50&s1=31&j1=55&j0=31&e0=5&e1=57&t0=29&t1=40&comp=67&prag=67&csv=10.csv',
+        "SSN": 'c0=40&femi=24&c1=50&b0=55&b1=40&p0=26&p1=52&m0=64&m1=19&s0=24&s1=43&j1=36&j0=33&e0=71&e1=19&t0=36&t1=33&comp=100&vega=67&csv=11.csv',
+        "ZA ZDRAVO DRUŽBO": 'c0=38&femi=24&c1=21&b0=33&b1=36&p0=36&p1=45&m0=52&m1=14&s0=38&s1=31&j1=31&j0=31&e0=76&t0=17&t1=69&prag=100&vega=67&csv=12.csv',
+        "SNS": 'c0=21&femi=48&c1=62&b0=26&b1=64&p0=24&p1=62&m0=26&m1=62&s0=40&s1=48&j1=60&j0=24&e0=43&e1=33&t0=31&t1=36&comp=67&mona=67&anar=67&csv=13.csv',
+        "SD": 'c0=76&femi=71&c1=12&b0=62&b1=17&p0=55&p1=17&m0=67&m1=26&s0=79&s1=14&j1=33&j0=62&e0=50&e1=29&t0=14&t1=57&csv=14.csv',
+        "LMŠ": 'c0=26&femi=29&c1=43&b0=43&b1=31&p0=29&p1=43&m0=55&m1=19&s0=33&s1=31&j1=40&j0=19&e0=45&e1=14&t0=10&t1=60&csv=15.csv',
+        "ReSET": 'c0=21&femi=10&c1=45&b0=55&b1=12&p0=24&p1=48&m0=40&m1=50&s0=29&s1=26&j1=43&j0=40&e0=36&e1=36&t0=17&t1=52&comp=100&prag=67&mona=67&csv=16.csv',
+        "GAS": 'c0=40&femi=14&c1=52&b0=50&b1=31&p0=19&p1=69&m0=38&m1=43&s0=48&s1=38&j1=36&j0=40&e0=50&e1=38&t1=95&comp=67&csv=17.csv',
+        "STRANKA A. BRATUŠEK": 'c0=57&femi=43&c1=31&b0=57&b1=10&p0=43&p1=38&m0=64&m1=21&s0=57&s1=19&j1=33&j0=33&e0=57&e1=17&t0=7&t1=67&csv=18.csv',
+        "ZL in SLOGA": 'c0=52&femi=52&b0=74&p0=31&p1=21&m0=71&m1=7&s0=69&s1=7&j1=14&j0=48&e0=50&e1=10&t0=26&t1=31&csv=19.csv',
+    };
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=")
+            if (pair[0] == variable) {
+                if (pair[1] == "NaN") {
+                    return 0
+                }
+                else {
+                    return pair[1] / 100;
+                }
+            }
+        }
+        return 0;
+    }
+
+    function getQueryVariableFromString(variable, input) {
+        var query = input.replace('?', '&');
+
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=")
+            if (pair[0] == variable) {
+                if (pair[1] == "NaN") {
+                    return 0
+                }
+                else {
+                    return pair[1] / 100;
+                }
+            }
+        }
+        return 0;
+    }
+</script>
+<script>
+    questions = [
+        /* ESSENTIALISME ************************************************ */
+        {
+            question: "“One is not born, but rather becomes, a woman.”",
+            question_slo: "Ženska se ne rodi, ampak to postane.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Differences of treatement and quality of life in our society show that racism is still omnipresent.",
+            question_slo: "Razlike v kvaliteti življenja in neenaka obravnava dokazujejo, da je rasizem še zmeraj vseprisoten.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "All sciences, even chemistry and biology, are not absolute and are subject to being shaped by our society.",
+            question_slo: "Nobena znanost, niti biologija niti kemija, ni absolutna, vse oblikuje družba.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The categories “women” and “men” are social constructs that should be given up.",
+            question_slo: "Kategoriji \"ženske\" in \"moški\" sta družbena konstrukta, ki bi se jima morali odreči.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Nobody is by nature predisposed to criminality.",
+            question_slo: "Nihče ni po naravi nagnjen h kriminalnim dejanjem.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Sexual orientation is a social construct",
+            question_slo: "Spolna usmerjenost je družbeni konstrukt.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Social differences between ethnic groups cannot be explained by biology.",
+            question_slo: "Družbenih razlik med etničnimi skupinami se ne da razložiti z biologijo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The social roles of women and men can partly be explained by biological differences.",
+            question_slo: "Družbene vloge moških in žensk se da deloma pojasniti z biološkimi razlikami.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Hormonal differences can explain some differences in individual characteristics between women and men.",
+            question_slo: "Hormonske razlike lahko razložijo nekatere razlike v posameznih lastnostih moških in žensk.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Sexual assaults are partly caused by men&#39;s natural impulse.",
+            question_slo: "Spolni napadi so deloma povzročeni zaradi naravnih moških impulzov.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Transgender individuals will never really be of the gender they would like to be.",
+            question_slo: "Transspolne osebe ne bodo nikoli zares takšnega spola, kot bi si želele.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Members of a nation or culture have some unchangeable characteristics that define them.",
+            question_slo: "Pripadniki naroda ali kulture imajo nekatere nespremenljive lastnosti, ki jih zaznamujejo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Biologically, human beings are designed for heterosexuality.",
+            question_slo: "Biološko gledano so človeška bitja ustvarjena za heteroseksualnost.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Selfishness is the overriding drive in the human species, no matter the context.",
+            question_slo: "Sebičnost je prevladujoč človeški nagon, ne glede na kontekst.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "c1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "c0",
+                    value: 3
+                }
+            ]
+        },
+        /* NATIONALISME ************************************************* */
+        {
+            question: "Borders should eventually be abolished.",
+            question_slo: "Meje bi morali sčasoma ukiniti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "People need to stand up for their ideals, even if it leads them to betray their country.",
+            question_slo: "Ljudje se morajo zavzemati za svoja načela, tudi če zaradi tega izdajo svojo državo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "My country must pay for the damages caused by the crimes it commited in other countries.",
+            question_slo: "Moja država mora plačati za škodo, povzročeno z zločini, ki jih je zagrešila v drugih državah.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "If two countries have similar economies, social systems and environmental norms, then the free market between them has no negative impact.",
+            question_slo: "Če imata dve državi podobni gospodarstvi, družbene sisteme in okoljske norme, potem prosti trg med njima nima negativnega vpliva.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "National Chauvinism during sport competitions is not acceptable.",
+            question_slo: "Državni šovinizem med športnimi tekmovanji ni sprejemljiv.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "I am equally concerned about the inhabitants of my country and those of other the countries.",
+            question_slo: "Enako me skrbi za prebivalce moje države kot za prebivalce drugih držav.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Foreigners living in my country should be allowed to act politically, equally to those who have the nationality.",
+            question_slo: "Tujci, ki živijo v moji državi, bi morali imeti pravico do političnega delovanja na enak način kot državljani.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Citizens should take priority over foreigners.",
+            question_slo: "Državljani bi morali imeti prednost pred tujci.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The values of my country are superior to those of other countries.",
+            question_slo: "Vrednote moje države so boljše od vrednot drugih držav.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Multiculturalism is a threat to our society.",
+            question_slo: "Multikulturalizem je grožnja naši družbi.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "A good citizen is a patriot.",
+            question_slo: "Dober državljan je patriot.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is legitimate for a country to intervene militarily to defend its economic interests.",
+            question_slo: "Legitimno je, da država vojaško intervenira, da bi zaščitila svoje gospodarske interese.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is necessary to teach history in order to create a sense of belonging to the nation.",
+            question_slo: "Nujno je učiti zgodovino, da bi ustvarili občutek pripadnosti narodu.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Research produced by my country should not be available to other countries.",
+            question_slo: "Izsledki raziskav moje države ne bi smeli biti na voljo drugim državam.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "b1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "b0",
+                    value: 3
+                }
+            ]
+        },
+        /* PRODUCTION *************************************************** */
+        {
+            question: "No one should get rich from owning a business, housing, or land.",
+            question_slo: "Nihče ne bi smel obogateti na račun tega, da ima v lasti podjetje, nepremičnino ali zemljo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Wage labour is a form of theft from the worker by companies.",
+            question_slo: "Mezdno delo je oblika kraje delavcu s strani podjetja.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is important that health should stay a public matter.",
+            question_slo: "Pomembno je, da zdravstvo ostane v javni domeni.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Energy and transport structures should be a public matter.",
+            question_slo: "Energetska in prometna infrastruktura bi morali biti v javni domeni.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Patents should not exist.",
+            question_slo: "Patenti ne bi smeli obstajati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is necessary to implement assemblies to ration our production to the consumers according to their needs.",
+            question_slo: "Nujno je ustanavljati zbornice, da bi uskladili proizvodnjo s potrošniki glede na njihove potrebe.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The labor market enslave workers.",
+            question_slo: "Trg dela zasužnjuje delavce.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p0",
+                    value: 3,
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Looking for one&#39;s own profit is healthy for the economy.",
+            question_slo: "Zasledovanje lastnega profita je zdravo za gospodarstvo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is merit that explains differences of wealth between two individuals.",
+            question_slo: "Razliko med bogastvom dveh posameznikov pojasnjujejo zasluge.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The fact that some schools and universities are private is not a problem.",
+            question_slo: "Dejstvo, da so nekatere šole in univerze zasebne, ni problem.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Offshoring and outsourcing are necessary evils to improve production.",
+            question_slo: "Najemanje delavcev in podizvajalcev iz tujine je nujno zlo za napredek proizvodnje.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is acceptable that there are rich and poor people.",
+            question_slo: "Sprejemljivo je, da obstajajo bogati in revni ljudje.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is acceptable that some industry sectors are private.",
+            question_slo: "Sprejemljivo je, da so nekateri industrijski sektorji zasebni.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Banks should remain private.",
+            question_slo: "Banke naj ostanejo zasebne.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "p1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "p0",
+                    value: 3
+                }
+            ]
+        },
+        /* MARKET ******************************************************* */
+        {
+            question: "Revenues and capital should be taxed to redistribute wealth.",
+            question_slo: "Prihodki in kapital bi morali biti obdavčeni tako, da bi se bogastvo porazdelilo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The age of retirement should be lowered.",
+            question_slo: "Upokojitveno starost bi morali znižati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Dismissals of employees should be forbidden except if it is justified.",
+            question_slo: "Odpuščanje zaposlenih bi moralo biti prepovedano, razen ce je upravičeno.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Minimal levels of salary should be ensured to make sure that a worker can live of her/his work.",
+            question_slo: "Minimalna plača bi morala biti zagotovljena, da bi posrkrbeli, da delavec/-ka lahko živi od svojega dela.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is necessary to avoid private monopoly.",
+            question_slo: "Nujno se je izogniti zasebnim monopolom.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Loans contracted in the public sphere (State, regions, collectivities...) should not necessarily be refunded.",
+            question_slo: "Posojil, ki so sklenjena v javni sferi (država, regije, skupnosti ...), ni treba nujno vrniti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Some sectors or type of employment should be financially supported.",
+            question_slo: "Nekateri sektorji ali tipi zaposlitev bi morali biti finančno podprti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Market economy is optimal when it is not regulated.",
+            question_slo: "Tržno gospodarstvo je optimalno, kadar ni regulirano.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Nowadays employees are free to choose when signing a contract with their future employer",
+            question_slo: "Dandanes imajo zaposleni svobodno izbiro, ko podpisujejo pogodbo s svojim bodočim zaposlovacem.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is necessary to remove regulations in labour legislation to encourage firms to hire.",
+            question_slo: "Nujno je odpraviti regulacije v delovni zakonodaji, da bi spodbudili podjetja k zaposlovanju.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The maximum allowed hours in the legal work week should be increased.",
+            question_slo: "Največje dovoljeno število ur v zakonsko določenem delovnem tednu bi morali povečati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Environmental norms should be influenced by mass consumption and not from an authority.",
+            question_slo: "Okoljske norme bi morale biti pod vplivom masovne potrošnje, ne avtoritete.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Social assistance deters people from working.",
+            question_slo: "Socialna pomoč ljudi odvrača od dela.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "State-run companies should be managed like private ones and follow the logic of the market (competition, profitability...).",
+            question_slo: "Državna podjetja bi morala biti upravljana enako kot zasebna in slediti logiki trga (konkurenčnost, donosnost ...).",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "m1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "m0",
+                    value: 3
+                }
+            ]
+        },
+        /* SOCIETE ****************************************************** */
+        {
+            question: "Traditions should be questioned.",
+            question_slo: "Tradicije bi morali preizpraševati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "I do not have any problem if other official languages are added or replace the already existing official language in my country.",
+            question_slo: "Nimam težav s tem, da bi dodali druge uradne jezike ali zamenjali uradni jezik v moji državi.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Marriage should be abolished.",
+            question_slo: "Poroko bi morali ukiniti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Foreigners enrich our culture.",
+            question_slo: "Tujci bogatijo našo kulturo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The influence of religion should decrease.",
+            question_slo: "Vpliv vere bi se moral zmanjšati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "A language is defined by its users, not by scholars.",
+            question_slo: "Jezik določajo njegovi govorci, ne znanstveniki.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Euthanasia should be authorised.",
+            question_slo: "Evtanazija bi morala biti dovoljena.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Homosexuals should not be treated equally to heterosexuals with regards to marriage, filiation, adoption or procreation.",
+            question_slo: "Homoseksualci ne bi smeli biti obravnavani enako, kar se tiče poroke, posvojitev ali razmnoževanja.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "In some specific conditions, the death penalty is justified.",
+            question_slo: "Pod nekaterimi specifičnimi pogoji je smrtna kazen upravičena.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                },
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                },
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Technological progress must not to change society too quickly.",
+            question_slo: "Tehnološki napredek družbe ne sme prehitro spremeniti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "School should mostly teach our values, traditions and fundamental knowledge.",
+            question_slo: "Šola bi morala učiti predvsem vrednote, tradicije in temeljna znanja.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Abortion should be limited to specific cases.",
+            question_slo: "Splav bi moral biti omejen na specifične primere.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                },
+                {
+                    axis: "femi",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The main goal of a couple is to make at least one child.",
+            question_slo: "Osrednji cilj para je, da naredi vsaj enega otroka.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Abstinence should be prefered to contraception, to preserve the true nature of the sexual act.",
+            question_slo: "Abstinenca bi morala imeti prednost pred kontracepcijo, da se ohrani prava narava spolnega odnosa.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "s1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "s0",
+                    value: 3
+                }
+            ]
+        },
+        /* ECOLOGIE ***************************************************** */
+        {
+            question: "It is not acceptable that human actions should lead to the extinction of species.",
+            question_slo: "Ni sprejemljivo, da človeška dejanja vodijo v izumiranje živalskih vrst.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "GMOs should be forbidden outside research and medical purposes.",
+            question_slo: "Gensko spremenjeni organizmi bi morali biti prepovedani onkraj raziskovalnih in medicinskih namenov.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "We must fight against global warming.",
+            question_slo: "Boriti se moramo proti globalnemu segrevanju.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "We should accept changes in our way of consuming food to limit the exploitation of nature.",
+            question_slo: "Sprejeti moramo spremembe v našem načinu prehranjevanja, da bi omejili izkorišcanje narave.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is important to encourage an agriculture that maintains a food biodiversity, even if the output is inferior.",
+            question_slo: "Pomembno je vzpodbujati kmetijstvo, ki ohranja biodiverziteto hrane, četudi je pridelek na ta račun slabši.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Preserving non urban ecosystems is more important than creating jobs.",
+            question_slo: "Ohranjanje neurbanih ekosistemov je pomembnejše od ustvarjanja služb.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Reduction of waste should be done by reducing production.",
+            question_slo: "Zmanjševanje količine smeti bi morali doseči z zmanjševanjem proizvodnje.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...) ",
+            question_slo: "Kolonizacija vesolja je dobra rešitev za oskrbo z materiali, ki jih bo na Zemlji nekoč zmanjkalo (železo, redke kovine, goriva ...).",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Transforming ecosystems durably to increase the quality of life of human beings is legitimate.",
+            question_slo: "Trajno preoblikovanje ekosistemov za zvišanje kvalitete življenja ljudi je legitimno.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is necessary to massively invest in research to improve productivity.",
+            question_slo: "Nujno je veliko vlagati v razvoj, da bi povečali produktivnost.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Transhumanism will be beneficial because it will allow us to improve our capacities.",
+            question_slo: "Transhumanizem bo koristen, ker nam bo omogočil izboljšati naše zmogljivosti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Nuclear fission, when well maintained, is a good source of energy.",
+            question_slo: "Jedrska cepitev, ce je dobro vzdrževana, je dober vir energije.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Exploitation of fossil fuels is necessary.",
+            question_slo: "Izkoriščanje fosilnih goriv je nujno.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Maintaining strong economic growth should be an objective for the government.",
+            question_slo: "Ohranjanje močne gospodarske rasti bi moral biti cilj vlade.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "e1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "e0",
+                    value: 3
+                }
+            ]
+        },
+        /* LIBERTAIRE *************************************************** */
+        {
+            question: "Prisons should no longer exist.",
+            question_slo: "Zapori ne bi smeli več obstajati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is unfair to set a minimal penalty for an offense or a crime.",
+            question_slo: "Ni pošteno določiti minimalne kazni za prekršek ali zlocin.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Individuals who get out of prison should be accompanied in their reinsertion.",
+            question_slo: "Posameznike, ki pridejo iz zapora, je potrebno spremljati pri njihovem vključevanju nazaj v družbo.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Justice should always take into consideration the context and the past of the condemned and adapt their penalty accordingly.",
+            question_slo: "Pravica bi vedno morala upoštevati kontekst in preteklost obsojenca in temu primerno prilagoditi kazen.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Conditions of life in jail should be greatly improved.",
+            question_slo: "Življenjske pogoje v zaporu bi morali močno izboljšati.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The filing and storage of personal records should be delimited strictly and database cross-checking should be forbidden.",
+            question_slo: "Zbiranje in shranjevanje osebnih podatkov bi moralo biti strogo omejeno, povezovanje različnih baz osebnih podatkov pa prepovedano.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The right to be anonymous on Internet should be guaranteed.",
+            question_slo: "Pravica biti anonimen na internetu bi morala biti zagotovljena.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The purpose of the judiciary system should be to punish those who went against the law.",
+            question_slo: "Namen pravosodnega sistema bi moral biti kaznovati tiste, ki so kršili zakon.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The police should be armed.",
+            question_slo: "Policija mora biti oborožena.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "The sacrifice of some civil liberties is a necessity in order to be protected from terrorist acts.",
+            question_slo: "Žrtvovanje nekaterih državljanskih svoboščin je nujno za preprečevanje terorističnih dejanj.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Order and authority should be respected in all circumstances.",
+            question_slo: "Red in oblast je treba spoštovati v vseh okoliščinah.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Heavy penalties are efficient because they are dissuasive.",
+            question_slo: "Stroge kazni so učinkovite, ker odvračajo od zločinov.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "It is better to arrest someone potentially dangerous preventively rather than taking the risk of having them committing a crime.",
+            question_slo: "Bolje je preventivno aretirati potencialno nevarne kot tvegati, da storijo zločin.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "j1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "j0",
+                    value: 3
+                }
+            ]
+        },
+        /* STRATEGIE **************************************************** */
+        {
+            question: "Mass strike is a good way to acquire new rights.",
+            question_slo: "Množična stavka je dober način za pridobitev novih pravic.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Armed struggle in a country is sometimes necessary.",
+            question_slo: "Oborožen boj v državi je včasih nujen.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Insurrection is necessary to deeply change society.",
+            question_slo: "Vstaja je nujna za globoko spremembo družbe.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Activism in existing political organisations is not relevant to change society.",
+            question_slo: "Aktivizem v obstoječih političnih organizacijah ni relevanten za spremembe v družbi.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Elections organised by the state cannot question the powers in place.",
+            question_slo: "Volitve, ki jih organizira država, ne morejo preizprašati obstoječih moči.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Hacking has a legitimate place in political struggle.",
+            question_slo: "Hekanje ima legitimno mesto v političnem boju.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Sabotage is legitimate under certain conditions.",
+            question_slo: "Pod nekaterimi pogoji je sabotaža legitimna.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Activists must always act in strict accordance with the law.",
+            question_slo: "Aktivisti morajo vedno delovati strogo v skladu z zakonom.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Revolutions will always end up in a bad way.",
+            question_slo: "Revolucije se bodo vedno slabo končale.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Changing the system radically is counter-productive. We should rather transform it progressively.",
+            question_slo: "Radikalne spremembe sistema so kontraproduktivne. Spremeniti ga moramo postopoma.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Violence against individuals is never productive.",
+            question_slo: "Nasilje proti posameznikom ni nikoli produktivno.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "We should always distance ourselves from protestors who use violence.",
+            question_slo: "Vedno se moramo distancirati od protestnikov, ki uporabljajo nasilje.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "We need to make compromises with the opposition to apply our ideas.",
+            question_slo: "Da bi uspeli s svojimi idejami, je treba z opozicijo sklepati kompromise.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        {
+            question: "Changes in an individual&#39;s way of life can induce changes in society.",
+            question_slo: "Spremembe v življenju posameznika lahko prinesejo spremembe v družbi.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "t1",
+                    value: 3
+                }
+            ],
+            valuesNo: [
+                {
+                    axis: "t0",
+                    value: 3
+                }
+            ]
+        },
+        /* BONUS ******************************************************** */
+        {
+            question: "My religion must be spread as widely as possible.",
+            question_slo: "Mojo religijo je treba razširiti, kolikor je možno.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "reli",
+                    value: 3
+                }
+            ],
+            valuesNo: []
+        },
+        {
+            question: "It is a small group that consciously and secretly controls the world.",
+            question_slo: "Svet zavestno in na skrivaj nadzira majhna skupina ljudi.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "comp",
+                    value: 3
+                }
+            ],
+            valuesNo: []
+        },
+        {
+            question: "A good policy is a pragmatic policy without ideology.",
+            question_slo: "Dobra politika je pragmatična politika brez ideologije.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "prag",
+                    value: 3
+                }
+            ],
+            valuesNo: []
+        },
+        {
+            question: "We need to establish a monarchy to federate the people and preserve our sovereignty.",
+            question_slo: "Vzpostaviti moramo monarhijo, da bi združili ljudi in ohranili svojo suverenost.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "mona",
+                    value: 3
+                }
+            ],
+            valuesNo: []
+        },
+        {
+            question: "Humans should neither eat nor exploit animals.",
+            question_slo: "Ljudje ne bi smeli jesti ali drugače izkorišcati živali.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "vega",
+                    value: 3
+                }
+            ],
+            valuesNo: []
+        },
+        {
+            question: "The State should be abolished.",
+            question_slo: "Državo bi bilo treba ukiniti.",
+            answer: 0,
+            valuesYes: [
+                {
+                    axis: "anar",
+                    value: 3
+                }
+            ],
+            valuesNo: []
+        }
+    ];
+</script>
+<script>
+    axes = [
+        "c",
+        "b",
+        "p",
+        "m",
+        "s",
+        "j",
+        "e",
+        "t"
+    ];
+</script>
+<script>
+    characteristics = [];
+
+    //  Get results from URL and show graphs
+    for (var i = 0; i < axes.length; i++) {
+        negativeValue = getQueryVariable(axes[i] + "0");
+        positiveValue = getQueryVariable(axes[i] + "1");
+        setAxisValue(axes[i] + "AxisNeg", negativeValue);
+        setAxisValue(axes[i] + "AxisPos", positiveValue);
+        setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
+
+        if (negativeValue > positiveValue) {
+            characteristics.push({name: axes[i] + "0", value: negativeValue});
+        }
+        else {
+            characteristics.push({name: axes[i] + "1", value: positiveValue});
+        }
+    }
+
+    characteristics.sort(function (a, b) {
+        return a.value < b.value;
+    });
+
+    function setAxisValue(name, value) {
+        var axis = document.getElementById(name)
+        if (!axis)
+            return
+
+        var text = document.getElementById(name + "Text")
+        if (!text)
+            return
+
+        axis.style.width = ((100 * value).toFixed(1) + "%");
+
+        value = (100 * value).toFixed(0);
+
+        if (value > 10) {
+            text.innerHTML = (value + "%");
+        }
+    }
+
+</script>
+<script>
+    var qn = 0; // Question number
+    var prev_answer = null;
+
+
+    function show_question() {
+        document.getElementById("question-text").innerHTML = questions[qn].question_slo;
+        document.getElementById("quiz-progress").innerHTML = "" + (qn + 1) + "/" + questions.length;
+        document.getElementById("bar").style.width = (((qn + 1) / questions.length) * 100).toFixed(0) + "%";
+
+        if (qn == 0) {
+            document.getElementById("back_button").style.visibility = 'hidden';
+        }
+        else {
+            document.getElementById("back_button").style.visibility = 'visible';
+        }
+    }
+
+    function next_question(answer) {
+        questions[qn].answer = answer
+
+        //  Analytics
+        _paq.push(['trackContentInteraction', 'questionAnswered', answer, questions[qn].question_slo, 'https://danesjenovdan.si/politicni-parket']);
+
+        qn++;
+
+        if (qn < questions.length) {
+            show_question();
+        }
+        else {
+            show_results();
+        }
+
+
+    }
+
+    function prev_question() {
+        if (qn == 0) {
+            return;
+        }
+        qn--;
+        show_question();
+    }
+
+    function calculate_score(score, max_value) {
+        return (100 * (score) / (max_value)).toFixed(0);
+    }
+
+    function show_results() {
+        var axes = {};
+
+        for (var i = 0; i < questions.length; i++) {
+            q = questions[i];
+
+            for (var j = 0; j < q.valuesYes.length; j++) {
+                a = q.valuesYes[j];
+                if (!(a.axis in axes)) {
+                    axes[a.axis] = {
+                        val: 0,
+                        sum: 0
+                    }
+                }
+
+                if (q.answer > 0) {
+                    axes[a.axis].val += q.answer * a.value;
+                }
+                axes[a.axis].sum += Math.max(a.value, 0);
+            }
+
+            for (var j = 0; j < q.valuesNo.length; j++) {
+                a = q.valuesNo[j];
+                if (!(a.axis in axes)) {
+                    axes[a.axis] = {
+                        val: 0,
+                        sum: 0
+                    }
+                }
+
+                if (q.answer < 0) {
+                    axes[a.axis].val -= q.answer * a.value;
+                }
+                axes[a.axis].sum += Math.max(a.value, 0);
+            }
+        }
+
+        url = ""
+        for (var aK in axes) {
+            if (axes[aK].val > 0) {
+                if (url != "")
+                    url += "&"
+                url += aK + "=" + calculate_score(axes[aK].val, axes[aK].sum)
+            }
+        }
+
+        url = "/politicni-portret/rezultati?" + url
+        location.href = url;
+    }
+
+
+    function simulate() {
+        rand_c = Math.random();
+        rand_b = Math.random();
+        rand_s = Math.random();
+        rand_j = Math.random();
+        rand_p = Math.random();
+        rand_m = Math.random();
+        rand_e = Math.random();
+        rand_t = Math.random();
+
+        rand_per_axis = {
+            c0: rand_c,
+            c1: 1 - rand_c,
+            b0: rand_b,
+            b1: 1 - rand_b,
+            s0: rand_s,
+            s1: 1 - rand_s,
+            j0: rand_j,
+            j1: 1 - rand_j,
+            p0: rand_p,
+            p1: 1 - rand_p,
+            m0: rand_m,
+            m1: 1 - rand_m,
+            e0: rand_e,
+            e1: 1 - rand_e,
+            t0: rand_t,
+            t1: 1 - rand_t,
+        };
+
+        while (qn < questions.length) {
+            prop = 0.0;
+            propCounter = 0;
+            for (var j = 0; j < questions[qn].valuesYes.length; j++) {
+                a = questions[qn].valuesYes[j];
+                if (a.axis in rand_per_axis) {
+                    prop += rand_per_axis[a.axis];
+                    propCounter++;
+                }
+            }
+            for (var j = 0; j < questions[qn].valuesNo.length; j++) {
+                a = questions[qn].valuesNo[j];
+                if (a.axis in rand_per_axis) {
+                    prop += 1.0 - rand_per_axis[a.axis];
+                    propCounter++;
+                }
+            }
+
+            if (propCounter > 0)
+                prop /= propCounter;
+            else
+                prop = 0.2;
+
+            if (Math.random() < 0.1)
+                next_question(0);
+            else if (Math.random() < prop)
+                next_question(1);
+            else
+                next_question(-1);
+        }
+    }
+</script>
+
+
+<script>
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    csv = getParameterByName('csv');
+
+    function requestCSV(f, c) {
+        return new CSVAJAX(f, c);
+    }
+
+    function CSVAJAX(filepath, callback) {
+        this.request = new XMLHttpRequest();
+        this.request.open("GET", filepath, true);
+        this.request.timeout = 10000;
+        this.request.parent = this;
+        this.callback = callback;
+        this.request.onload = function () {
+            var d = this.response.split('\n');
+            /*1st separator*/
+            var i = d.length;
+            while (i--) {
+                if (d[i] !== "")
+                    d[i] = d[i].split(','); /*2nd separator*/
+                else
+                    d.splice(i, 1);
+            }
+            this.parent.response = d;
+            if (typeof this.parent.callback !== "undefined")
+                this.parent.callback(d);
+        };
+        this.request.send();
+    };
+
+    if (csv) {
+        var foo = requestCSV("/data/" + csv, function (data) {
+            var results = data[1].slice(1);
+
+            var allSubmissions = data.slice(1);
+
+
+            if (allSubmissions.length == 1) {
+                results = allSubmissions[0].slice(1);
+                results = results.map(map_answer_to_number);
+            }
+            else {
+                //  We have multiple submissions
+
+                //  For each submissions we add all the votes together
+
+                var submissionsResults = [];
+
+                for (var i = 0; i < allSubmissions.length; i++) {
+                    var submissions = allSubmissions[i].slice(1);
+
+                    for(var j = 0; j < submissions.length; j++)
+                    {
+                        var answer = submissions[j];
+
+                        if(submissionsResults[j] == undefined)
+                        {
+                            submissionsResults[j] = 0;
+                        }
+                        submissionsResults[j] += map_answer_to_number(answer) / allSubmissions.length;
+                    }
+                }
+
+                results = submissionsResults;
+            }
+
+            for (let i = 0; i < results.length; i++) {
+                const result = results[i];
+                next_question(result);
+            }
+        });
+    }
+
+    function map_answer_to_number(item) {
+        switch (item) {
+            case "\"Se popolnoma strinjam\"":
+                return 1;
+            case "\"Nekako se strinjam\"":
+                return 2 / 3;
+            case "\"Sem nevtralen/-a oz. oklevam\"":
+                return 0;
+            case "\"Se nekako ne strinjam\"":
+                return -2 / 3;
+            case "\"Absolutno se ne strinjam\"":
+                return -1;
+        }
+    }
+
+</script>
+
+
+<script>
+
+    var qn = 0; // Question number
+
+    function next_question(mult) {
+        questions[qn].answer = mult
+        qn++;
+
+        if (qn < questions.length) {
+            //  init_question();
+        }
+        else {
+            results();
+        }
+    }
+
+    function calc_score(score, max_value) {
+        return (100 * (score) / (max_value)).toFixed(0);
+    }
+
+    function results() {
+        var axes = {};
+
+        for (var i = 0; i < questions.length; i++) {
+            q = questions[i];
+
+            for (var j = 0; j < q.valuesYes.length; j++) {
+                a = q.valuesYes[j];
+                if (!(a.axis in axes)) {
+                    axes[a.axis] = {
+                        val: 0,
+                        sum: 0
+                    }
+                }
+
+                if (q.answer > 0) {
+                    axes[a.axis].val += q.answer * a.value;
+                }
+                axes[a.axis].sum += Math.max(a.value, 0);
+            }
+
+            for (var j = 0; j < q.valuesNo.length; j++) {
+                a = q.valuesNo[j];
+                if (!(a.axis in axes)) {
+                    axes[a.axis] = {
+                        val: 0,
+                        sum: 0
+                    }
+                }
+
+                if (q.answer < 0) {
+                    axes[a.axis].val -= q.answer * a.value;
+                }
+                axes[a.axis].sum += Math.max(a.value, 0);
+            }
+        }
+
+        url = ""
+        for (var aK in axes) {
+            if (axes[aK].val > 0) {
+                if (url != "")
+                    url += "&"
+                url += aK + "=" + calc_score(axes[aK].val, axes[aK].sum)
+            }
+        }
+
+        url = "/politicni-portret/stranke?" + url + "&csv=" + csv;
+
+        location.href = url;
+    }
+
+    axes = [
+        "c",
+        "b",
+        "p",
+        "m",
+        "s",
+        "j",
+        "e",
+        "t"
+    ];
+
+    var parties = [];
+
+    for (var party in partyResults) {
+
+        //   console.log(party, partyResults[party]);
+        var votes = [];
+
+        for (var i = 0; i < axes.length; i++) {
+            var neg = getQueryVariableFromString(axes[i] + "0", partyResults[party]);
+            var pos = getQueryVariableFromString(axes[i] + "1", partyResults[party]);
+
+            var vote = {};
+            vote.axes = axes[i];
+            vote.negative = neg;
+            vote.positive = pos;
+            vote.neutral = 1 - neg - pos;
+            votes.push(vote);
+        }
+
+        parties.push({party: party, votes: votes});
+    }
+
+    characteristics = []
+
+    for (var i = 0; i < axes.length; i++) {
+        var axis = axes[i];
+        var container = $('#' + axis);
+
+        var axisStuff = [];
+
+        for (var j = 0; j < parties.length; j++) {
+            var party = parties[j];
+
+            for (var k = 0; k < party.votes.length; k++) {
+                var vote = party.votes[k];
+                if (axis == vote.axes) {
+                    let link = partyResults[party.party];
+                    var append = $('<div class="progress-bar progress-bar-party d-flex flex-row clickable"><h6 class="text-center">' + party.party + '</h6><div class="progress-negative"></div><div class="progress-mid"></div><div class="progress-positive"></div></div>');
+
+                    append.find('.progress-positive').width((vote.positive * 100).toFixed(0) + "%");
+                    append.find('.progress-negative').width((vote.negative * 100).toFixed(0) + "%");
+                    append.find('.progress-mid').width((vote.neutral * 100).toFixed(0) + "%");
+
+                    append.on('click', function () {
+                        window.location.href = '/politicni-portret/stranke?' + link;
+                    });
+
+
+                    axisStuff.push({html: append, vote: vote});
+                }
+            }
+        }
+
+        axisStuff = axisStuff.sort(function (a, b) {
+            return b.vote.negative - a.vote.negative;
+        });
+
+
+        var you = container.find('.progress-bar');
+        you.detach();
+
+        for (let j = 0; j < axisStuff.length; j++) {
+            const stuff = axisStuff[j];
+
+            container.append(stuff.html);
+        }
+    }
+
+    function getQueryVariableFromString(variable, input) {
+        var query = input.replace('?', '&');
+
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=")
+            if (pair[0] == variable) {
+                if (pair[1] == "NaN") {
+                    return 0
+                }
+                else {
+                    return pair[1] / 100;
+                }
+            }
+        }
+        return 0;
+    }
+
+    function setAxisValue(name, value) {
+        var axis = document.getElementById(name)
+        if (!axis)
+            return
+
+        var text = document.getElementById(name + "Text")
+        if (!text)
+            return
+
+        axis.style.width = ((100 * value).toFixed(1) + "%");
+
+        value = (100 * value).toFixed(0);
+
+        if (value > 10) {
+            text.innerHTML = (value + "%");
+        }
+
+        /*  if (text.offsetWidth > axis.offsetWidth)
+              text.style.visibility = "hidden";*/
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
