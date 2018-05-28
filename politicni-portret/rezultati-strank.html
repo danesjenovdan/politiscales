@@ -3391,11 +3391,10 @@
     };
 
     if (csv) {
-        var foo = requestCSV("/data/" + csv, function (data) {
+        var foo = requestCSV("/politicni-portret/data/" + csv, function (data) {
             var results = data[1].slice(1);
 
             var allSubmissions = data.slice(1);
-
 
             if (allSubmissions.length == 1) {
                 results = allSubmissions[0].slice(1);
