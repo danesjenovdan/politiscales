@@ -203,8 +203,13 @@ h1 {
   word-break: break-all;
   text-transform: uppercase;
 
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+  }
+
   @include media-breakpoint-down(md) {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 
   @include media-breakpoint-only(lg) {
