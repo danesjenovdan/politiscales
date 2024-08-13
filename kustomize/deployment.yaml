@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: politicni-portret
+  labels:
+    app: politicni-portret
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: politicni-portret
+  template:
+    metadata:
+      labels:
+        app: politicni-portret
+    spec:
+      containers:
+        - name: politicni-portret
+          image: politicni-portret
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: 100Mi
+              cpu: 100m
+            limits:
+              memory: 100Mi
+              cpu: 100m
