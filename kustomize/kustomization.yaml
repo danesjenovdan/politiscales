@@ -8,4 +8,4 @@ resources:
 images:
   - name: politicni-portret
     newName: rg.fr-par.scw.cloud/djnd/politicni-portret
-    newTag: 'd0d45462dfd7c152d40856aa73718e3bb86097ed'
+    newTag: 'd0d45462dfd7c152d40856aa73718e3bb86097ed' #
